@@ -1,36 +1,104 @@
 import { Link } from "wouter";
-import { ArrowLeft, Download, ShieldCheck, Smartphone, Settings, Rocket, ExternalLink, CheckCircle2 } from "lucide-react";
+import { ArrowLeft, Download, ShieldCheck, Smartphone, Settings, Rocket, ExternalLink, CheckCircle2, MonitorCog, Wifi, TerminalSquare } from "lucide-react";
 import ShootingStars from "@/components/ShootingStars";
 
 const setupSteps = [
   {
-    title: "1) Install the correct Shizuku version",
-    body:
-      "Use the 11.0 Shizuku APK from the official project page first. This is the easiest version to get working on older Android/Quest-based setups before you upgrade later.",
+    title: "1) Install Shizuku 11.0 first",
+    body: (
+      <div className="space-y-3 text-sm leading-relaxed text-gray-400 font-mono">
+        <p>Start with the older 11.0 release instead of jumping straight to the newest version. On Meta Quest devices, the goal is to get the basic pairing flow working first, then update once the device can connect cleanly.</p>
+        <ul className="list-disc pl-5 space-y-1 text-xs text-gray-500">
+          <li>Download the 11.0 APK from the official GitHub release page.</li>
+          <li>Allow installation from unknown sources if the headset prompts for it.</li>
+          <li>Do not install the newest Shizuku yet unless the 11.0 version is already working.</li>
+        </ul>
+      </div>
+    ),
     action: "https://github.com/RikkaApps/Shizuku/releases",
     actionLabel: "GET SHIZUKU 11.0 APK",
     icon: Download,
   },
   {
-    title: "2) Set up Android settings for the launcher flow",
-    body:
-      "Open Android settings, allow apps to install unknown sources if needed, and use Lightning Launcher or a similar launcher setup to help the device expose the required app/access flow cleanly before continuing.",
-    action: "https://www.google.com/search?q=lightning+launcher+android+setup+shizuku",
-    actionLabel: "GOOGLE THE LIGHTNING LAUNCHER STEPS",
+    title: "2) Enable Meta Quest developer options",
+    body: (
+      <div className="space-y-3 text-sm leading-relaxed text-gray-400 font-mono">
+        <p>On the Quest, go to Settings and enable the developer features before you try any ADB or Shizuku pairing.</p>
+        <ul className="list-disc pl-5 space-y-1 text-xs text-gray-500">
+          <li>Settings → About → Software version</li>
+          <li>Tap the version/build number repeatedly until developer mode unlocks</li>
+          <li>Then open Settings → Developer and turn on USB debugging</li>
+          <li>Also check that unknown app installs are allowed if the APK installer asks for it</li>
+        </ul>
+      </div>
+    ),
+    action: "https://www.google.com/search?q=meta+quest+enable+developer+mode+usb+debugging",
+    actionLabel: "GOOGLE THE QUEST DEV MODE STEPS",
+    icon: MonitorCog,
+  },
+  {
+    title: "3) Use Lightning Launcher to fix the Android settings flow",
+    body: (
+      <div className="space-y-3 text-sm leading-relaxed text-gray-400 font-mono">
+        <p>If the headset UI is awkward or the settings app is hard to reach, install Lightning Launcher and temporarily use it as the home app so the Android app/system settings screen is easier to access.</p>
+        <ul className="list-disc pl-5 space-y-1 text-xs text-gray-500">
+          <li>Install Lightning Launcher from the APK or app store source you trust.</li>
+          <li>Set it as the default launcher temporarily if needed.</li>
+          <li>Use it to navigate to system settings, apps, and permissions without the launcher breaking the flow.</li>
+          <li>Once the device is set up, you can switch back if you want.</li>
+        </ul>
+      </div>
+    ),
+    action: "https://www.google.com/search?q=lightning+launcher+meta+quest+setup",
+    actionLabel: "GOOGLE LIGHTNING LAUNCHER SETUP",
     icon: Smartphone,
   },
   {
-    title: "3) Complete the Shizuku pairing + permissions",
-    body:
-      "Once the app is installed, open Shizuku, follow the device pairing flow, grant the permissions it requests, and keep the app running while you use the ADB tools.",
+    title: "4) Pair Shizuku with the Quest",
+    body: (
+      <div className="space-y-3 text-sm leading-relaxed text-gray-400 font-mono">
+        <p>Open the Shizuku 11.0 app and follow the pairing flow. On Meta Quest builds, the app usually wants either ADB pairing or a working device connection first.</p>
+        <ul className="list-disc pl-5 space-y-1 text-xs text-gray-500">
+          <li>Connect the headset to a PC with ADB if your setup requires it.</li>
+          <li>Use the Shizuku app’s onboarding flow to grant the requested permissions.</li>
+          <li>Allow the app to start the daemon/service if the headset asks for it.</li>
+          <li>Keep Shizuku running while you use the ADB tools.</li>
+        </ul>
+      </div>
+    ),
     action: "https://shizuku.rikka.app/",
     actionLabel: "OPEN OFFICIAL SHIZUKU GUIDE",
     icon: ShieldCheck,
   },
   {
-    title: "4) Upgrade after it works",
-    body:
-      "After the basic setup succeeds, you can upgrade to the newest Shizuku version and re-run the pairing steps. The goal is to get the device working first, then update it once the base configuration is stable.",
+    title: "5) Optional PC-side ADB pairing flow",
+    body: (
+      <div className="space-y-3 text-sm leading-relaxed text-gray-400 font-mono">
+        <p>If you are doing the more advanced setup on a PC, use this flow to make sure the headset is visible to ADB before starting Shizuku.</p>
+        <ul className="list-disc pl-5 space-y-1 text-xs text-gray-500">
+          <li>Install ADB tools on the PC and confirm they are working.</li>
+          <li>Run: adb devices to check the Quest is visible.</li>
+          <li>If needed, use adb pair and adb connect with the Quest IP and port.</li>
+          <li>After the device connects, launch the Shizuku app and finish the final permission prompts.</li>
+        </ul>
+      </div>
+    ),
+    action: "https://www.google.com/search?q=adb+pair+meta+quest+setup+shizuku",
+    actionLabel: "GOOGLE QUEST ADB PAIRING",
+    icon: Wifi,
+  },
+  {
+    title: "6) Upgrade after it works",
+    body: (
+      <div className="space-y-3 text-sm leading-relaxed text-gray-400 font-mono">
+        <p>Once the 11.0 installation is stable and ADB/Shizuku is functioning, update to the newest Shizuku release. This keeps the setup clean and avoids the common issue of upgrading before the base flow works.</p>
+        <ul className="list-disc pl-5 space-y-1 text-xs text-gray-500">
+          <li>Update only after the headset can pair and connect.</li>
+          <li>Re-open Shizuku and check that permissions still match.</li>
+          <li>If the app breaks after the upgrade, reinstall the working 11.0 APK and re-run the setup.</li>
+        </ul>
+      </div>
+    ),
     action: "https://github.com/RikkaApps/Shizuku/releases/latest",
     actionLabel: "GET THE LATEST SHIZUKU",
     icon: Rocket,
@@ -38,10 +106,11 @@ const setupSteps = [
 ];
 
 const quickNotes = [
-  "Use the older 11.0 APK first so the base flow works cleanly.",
-  "Lightning Launcher can help with the Android-side setup flow if your launcher config is blocking the app access.",
-  "After setup is confirmed, upgrade to the newest Shizuku and recheck permissions.",
-  "If a step fails, Google the exact Android version and launcher name for the current device instructions.",
+  "Use the 11.0 APK first. Do not start with the newest build when the Quest setup is still unstable.",
+  "Enable developer mode and USB debugging before anything else. Without that, Shizuku will not pair correctly.",
+  "If the Quest UI blocks normal settings access, use Lightning Launcher to simplify the navigation flow and reach the needed app permissions.",
+  "After the base setup works, upgrade to the newest Shizuku version and verify the pairing still works.",
+  "If your build differs, Google the exact Quest model + Android version + Shizuku phrase for your specific steps.",
 ];
 
 export default function ShizukuHelp() {
@@ -71,12 +140,12 @@ export default function ShizukuHelp() {
           <div className="flex items-center gap-3 mb-4">
             <Settings className="text-red-500" size={18} />
             <h1 className="font-display text-2xl sm:text-3xl font-black tracking-[0.12em] uppercase text-white">
-              How to use <span className="text-red-500">Shizuku</span>
+              Meta Quest <span className="text-red-500">Shizuku</span> Guide
             </h1>
           </div>
 
-          <p className="max-w-3xl text-sm leading-relaxed text-gray-400 font-mono">
-            If you are setting up Shizuku on an Android-based VR device, use the 11.0 APK first, confirm the Android launcher/settings flow using Lightning Launcher, then upgrade to the newest version after the basics are working.
+          <p className="max-w-4xl text-sm leading-relaxed text-gray-400 font-mono">
+            This is the cleanest order for Meta Quest builds: install Shizuku 11.0 APK first, enable developer mode and USB debugging, use Lightning Launcher to help with Android settings navigation if needed, pair the headset, then upgrade to the newest version only after the base setup is confirmed working.
           </p>
         </div>
 
@@ -98,7 +167,7 @@ export default function ShizukuHelp() {
                 </div>
               </div>
 
-              <p className="text-sm leading-relaxed text-gray-400 font-mono mb-4">{body}</p>
+              <div className="mb-4">{body}</div>
 
               <a
                 href={action}
@@ -116,7 +185,7 @@ export default function ShizukuHelp() {
         <div className="mt-8 rounded border border-red-900/30 bg-black/60 p-5 backdrop-blur-sm">
           <div className="flex items-center gap-2 mb-4">
             <CheckCircle2 className="text-red-500" size={16} />
-            <h3 className="font-display text-xs uppercase tracking-[0.2em] text-white">Quick notes</h3>
+            <h3 className="font-display text-xs uppercase tracking-[0.2em] text-white">Quick checklist</h3>
           </div>
 
           <ul className="space-y-3">
@@ -127,6 +196,16 @@ export default function ShizukuHelp() {
               </li>
             ))}
           </ul>
+        </div>
+
+        <div className="mt-8 rounded border border-red-900/30 bg-black/60 p-5 backdrop-blur-sm">
+          <div className="flex items-center gap-2 mb-3">
+            <TerminalSquare className="text-red-500" size={16} />
+            <h3 className="font-display text-xs uppercase tracking-[0.2em] text-white">Helpful command reminder</h3>
+          </div>
+          <p className="text-sm leading-relaxed text-gray-400 font-mono">
+            If you are pairing from a PC, the usual flow is: install ADB, verify the headset shows up with <span className="text-red-400">adb devices</span>, then use the recommended pairing/connect commands in the official Shizuku docs before you start the app itself.
+          </p>
         </div>
       </div>
     </div>
