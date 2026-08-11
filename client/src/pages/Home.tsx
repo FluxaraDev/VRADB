@@ -402,7 +402,7 @@ export default function Home() {
                 VR<span className="text-red-500">ADB</span>
               </div>
               <div className="text-[9px] text-gray-700 tracking-[0.2em] uppercase leading-none mt-0.5 font-mono">
-                KEY MAPPER
+                For Quest, Pico &amp; Android VR
               </div>
             </div>
           </div>
