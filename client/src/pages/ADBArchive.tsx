@@ -27,7 +27,7 @@ const extractQuotedSegments = (text: string): string[] => {
 
 const splitCandidateParts = (text: string): string[] => {
   return text
-    .split(/(?:&&|;|,(?=(?:adb\s+shell|debug\.oculus|setprop|persist\.debug\.oculus)))/i)
+    .split(/(?:&&|;)/i)
     .map((part) => part.trim())
     .filter(Boolean)
     .map((part) => part.replace(/^["'`]+|["'`,]+$/g, "").trim())
@@ -35,42 +35,46 @@ const splitCandidateParts = (text: string): string[] => {
 };
 
 const normalizeCommand = (raw: string): string | null => {
-  let cleaned = raw
+  const cleaned = raw
     .replace(/^[-*•]\s*/, "")
     .replace(/^\d+[.)-]\s*/, "")
     .replace(/^"|"$/g, "")
-    .replace(/[\s'\"`]+|[\s'\"`,]+$/g, "")
-    .replace(/[,;]+$/g, "")
+    .replace(/^[\s'"`]+|[\s'"`,]+$/g, "")
+    .replace(/\r/g, "")
     .trim();
 
   if (!cleaned) return null;
 
-  cleaned = cleaned.replace(/\n/g, " ").replace(/\s+/g, " ").trim();
-  const lower = cleaned.toLowerCase();
+  const normalizedText = cleaned.replace(/\\n/g, " ").replace(/\s+/g, " ").trim();
+  const lower = normalizedText.toLowerCase();
 
   if (lower.includes("adb shell")) {
-    const withoutPrefix = cleaned.replace(/^adb\s+shell\s+/i, "").trim();
+    const withoutPrefix = normalizedText.replace(/^adb\s+shell\s+/i, "").trim();
+    if (!withoutPrefix) return null;
     if (withoutPrefix.startsWith("setprop ")) return `adb shell ${withoutPrefix}`;
-    return cleaned;
+    return `adb shell ${withoutPrefix}`;
   }
 
-  if (cleaned.startsWith("setprop ")) return `adb shell ${cleaned}`;
+  if (normalizedText.startsWith("setprop ")) return `adb shell ${normalizedText}`;
 
-  if (cleaned.startsWith("debug.oculus.") || cleaned.startsWith("persist.debug.oculus.")) {
-    const [prop, ...rest] = cleaned.split(/\s+/);
-    const value = rest.length ? ` ${rest.join(" ")}` : " 1";
-    return `adb shell setprop ${prop}${value}`;
+  if (/^(?:debug\.oculus\.|persist\.debug\.oculus\.)/i.test(normalizedText)) {
+    const match = normalizedText.match(/^(?:debug\.oculus\.|persist\.debug\.oculus\.)[A-Za-z0-9_.-]+/i);
+    if (!match) return null;
+
+    const prop = match[0];
+    const rest = normalizedText.slice(prop.length).trim();
+    const value = rest ? rest : "1";
+    return `adb shell setprop ${prop} ${value}`.replace(/\s+/g, " ").trim();
   }
 
   if (lower.includes("debug.oculus") || lower.includes("persist.debug.oculus")) {
-    const match = cleaned.match(/(?:debug\.?oculus\.[^\s]+|persist\.debug\.oculus\.[^\s]+)/i);
-    if (match) {
-      const prop = match[0];
-      const propIndex = cleaned.indexOf(prop);
-      const rest = propIndex >= 0 ? cleaned.slice(propIndex + prop.length).trim() : "";
-      const value = rest ? ` ${rest}` : " 1";
-      return `adb shell setprop ${prop}${value}`;
-    }
+    const match = normalizedText.match(/(?:debug\.oculus\.[A-Za-z0-9_.-]+|persist\.debug\.oculus\.[A-Za-z0-9_.-]+)/i);
+    if (!match) return null;
+
+    const prop = match[0];
+    const rest = normalizedText.slice(normalizedText.indexOf(prop) + prop.length).trim();
+    const value = rest ? rest : "1";
+    return `adb shell setprop ${prop} ${value}`.replace(/\s+/g, " ").trim();
   }
 
   return null;
