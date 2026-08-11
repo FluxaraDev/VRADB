@@ -64,7 +64,7 @@ function CommandCard({ cmd }: { cmd: AdbCommand }) {
         description: `> ${cmd.command}`,
         duration: 1800,
         style: {
-          background: "#050505",
+          background: "#0dfe31",
           border: "1px solid #DC2626",
           color: "#f1f5f9",
           fontFamily: "'JetBrains Mono', monospace",
