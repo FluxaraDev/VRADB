@@ -151,18 +151,6 @@ export default function ADBArchive() {
     safePage * PAGE_SIZE
   );
 
-  const handleCopy = async (command: string) => {
-    try {
-      await navigator.clipboard.writeText(command);
-      toast.success("COMMAND COPIED", {
-        description: `> ${command}`,
-        duration: 1500,
-      });
-    } catch {
-      toast.error("COPY FAILED");
-    }
-  };
-
   return (
     <div className="relative min-h-screen bg-black text-gray-100 overflow-x-hidden crt-scanlines crt-noise">
       <div
