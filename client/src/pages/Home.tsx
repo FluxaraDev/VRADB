@@ -440,6 +440,10 @@ export default function Home() {
               <Database size={10} />
               LIST
             </Link>
+            <Link href="/help" className="inline-flex items-center gap-1.5 rounded border border-red-800/35 bg-red-950/20 px-2.5 py-1 text-[10px] uppercase tracking-[0.2em] text-red-400 hover:border-red-600/60 hover:text-red-300 transition-colors">
+              <Shield size={10} />
+              HELP
+            </Link>
           </div>
         </div>
       </header>
