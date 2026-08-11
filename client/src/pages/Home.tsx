@@ -275,7 +275,7 @@ function HeroBoot() {
               <br />
               <span className="text-red-500">DISCORD SERVER:</span> <a href="https://discord.gg/WS9Pe8Tzx" target="_blank" rel="noopener noreferrer" className="text-red-400 hover:text-red-300 underline">https://discord.gg/WS9Pe8Tzx</a>
               <br />
-              <span className="text-gray-600 text-xs">JOIN TO GET MORE. Credits to me for the website / goobert / sing / ace for most of the ADB commands</span>
+              <span className="text-gray-600 text-xs">JOIN TO GET MORE. Credits to jinn00898 for the website and FluxDev for small tweaks. / goobert / sing / ace for most of the ADB commands</span>
             </p>
           </div>
 
