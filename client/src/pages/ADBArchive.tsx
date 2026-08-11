@@ -70,7 +70,6 @@ const normalizeCommand = (raw: string): string | null => {
 };
 
 function parseArchiveText(raw: string, sourceLabel: string): ArchiveEntry[] {
-  const seen = new Set<string>();
   const entries: ArchiveEntry[] = [];
 
   raw.split(/\r?\n/).forEach((line, lineIndex) => {
@@ -84,12 +83,8 @@ function parseArchiveText(raw: string, sourceLabel: string): ArchiveEntry[] {
         const normalized = normalizeCommand(part);
         if (!normalized) return;
 
-        const key = normalized.toLowerCase();
-        if (seen.has(key)) return;
-        seen.add(key);
-
         entries.push({
-          id: `${sourceLabel}-${lineIndex}-${normalized.slice(0, 80)}`,
+          id: `${sourceLabel}-${lineIndex}-${normalized.slice(0, 80)}-${Math.random().toString(36).slice(2, 8)}`,
           source: sourceLabel,
           text: normalized,
         });
