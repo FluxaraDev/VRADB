@@ -55,7 +55,7 @@ function useBootText(lines: string[], intervalMs = 400) {
 }
 
 /* ── Command Card ── */
-function CommandCard({ cmd }: { cmd: AdbCommand }) {
+export function CommandCard({ cmd }: { cmd: AdbCommand }) {
   const [copied, setCopied] = useState(false);
 
   const handleCopy = useCallback(async () => {

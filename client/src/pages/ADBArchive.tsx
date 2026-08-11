@@ -1,9 +1,9 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "wouter";
-import { ArrowLeft, Copy, Database, Search, Terminal, ChevronLeft, ChevronRight } from "lucide-react";
-import { toast } from "sonner";
+import { ArrowLeft, Database, Search, Terminal, ChevronLeft, ChevronRight } from "lucide-react";
 import list1Text from "@/data/list1.txt?raw";
 import list2Text from "@/data/list2.txt?raw";
+import { CommandCard } from "./Home";
 
 type ArchiveEntry = {
   id: string;
@@ -18,40 +18,51 @@ const ARCHIVE_SOURCES = [
 
 const PAGE_SIZE = 50;
 
-const splitCommands = (line: string): string[] => {
-  return line
-    .split(/\s*&&\s*|\s*;\s*/)
-    .map((part) => part.trim())
-    .filter(Boolean)
-    .filter((part) => part.length > 3);
+const extractQuotedSegments = (text: string): string[] => {
+  const quoted = text.match(/"([^"]+)"/g) ?? [];
+  return quoted
+    .map((segment) => segment.replace(/^"|"$/g, "").trim())
+    .filter(Boolean);
 };
 
 const normalizeCommand = (raw: string): string | null => {
-  let cleaned = raw.trim();
-  cleaned = cleaned.replace(/^[-*•]\s*/, "");
-  cleaned = cleaned.replace(/^\d+[.)-]\s*/, "");
-  cleaned = cleaned.replace(/^"|"$/g, "").trim();
+  let cleaned = raw
+    .replace(/^[-*•]\s*/, "")
+    .replace(/^\d+[.)-]\s*/, "")
+    .replace(/^"|"$/g, "")
+    .replace(/^[\s'\"`]+|[\s'\"`,]+$/g, "")
+    .trim();
 
   if (!cleaned) return null;
 
+  cleaned = cleaned.replace(/\\n/g, " ").replace(/\s+/g, " ").trim();
   const lower = cleaned.toLowerCase();
-  if (!lower.includes("adb shell") && !lower.includes("debug.oculus")) {
-    return null;
+
+  if (lower.includes("adb shell")) {
+    if (lower.startsWith("adb shell") && cleaned.includes("setprop")) {
+      return cleaned;
+    }
+
+    const withoutPrefix = cleaned.replace(/^adb\s+shell\s+/i, "").trim();
+    if (withoutPrefix.startsWith("setprop ")) {
+      return `adb shell ${withoutPrefix}`;
+    }
   }
 
-  if (lower.startsWith("adb shell")) {
-    return `adb shell ${cleaned.replace(/^adb shell\s+/i, "").trim()}`;
-  }
-
-  if (lower.startsWith("setprop ")) {
+  if (cleaned.startsWith("setprop ") || cleaned.startsWith("debug.oculus.")) {
+    if (cleaned.startsWith("debug.oculus.")) {
+      const [prop, ...rest] = cleaned.split(/\s+/);
+      const value = rest.length ? ` ${rest.join(" ")}` : " 1";
+      return `adb shell setprop ${prop}${value}`;
+    }
     return `adb shell ${cleaned}`;
   }
 
-  if (lower.startsWith("debug.oculus")) {
-    return `adb shell setprop ${cleaned} 1`;
+  if (lower.includes("debug.oculus")) {
+    return `adb shell ${cleaned}`;
   }
 
-  return cleaned;
+  return null;
 };
 
 function parseArchiveText(raw: string, sourceLabel: string): ArchiveEntry[] {
@@ -62,10 +73,10 @@ function parseArchiveText(raw: string, sourceLabel: string): ArchiveEntry[] {
     const base = line.trim();
     if (!base) return;
 
-    const pieces = splitCommands(base);
+    const candidates = [base, ...extractQuotedSegments(base)];
 
-    pieces.forEach((piece) => {
-      const normalized = normalizeCommand(piece);
+    candidates.forEach((candidate) => {
+      const normalized = normalizeCommand(candidate);
       if (!normalized) return;
 
       const key = normalized.toLowerCase();
@@ -282,35 +293,17 @@ export default function ADBArchive() {
         {!loading && !error && filteredEntries.length > 0 && (
           <>
             <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-3">
-              {pagedEntries.map((entry) => {
-                const boxHeight = Math.min(220, Math.max(92, 90 + Math.ceil(entry.text.length / 28) * 10));
-
-                return (
-                  <div
-                    key={entry.id}
-                    className="group rounded border border-red-900/20 bg-white/[0.02] px-3 py-2 text-[11px] leading-relaxed font-mono text-gray-300 transition-all duration-150 hover:border-red-600/40 hover:bg-white/[0.035]"
-                    style={{ minHeight: `${boxHeight}px` }}
-                  >
-                    <div className="flex items-center justify-between gap-2 mb-2">
-                      <span className="text-[9px] uppercase tracking-[0.2em] text-red-700">
-                        {entry.source}
-                      </span>
-                      <button
-                        onClick={() => handleCopy(entry.text)}
-                        className="inline-flex items-center gap-1 rounded border border-red-900/25 px-2 py-1 text-[9px] uppercase tracking-[0.2em] text-red-400 hover:border-red-600/50 hover:text-red-300 transition-colors"
-                      >
-                        <Copy size={10} />
-                        COPY
-                      </button>
-                    </div>
-
-                    <code className="block whitespace-pre-wrap break-words text-green-400 leading-relaxed">
-                      <span className="text-red-600 mr-2">$</span>
-                      {entry.text}
-                    </code>
-                  </div>
-                );
-              })}
+              {pagedEntries.map((entry) => (
+                <CommandCard
+                  key={entry.id}
+                  cmd={{
+                    id: entry.id,
+                    label: entry.source,
+                    command: entry.text,
+                    description: entry.source,
+                  }}
+                />
+              ))}
             </div>
 
             <div className="mt-8 flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
