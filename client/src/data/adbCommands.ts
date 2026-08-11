@@ -306,7 +306,7 @@ export const adbCategories: AdbCategory[] = [
         id: "dbg-2",
         label: "Hertz switcher",
         command: "adb shell setprop debug.oculus.cpuLevel 0; setprop debug.oculus.PhaseSyncAdditionalPadding 100; setprop debug.oculus.KickoffHeadroom 1; setprop debug.oculus.vsyncEmu 1; setprop debug.oculus.forcePhaseSync 1.8; setprop debug.oculus.extraKickoffHeadroom 1; setprop debug.oculus.refreshRate 60; setprop debug.oculus.swapInterval 1; setprop debug.oculus.useFrameSync 1.4; setprop debug.oculus.vSync 1; setprop debug.oculus.extraKickoffHeadspace 1; setprop debug.oculus.PhaseSyncDelayOverride 100; setprop debug.oculus.phaseSync 100",
-        description: "Optimizes refresh rate, frame sync, and performance timing for smooth VR experience.",
+        description: "Warning: do not set debug.oculus.vsyncEmu above 1. It can fry your headset and may cause artifacting and glitching. Pairing this with debug.oculus.refreshRate bypasses the headset's maximum and minimum refresh-rate limits while tuning frame sync and performance timing.",
       },
       {
         id: "dbg-3",
