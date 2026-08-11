@@ -4,6 +4,7 @@ import { ArrowLeft, Database, Search, Terminal, ChevronLeft, ChevronRight } from
 import list1Text from "@/data/list1.txt?raw";
 import list2Text from "@/data/list2.txt?raw";
 import { CommandCard } from "./Home";
+import ShootingStars from "@/components/ShootingStars";
 
 type ArchiveEntry = {
   id: string;
@@ -154,6 +155,7 @@ export default function ADBArchive() {
 
   return (
     <div className="relative min-h-screen bg-black text-gray-100 overflow-x-hidden crt-scanlines crt-noise">
+      <ShootingStars />
       <div
         className="fixed inset-0 pointer-events-none z-0"
         style={{
