@@ -10,6 +10,7 @@
 import { useState, useCallback, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { toast } from "sonner";
+import { Link } from "wouter";
 import {
   Cpu,
   Package,
@@ -26,6 +27,7 @@ import {
   Zap,
   Activity,
   Shield,
+  Database,
 } from "lucide-react";
 import ShootingStars from "@/components/ShootingStars";
 import { adbCategories, type AdbCommand, type AdbCategory } from "@/data/adbCommands";
@@ -434,6 +436,10 @@ export default function Home() {
                 <span className="text-red-600 font-bold">{adbCategories.length}</span> MODULES
               </span>
             </div>
+            <Link href="/archive" className="inline-flex items-center gap-1.5 rounded border border-red-800/35 bg-red-950/20 px-2.5 py-1 text-[10px] uppercase tracking-[0.2em] text-red-400 hover:border-red-600/60 hover:text-red-300 transition-colors">
+              <Database size={10} />
+              ARCHIVE
+            </Link>
           </div>
         </div>
       </header>
