@@ -1,6 +1,8 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "wouter";
 import { ArrowLeft, Database, Search, Terminal } from "lucide-react";
+import list1Text from "@/data/list1.txt?raw";
+import list2Text from "@/data/list2.txt?raw";
 
 type ArchiveEntry = {
   id: string;
@@ -9,14 +11,8 @@ type ArchiveEntry = {
 };
 
 const ARCHIVE_SOURCES = [
-  {
-    label: "hellaadbs.txt",
-    url: "https://marbleshub.neocities.org/ASSETS/hellaadbs.txt",
-  },
-  {
-    label: "Adbs.txt",
-    url: "https://marbleshub.neocities.org/ASSETS/Adbs%20.txt",
-  },
+  { label: "list1.txt", raw: list1Text },
+  { label: "list2.txt", raw: list2Text },
 ] as const;
 
 const GROUP_SIZE = 50;
@@ -71,42 +67,21 @@ export default function ADBArchive() {
   useEffect(() => {
     let active = true;
 
-    const loadArchive = async () => {
+    const loadArchive = () => {
       try {
         setLoading(true);
         setError(null);
 
-        const response = await fetch("/api/archive", { cache: "no-store" });
-        if (!response.ok) {
-          throw new Error("Archive API failed");
-        }
-
-        const payload = (await response.json()) as { entries?: ArchiveEntry[] };
+        const parsedEntries = ARCHIVE_SOURCES.flatMap(({ label, raw }) =>
+          parseArchiveText(raw, label)
+        );
 
         if (!active) return;
-        setEntries(payload.entries ?? []);
+        setEntries(parsedEntries);
       } catch (loadError) {
         if (!active) return;
         console.error(loadError);
-
-        try {
-          const groups = await Promise.all(
-            ARCHIVE_SOURCES.map(async ({ url, label }) => {
-              const remoteResponse = await fetch(url, { cache: "no-store" });
-              if (!remoteResponse.ok) {
-                throw new Error(`Failed to load ${label}`);
-              }
-              const raw = await remoteResponse.text();
-              return parseArchiveText(raw, label);
-            })
-          );
-
-          if (!active) return;
-          setEntries(groups.flat());
-        } catch {
-          if (!active) return;
-          setError("Unable to load the remote archive right now. Please try again in a moment.");
-        }
+        setError("Unable to load the local archive files.");
       } finally {
         if (active) setLoading(false);
       }

@@ -1,0 +1,2193 @@
+debug.oculus.aadt.disable
+debug.oculus.aadt.log
+debug.oculus.aadt.override
+debug.oculus.adaclocks.force
+debug.oculus.adaclocks.lower
+debug.oculus.adaclocks.lowerCpu
+debug.oculus.adaclocks.lowerGpu
+debug.oculus.adaptiveRefreshRate
+debug.oculus.adaptiveRefreshRateLog
+debug.oculus.adaptiveSpaceWarp
+debug.oculus.afd.left.diopter_max
+debug.oculus.afd.left.diopter_min
+debug.oculus.afd.left.lens_pos_mm_max
+debug.oculus.afd.left.lens_pos_mm_min
+debug.oculus.afd.right.diopter_max
+debug.oculus.afd.right.diopter_min
+debug.oculus.afd.right.lens_pos_mm_max
+debug.oculus.afd.right.lens_pos_mm_min
+debug.oculus.airlink.logger
+debug.oculus.allowDynresGPUBoost
+debug.oculus.allowedLayers
+debug.oculus.allowGPU5
+debug.oculus.allRefreshRates
+debug.oculus.anamorphic
+debug.oculus.anamorphic.et
+debug.oculus.anamorphic.focal
+debug.oculus.anamorphic.formula
+debug.oculus.anamorphic.fovea
+debug.oculus.anamorphic.foveaDegrees
+debug.oculus.anamorphic.frd
+debug.oculus.anamorphic.rate
+debug.oculus.anamorphic.snap
+debug.oculus.apertureWarpMode
+debug.oculus.applyViewCalibration
+debug.oculus.appsw.aligned
+debug.oculus.appsw.depth
+debug.oculus.appsw.prewarp
+debug.oculus.appsw.prewarp_scale
+debug.oculus.appsw.refine
+debug.oculus.arvrPlatformModeOverride
+debug.oculus.assistant.automation
+debug.oculus.aswDLimit
+debug.oculus.aswELimit
+debug.oculus.ASWPreview
+debug.oculus.AutoDisablePhaseSync
+debug.oculus.autoDriverApp
+debug.oculus.autoDriverController
+debug.oculus.autoDriverMode
+debug.oculus.autoDriverPlaybackHeadMode
+debug.oculus.avalanche.disable_speed_test_cache
+debug.oculus.batterySaverTargetWatts
+debug.oculus.BeginFrameLoad
+debug.oculus.blackScreenDetector
+debug.oculus.blackScreenDetector.log
+debug.oculus.blackScreenDetector.reportThreshold
+debug.oculus.blackScreenDetector.threshold
+debug.oculus.blurColor
+debug.oculus.bodyApiCmd
+debug.oculus.bodyApiForceFullBody
+debug.oculus.bodyApiLogQualityTelemetryMetrics
+debug.oculus.bodypose.server
+debug.oculus.brightness.logging
+debug.oculus.brightness.oscillateBacklightScale
+debug.oculus.buildBaseShadersForMask
+debug.oculus.CABC.apl
+debug.oculus.CABC.clip
+debug.oculus.CABC.dump
+debug.oculus.CABC.enable
+debug.oculus.CABC.globalGain
+debug.oculus.CABC.height
+debug.oculus.CABC.interval
+debug.oculus.CABC.logging
+debug.oculus.CABC.maxK
+debug.oculus.CABC.minBacklightLevel
+debug.oculus.CABC.minG
+debug.oculus.CABC.smooth.weight
+debug.oculus.CABC.width
+debug.oculus.CABC.zonescale
+debug.oculus.CameraCutAngle
+debug.oculus.CameraCutDistance
+debug.oculus.CameraPhaseSync.Buffer
+debug.oculus.CameraPhaseSync.Enabled
+debug.oculus.CameraPhaseSync.ForceOffset
+debug.oculus.CameraPhaseSync.UpdateInterval
+debug.oculus.capture.always_up
+debug.oculus.capture.asyncSwapBuffers
+debug.oculus.capture.bitrate
+debug.oculus.capture.fps
+debug.oculus.capture.height
+debug.oculus.capture.roll_angle_stabil_params = Requires 2 params
+debug.oculus.capture.rotation_3_dof_stabil_params = Requires 4 params
+debug.oculus.capture.width
+debug.oculus.captureRawColor
+debug.oculus.cgd.forceDisableBicubicSampler
+debug.oculus.clearColor
+debug.oculus.clearToggle
+debug.oculus.clipDistortionMesh
+debug.oculus.clockStateLogImmediate
+debug.oculus.clockStateLogLevel
+debug.oculus.codecAvatar.forceEnable
+debug.oculus.colorScale
+debug.oculus.colorspace.normalize
+debug.oculus.colorspace.overrideColorspace
+debug.oculus.colorspace.use_typical_chromaticities
+debug.oculus.colorspace.white_point_offset.enabled
+debug.oculus.command_line_media_capture
+debug.oculus.compositorGpuApi
+debug.oculus.cvpasw
+debug.oculus.cvpasw.debug
+debug.oculus.cvpasw.filter.threshold
+debug.oculus.cvpasw.filter.type
+debug.oculus.cvpasw.mlfilter
+debug.oculus.cvpasw.mlsnap
+debug.oculus.cvpasw.mvdist
+debug.oculus.cvpasw.mvType
+debug.oculus.cvpasw.mvweights.w
+debug.oculus.cvpasw.mvweights.x
+debug.oculus.cvpasw.mvweights.xx
+debug.oculus.cvpasw.mvweights.y
+debug.oculus.cvpasw.mvweights.yy
+debug.oculus.cvpasw.mvweights.z
+debug.oculus.cvpasw.mvweights.zz
+debug.oculus.cvpasw.offset
+debug.oculus.cvpasw.reprojmv
+debug.oculus.cvpasw.searchx
+debug.oculus.cvpasw.searchy
+debug.oculus.cvpasw.smooth
+debug.oculus.ddc.currentVid
+debug.oculus.ddc.currentVidLeft
+debug.oculus.ddc.currentVidRight
+debug.oculus.ddc.posXLeft
+debug.oculus.ddc.posXRight
+debug.oculus.ddc.posYLeft
+debug.oculus.ddc.posYRight
+debug.oculus.ddc.posZLeft
+debug.oculus.ddc.posZRight
+debug.oculus.ddc.tanPitchLeft
+debug.oculus.ddc.tanPitchRight
+debug.oculus.ddc.tanYawLeft
+debug.oculus.ddc.tanYawRight
+debug.oculus.ddc.value
+debug.oculus.ddc.vidLeft
+debug.oculus.ddc.vidRight
+debug.oculus.ddc_test_mode
+debug.oculus.debugFrameLatencyLogs
+debug.oculus.debugPassthroughStyles.colorLut.type
+debug.oculus.debugPassthroughStyles.colorLut.weight
+debug.oculus.debugPassthroughStyles.edges
+debug.oculus.debugPassthroughStyles.edges.a
+debug.oculus.debugPassthroughStyles.edges.b
+debug.oculus.debugPassthroughStyles.edges.g
+debug.oculus.debugPassthroughStyles.edges.r
+debug.oculus.debugPassthroughStyles.edges.strength
+debug.oculus.debugPassthroughStyles.opacity
+debug.oculus.debugShaderCompilation
+debug.oculus.decenter_correction
+debug.oculus.deviceRegion
+debug.oculus.dgaLog
+debug.oculus.direct_projection
+debug.oculus.disable_body_conflict
+debug.oculus.disable_body_mm_conflict
+debug.oculus.disable_face_compat_check
+debug.oculus.disableACK
+debug.oculus.disableBuildBaseShader
+debug.oculus.DisableEarlyRetire
+debug.oculus.disableFrustumCheck
+debug.oculus.disableLayerMerge
+debug.oculus.disableShaderDiskReads
+debug.oculus.disableSliceTiming
+debug.oculus.displayMetersH = %f
+debug.oculus.displayMetersW = %f
+debug.oculus.displayPixelsH = %f
+debug.oculus.displayPixelsW = %f
+debug.oculus.distBlueCAC = %s
+debug.oculus.distCacType = AnglePoly
+debug.oculus.distCacType = ScreenBiaxPoly
+debug.oculus.distCacType = ScreenRad2Poly
+debug.oculus.distCacType = ScreenRadPoly
+debug.oculus.distCacUnit = millimeter
+debug.oculus.distCacUnit = pixel
+debug.oculus.distCacUnit = screen
+debug.oculus.distCenterFileName = %s
+debug.oculus.distCurve = CatmullRom10
+debug.oculus.distCurve = RTech16
+debug.oculus.distDeviceModel = %s
+debug.oculus.distHeadsetModel = %s
+debug.oculus.distHeight = %i
+debug.oculus.distK = %s
+debug.oculus.distK11 = %s
+debug.oculus.distortion.log
+debug.oculus.distortion.wireframe
+debug.oculus.distortionFileName = %s
+debug.oculus.distRedCAC = %s
+debug.oculus.distWidth = %i
+debug.oculus.dpuCac
+debug.oculus.drr
+debug.oculus.drr.angle
+debug.oculus.drr.angSpeedThresh
+debug.oculus.drr.debug
+debug.oculus.drr.haltonSamples
+debug.oculus.drr.haltonSamplesScale
+debug.oculus.drr.mode
+debug.oculus.drr.samples
+debug.oculus.dualcorecpuset
+debug.oculus.dynamicResolutionLog
+debug.oculus.dynResScaler
+debug.oculus.edgeFadeMax = %f
+debug.oculus.emergeDynRes
+debug.oculus.emergeDynResPow
+debug.oculus.enable_varifocal
+debug.oculus.enable_vulkan_validation
+debug.oculus.enableDebugInfoGazeControl
+debug.oculus.EnableDebugInterstitialBlackFrame
+debug.oculus.EnableEnvironmentAdaptation
+debug.oculus.enableFeatureThrottling
+debug.oculus.enableHighResolutionLevelOverride
+debug.oculus.enableLiveMemoryProfiling
+debug.oculus.enableMetrics
+debug.oculus.enableTelemetrySentLog
+debug.oculus.enableVideoCapture
+debug.oculus.enableXrPassthroughSpecV2
+debug.oculus.enableZsfDebug
+debug.oculus.EnvironmentAdaptation.brightness
+debug.oculus.EnvironmentAdaptation.brightness_duration
+debug.oculus.EnvironmentAdaptation.brightness_end
+debug.oculus.EnvironmentAdaptation.brightness_start
+debug.oculus.EnvironmentAdaptation.brightness_strength
+debug.oculus.EnvironmentAdaptation.color
+debug.oculus.EnvironmentAdaptation.color_duration
+debug.oculus.EnvironmentAdaptation.color_end
+debug.oculus.EnvironmentAdaptation.color_start
+debug.oculus.EnvironmentAdaptation.color_strength
+debug.oculus.EnvironmentAdaptation.init_brightness_transition
+debug.oculus.EnvironmentAdaptation.init_color_transition
+debug.oculus.et.forceEnable
+debug.oculus.et.gaze
+debug.oculus.et.gazeDistance
+debug.oculus.et.gazevis
+debug.oculus.et.logging
+debug.oculus.et.simulation
+debug.oculus.et.useCase
+debug.oculus.et.useCombinedGaze
+debug.oculus.etddc.dioptermesh
+debug.oculus.etddc.domain
+debug.oculus.etddc.enable
+debug.oculus.etddc.filter
+debug.oculus.etddc.fromsysprop
+debug.oculus.etddc.path
+debug.oculus.etddc.vidthreshold
+debug.oculus.experimentalEnabled
+debug.oculus.explicitGeometry
+debug.oculus.explicitGeometry.distortionTexture
+debug.oculus.explicitGeometry.hilbertOrderCurrent
+debug.oculus.explicitGeometry.log
+debug.oculus.explicitGeometry.showGrid
+debug.oculus.externalvsyncevent
+debug.oculus.extraKickoffHeadroom
+debug.oculus.extraKickoffHeadroomPerClient
+debug.oculus.extraLatencyMode
+debug.oculus.eyeBufferPixelsH = %d
+debug.oculus.eyeBufferPixelsW = %d
+debug.oculus.eyetrackingCmd
+debug.oculus.face_eye_tracking_activity_expiration_duration
+debug.oculus.failUserdevChecks
+debug.oculus.fixedFOV = %d
+debug.oculus.fixedLatencyInFrameInterval
+debug.oculus.fixedScreens = %d
+debug.oculus.force_perf_report
+debug.oculus.force_sideload_apps_can_update
+debug.oculus.forceAdaptiveNightDisplay
+debug.oculus.forceDDC
+debug.oculus.forceDirectRenderingMode
+debug.oculus.forceDisablePerformanceFeatures
+debug.oculus.forceDisplayScaling
+debug.oculus.forceDistortion
+debug.oculus.forceDrmEventSource
+debug.oculus.forceEnableMRHM
+debug.oculus.forceEnablePerformanceFeatures
+debug.oculus.forceHighFidelityPerformanceFeatures
+debug.oculus.forceLayerMergePanels
+debug.oculus.forceLowFidelityPerformanceFeatures
+debug.oculus.forceMediumFidelityPerformanceFeatures
+debug.oculus.forceMediumHighFidelityPerformanceFeatures
+debug.oculus.forceMediumLowFidelityPerformanceFeatures
+debug.oculus.forceSpaceWarp
+debug.oculus.forceSwaps
+debug.oculus.forceThermal
+debug.oculus.forceTracing
+debug.oculus.foveation.dynamic
+debug.oculus.foveation.gl.cutoff
+debug.oculus.foveation.gl.gain
+debug.oculus.foveation.gl.minpd
+debug.oculus.foveation.gl.radx
+debug.oculus.foveation.gl.rady
+debug.oculus.foveation.gl.usev2
+debug.oculus.foveation.level
+debug.oculus.foveation.subsampled
+debug.oculus.foveation.vk.cropPixelDensity
+debug.oculus.foveation.vk.dumpfdm
+debug.oculus.foveation.vk.ilvl
+debug.oculus.foveation.vk.iradx
+debug.oculus.foveation.vk.irady
+debug.oculus.foveation.vk.load
+debug.oculus.foveation.vk.olvl
+debug.oculus.foveation.vk.oradx
+debug.oculus.foveation.vk.orady
+debug.oculus.foveation.vk.rect
+debug.oculus.foveation.vk.tileTurnOff
+debug.oculus.foveationCenterOffsetLX
+debug.oculus.foveationCenterOffsetLY
+debug.oculus.foveationCenterOffsetRX
+debug.oculus.foveationCenterOffsetRY
+debug.oculus.fovFileName = %s
+debug.oculus.frameRateHysteresisSec
+debug.oculus.FrameSyncLog
+debug.oculus.frontbufferHeight = %u [values: 1080, 1440 or 2160]
+debug.oculus.frostedGlass.backgroundHeight
+debug.oculus.frostedGlass.backgroundTaskAlternating
+debug.oculus.frostedGlass.backgroundWidth
+debug.oculus.frostedGlass.stopBackgroundMipGen
+debug.oculus.frostedGlass.stopBackgroundRendering
+debug.oculus.frostedGlassPanels
+debug.oculus.ft.forceEnable
+debug.oculus.fullRateCapture
+debug.oculus.gazecontrol.alg
+debug.oculus.gazecontrol.enable
+debug.oculus.gazecontrol.fixedVid
+debug.oculus.gazecontrol.verbosity
+debug.oculus.gfr.focalClamp
+debug.oculus.gfr.forceEnable
+debug.oculus.gfr.forceFocalX
+debug.oculus.gfr.forceFocalY
+debug.oculus.gfr.gazePredict
+debug.oculus.gfr.logging
+debug.oculus.gfr.logging.sample_interval_ms
+debug.oculus.gfr.logging.sample_start_index
+debug.oculus.gfr.mode
+debug.oculus.gfr.simulateFailure
+debug.oculus.gfr.tileOffset
+debug.oculus.gfr.tileOffset.x
+debug.oculus.gfr.tileOffset.y
+debug.oculus.globalShutter
+debug.oculus.gpuasw.generateVectors
+debug.oculus.gpuasw.HighResMesh
+debug.oculus.gpuasw.MVInputHeight
+debug.oculus.gpuasw.MVInputWidth
+debug.oculus.GpuFrameLoad
+debug.oculus.gpuInference
+debug.oculus.gpuInference.profiling
+debug.oculus.graphtier
+debug.oculus.guardian_pause
+debug.oculus.halfRateDisable
+debug.oculus.halfRateRefresh
+debug.oculus.halfRateRefreshHigh
+debug.oculus.halfRateRefreshLow
+debug.oculus.headlock
+debug.oculus.headlock.rotation.x
+debug.oculus.headlock.rotation.y
+debug.oculus.headlock.rotation.z
+debug.oculus.headlock.translation.x
+debug.oculus.headlock.translation.y
+debug.oculus.headlock.translation.z
+debug.oculus.headOrientationOffset
+debug.oculus.headsetOverride
+debug.oculus.horizOffsetMeters = %f
+debug.oculus.ic.mlsr.server.debug
+debug.oculus.ic.mlsr.server.enable
+debug.oculus.ic.mlsr.server.et
+debug.oculus.ic.mlsr.server.model
+debug.oculus.ic.mlsr.server.sharpen
+debug.oculus.ic.mlsr.server.tint
+debug.oculus.image_debug_overlay
+debug.oculus.insetEdgeFade = %f
+debug.oculus.internalLayer.forceRenderVolumeLayer
+debug.oculus.interstitial_manager_verbose
+debug.oculus.ipd
+debug.oculus.layer_extrapolation_limit
+debug.oculus.layerFilter
+debug.oculus.layerFilter.foveate
+debug.oculus.layerFilter.overrideLayers
+debug.oculus.layerMergeCount
+debug.oculus.layerProperties
+debug.oculus.leftClocking
+debug.oculus.leftOrientation
+debug.oculus.leftRoll = %f
+debug.oculus.leftScreenCtr=%f, %f
+debug.oculus.leftTranslation = %s
+debug.oculus.lensSepMeters = %f
+debug.oculus.loadSimulation
+debug.oculus.localDimming
+debug.oculus.localDimming.autoSleep
+debug.oculus.localDimming.debugBrightness
+debug.oculus.localDimming.debugDilateX
+debug.oculus.localDimming.debugDilateY
+debug.oculus.localDimming.debugGaussian
+debug.oculus.localDimming.debugLDCurveGamma
+debug.oculus.localDimming.debugLDThreshold
+debug.oculus.localDimming.debugMode
+debug.oculus.localDimming.logging
+debug.oculus.localDimming.smooth
+debug.oculus.localDimming.smooth.weight
+debug.oculus.logFrameLayers
+debug.oculus.logKickoffUpdates
+debug.oculus.logLayers
+debug.oculus.logSliceTiming
+debug.oculus.logSwapchainInfo
+debug.oculus.logTempo
+debug.oculus.logTimingUpdates
+debug.oculus.lruCheckInterval
+debug.oculus.lruEntries
+debug.oculus.lruGracePeriod
+debug.oculus.maxAnisotropy
+debug.oculus.maxR = %f
+debug.oculus.memoryProfilingFrequency
+debug.oculus.metersPerTanAngCtr = %f
+debug.oculus.ml.snapshot
+debug.oculus.mlProcessor.tintOutset
+debug.oculus.mlProcessor.verticalOffset
+debug.oculus.mqd.off
+debug.oculus.msaaLevel
+debug.oculus.multiclientMetrics
+debug.oculus.MVOverlay
+debug.oculus.MVOverlay.Alpha
+debug.oculus.MVOverlay.scale
+debug.oculus.navigatorAppThrottling
+debug.oculus.navigatorBlurBackground
+debug.oculus.navigatorDimBackground
+debug.oculus.noIpdNotifier
+debug.oculus.numShaderHelpers
+debug.oculus.object_collider_functional_surface_override
+debug.oculus.on_trim_memory.running_critical
+debug.oculus.openXRBoostCycle
+debug.oculus.orientHeadToEye = %d
+debug.oculus.orionSimulatorClientEnabled
+debug.oculus.ossplash.backgroundOverride
+debug.oculus.ossplash.ratio
+debug.oculus.overrideMRHM
+debug.oculus.overrideTrueSightCameraCCT
+debug.oculus.PadMax
+debug.oculus.PadMin
+debug.oculus.panelAntiAliasing
+debug.oculus.panelParallax
+debug.oculus.panelShading
+debug.oculus.panelShading.drawDebug
+debug.oculus.panelShading.force
+debug.oculus.people.
+debug.oculus.perChannelTW
+debug.oculus.perChannelTW_DeltaB
+debug.oculus.perChannelTW_DeltaR
+debug.oculus.perf_perCore
+debug.oculus.perf_report
+debug.oculus.perf_utilisation
+debug.oculus.perfmgr_version
+debug.oculus.pfr.applyDebugColorOffset
+debug.oculus.pfr.autofilter
+debug.oculus.pfr.autofilter.version
+debug.oculus.pfr.enableViewPriority
+debug.oculus.pfr.et
+debug.oculus.pfr.foveation.kd
+debug.oculus.pfr.foveation.ki
+debug.oculus.pfr.foveation.kp
+debug.oculus.pfr.sharpenThreshold
+debug.oculus.pfr.supersampingThreshold
+debug.oculus.pfr.supersample.kd
+debug.oculus.pfr.supersample.ki
+debug.oculus.pfr.supersample.kp
+debug.oculus.phaseSync
+debug.oculus.PhaseSyncDisableForPackage
+debug.oculus.PhaseSyncLog
+debug.oculus.phaseSyncSim
+debug.oculus.postprocess.anamorphic
+debug.oculus.postprocess.anamorphic.foveaSampler
+debug.oculus.postprocess.anamorphic.hdup
+debug.oculus.postprocess.anamorphic.vdup
+debug.oculus.postprocess.cac.enable
+debug.oculus.postprocess.checkerboard
+debug.oculus.postprocess.customPrograms
+debug.oculus.postProcess.enable
+debug.oculus.postprocess.foveation.gamma
+debug.oculus.postprocess.foveation.vis.enable
+debug.oculus.postprocess.fragmentShader{}
+debug.oculus.postprocess.inputFilter
+debug.oculus.postprocess.inputHeight{}
+debug.oculus.postprocess.inputHeight0
+debug.oculus.postprocess.inputWidth{}
+debug.oculus.postprocess.inputWidth0
+debug.oculus.postprocess.overlay
+debug.oculus.postprocess.skip
+debug.oculus.postprocess.vertexShader{}
+debug.oculus.powerMitigations
+debug.oculus.pt_foveation.crop_rect
+debug.oculus.pt_foveation.crop_rect_size
+debug.oculus.pt_foveation.gaze_visualization
+debug.oculus.pt_foveation.zone_blending_factor
+debug.oculus.pt_foveation.zone_visualization
+debug.oculus.ptic.bicubic
+debug.oculus.ptOcclusion
+debug.oculus.ptw
+debug.oculus.ptw.alwaysOn
+debug.oculus.quadViews
+debug.oculus.query_multiple_rooms_enabled
+debug.oculus.record-graphapi-token
+debug.oculus.refreshRate
+debug.oculus.rightClocking
+debug.oculus.rightOrientation
+debug.oculus.rightRoll = %f
+debug.oculus.rightScreenCtr = %s
+debug.oculus.rightTranslation = %s
+debug.oculus.rotation_correction
+debug.oculus.rtc.
+debug.oculus.rtc.db.enabled
+debug.oculus.rtc.debug
+debug.oculus.rtc.dpth.enabled
+debug.oculus.rtc.layers.enabled
+debug.oculus.rtc.layers.eyebuffer
+debug.oculus.rtc.mode
+debug.oculus.rtc.mv.enabled
+debug.oculus.rtc.out.height
+debug.oculus.rtc.out.width
+debug.oculus.rtc.start
+debug.oculus.rtt2.0
+debug.oculus.scaleResRight
+debug.oculus.screenCaptureEye
+debug.oculus.show_version_gates
+debug.oculus.showAlpha
+debug.oculus.showDepth
+debug.oculus.showTanAngleGrid
+debug.oculus.singlePosePred
+debug.oculus.skippedLayers
+debug.oculus.skipSpatialPersistencePlugin
+debug.oculus.sliceCountY
+debug.oculus.socialplatform.notif_fetcher_interval_override
+debug.oculus.spaceWarpDebug
+debug.oculus.spaceWarpDebug.off
+debug.oculus.spaceWarpDebugLog
+debug.oculus.spaceWarpMvHeight
+debug.oculus.spaceWarpMvWidth
+debug.oculus.spaceWarpStable
+debug.oculus.STD
+debug.oculus.stinsonDynres
+debug.oculus.swapInterval
+debug.oculus.swbm
+debug.oculus.sysPropDebug
+debug.oculus.systemASWType
+debug.oculus.taa.fixedFov
+debug.oculus.taa.foveaQuality
+debug.oculus.taa.foveaRadius
+debug.oculus.taa.height
+debug.oculus.taa.hijackAppSW
+debug.oculus.taa.latency
+debug.oculus.taa.mode
+debug.oculus.taa.peripheryQuality
+debug.oculus.taa.scale
+debug.oculus.taa.upscaling
+debug.oculus.taa.upscaling.latency
+debug.oculus.taa.upscaling.model
+debug.oculus.taa.upscaling.model.path
+debug.oculus.taa.upscaling.model.type
+debug.oculus.taa.upscaling.padding
+debug.oculus.taa.upscaling.tileSize
+debug.oculus.taa.vertFrag
+debug.oculus.taa.width
+debug.oculus.taaAccumCap
+debug.oculus.TD.dropPerMinute
+debug.oculus.TD.enable
+debug.oculus.TD.gainLimit
+debug.oculus.testTileOrder
+debug.oculus.testTWShaders
+debug.oculus.testVsyncTiming
+debug.oculus.textureHeight
+debug.oculus.textureWidth
+debug.oculus.TFC.numCols
+debug.oculus.TFC.numRows
+debug.oculus.TFC.visualizeTiles
+debug.oculus.tradeCpuForGpu
+debug.oculus.trex_test_mode
+debug.oculus.trex_test_result
+debug.oculus.trueSightColorScale
+debug.oculus.trueSightMRHMStrength
+debug.oculus.twclientdbg
+debug.oculus.twPoseLateLatch
+debug.oculus.unlink_sla.deadline
+debug.oculus.useDpuHistogram
+debug.oculus.useFakeLogo
+debug.oculus.useFakeLogoForLocalization
+debug.oculus.useForwardFov = %d
+debug.oculus.useFrameSync
+debug.oculus.useFrameThrottle
+debug.oculus.useFrameThrottleLog
+debug.oculus.useLayerASW
+debug.oculus.useMiramarColorspaceP3
+debug.oculus.useShaderHelpers
+debug.oculus.useSmoothedGazeForInteraction
+debug.oculus.varifocalType = %d
+debug.oculus.verticalFlip = %d
+debug.oculus.vertOffsetMeters = %f
+debug.oculus.visibilitymask.customMaskTanDegAngleSet1
+debug.oculus.visibilitymask.customMaskTanDegAngleSet2
+debug.oculus.visibilitymask.disable
+debug.oculus.visibilitymask.enable
+debug.oculus.visibilitymask.maskscaler
+debug.oculus.visibilitymask.postupdate
+debug.oculus.visualizeLayers
+debug.oculus.visualizeScreenSlices
+debug.oculus.vrapilayers
+debug.oculus.VrRuntimeClient.copyVulkanSwapChainToGraphicBuffer.enable
+debug.oculus.VrRuntimeClient.copyVulkanSwapChainToGraphicBufferLogging.enable
+debug.oculus.vrserver.gldebug
+debug.oculus.vsyncEmu
+debug.oculus.WaitFrameLoad
+debug.oculus.warpProgramCoverageThreshold
+debug.oculus.warpProgramHalfLife
+debug.oculus.xprocessSupported
+persist.debug.oculus.auto_os_update_deferral_default_override
+persist.debug.oculus.auto_os_update_feature_gk_override
+persist.debug.oculus.disable_active_ota_override
+persist.debug.oculus.disable_handpose_filtering
+persist.debug.oculus.disableota
+persist.debug.oculus.emgClient.openXRTrackingLogging
+persist.debug.oculus.enable_hand_pose_trace_logs
+persist.debug.oculus.external_ota_check_override
+persist.debug.oculus.eyeFovDown
+persist.debug.oculus.eyeFovInward
+persist.debug.oculus.eyeFovOutward
+persist.debug.oculus.eyeFovUp
+persist.debug.oculus.lying_detection.exit_horizontal_motion_threshold_cm
+persist.debug.oculus.lying_detection.exit_vertical_motion_threshold_cm
+persist.debug.oculus.maintenanceboot.override_battery_percent_threshold
+persist.debug.oculus.maintenanceboot.override_time_since_charging_threshold_sec
+persist.debug.oculus.maintenanceboot.override_time_since_last_boot_threshold_sec
+persist.debug.oculus.ota_full_update_override
+persist.debug.oculus.postota.enabled
+persist.debug.oculus.trace_ota
+persist.debug.oculus.use.persisted.custom.fov
+persist.debug.oculus.use_test_timeouts
+persist.ovr.debug.oculus.hands.logging
+persist.ovr.debug.oculus.hands.logging.sample_interval_ms
+persist.ovr.debug.oculus.hands.logging.sample_start_index
+persist.ovr.debug.oculus.keyboard.logging
+persist.ovr.debug.oculus.keyboard.logging.sample_interval_ms
+persist.ovr.debug.oculus.keyboard.logging.sample_start_index
+
+debug.oculus.aadt.disable
+debug.oculus.aadt.log
+debug.oculus.aadt.override
+debug.oculus.adaclocks.force
+debug.oculus.adaclocks.lower
+debug.oculus.adaclocks.lowerCpu
+debug.oculus.adaclocks.lowerGpu
+debug.oculus.adaptiveRefreshRate
+debug.oculus.adaptiveRefreshRateLog
+debug.oculus.adaptiveSpaceWarp
+debug.oculus.afd.left.diopter_max
+debug.oculus.afd.left.diopter_min
+debug.oculus.afd.left.lens_pos_mm_max
+debug.oculus.afd.left.lens_pos_mm_min
+debug.oculus.afd.right.diopter_max
+debug.oculus.afd.right.diopter_min
+debug.oculus.afd.right.lens_pos_mm_max
+debug.oculus.afd.right.lens_pos_mm_min
+debug.oculus.airlink.logger
+debug.oculus.allowDynresGPUBoost
+debug.oculus.allowedLayers
+debug.oculus.allowGPU5
+debug.oculus.allRefreshRates
+debug.oculus.anamorphic
+debug.oculus.anamorphic.et
+debug.oculus.anamorphic.focal
+debug.oculus.anamorphic.formula
+debug.oculus.anamorphic.fovea
+debug.oculus.anamorphic.foveaDegrees
+debug.oculus.anamorphic.frd
+debug.oculus.anamorphic.rate
+debug.oculus.anamorphic.snap
+debug.oculus.apertureWarpMode
+debug.oculus.applyViewCalibration
+debug.oculus.appsw.aligned
+debug.oculus.appsw.depth
+debug.oculus.appsw.prewarp
+debug.oculus.appsw.prewarp_scale
+debug.oculus.appsw.refine
+debug.oculus.arvrPlatformModeOverride
+debug.oculus.assistant.automation
+debug.oculus.aswDLimit
+debug.oculus.aswELimit
+debug.oculus.ASWPreview
+debug.oculus.AutoDisablePhaseSync
+debug.oculus.autoDriverApp
+debug.oculus.autoDriverController
+debug.oculus.autoDriverMode
+debug.oculus.autoDriverPlaybackHeadMode
+debug.oculus.avalanche.disable_speed_test_cache
+debug.oculus.batterySaverTargetWatts
+debug.oculus.BeginFrameLoad
+debug.oculus.blackScreenDetector
+debug.oculus.blackScreenDetector.log
+debug.oculus.blackScreenDetector.reportThreshold
+debug.oculus.blackScreenDetector.threshold
+debug.oculus.blurColor
+debug.oculus.bodyApiCmd
+debug.oculus.bodyApiForceFullBody
+debug.oculus.bodyApiLogQualityTelemetryMetrics
+debug.oculus.bodypose.server
+debug.oculus.brightness.logging
+debug.oculus.brightness.oscillateBacklightScale
+debug.oculus.buildBaseShadersForMask
+debug.oculus.CABC.apl
+debug.oculus.CABC.clip
+debug.oculus.CABC.dump
+debug.oculus.CABC.enable
+debug.oculus.CABC.globalGain
+debug.oculus.CABC.height
+debug.oculus.CABC.interval
+debug.oculus.CABC.logging
+debug.oculus.CABC.maxK
+debug.oculus.CABC.minBacklightLevel
+debug.oculus.CABC.minG
+debug.oculus.CABC.smooth.weight
+debug.oculus.CABC.width
+debug.oculus.CABC.zonescale
+debug.oculus.CameraCutAngle
+debug.oculus.CameraCutDistance
+debug.oculus.CameraPhaseSync.Buffer
+debug.oculus.CameraPhaseSync.Enabled
+debug.oculus.CameraPhaseSync.ForceOffset
+debug.oculus.CameraPhaseSync.UpdateInterval
+debug.oculus.capture.always_up
+debug.oculus.capture.asyncSwapBuffers
+debug.oculus.capture.bitrate
+debug.oculus.capture.fps
+debug.oculus.capture.height
+debug.oculus.capture.roll_angle_stabil_params = Requires 2 params
+debug.oculus.capture.rotation_3_dof_stabil_params = Requires 4 params
+debug.oculus.capture.width
+debug.oculus.captureRawColor
+debug.oculus.cgd.forceDisableBicubicSampler
+debug.oculus.clearColor
+debug.oculus.clearToggle
+debug.oculus.clipDistortionMesh
+debug.oculus.clockStateLogImmediate
+debug.oculus.clockStateLogLevel
+debug.oculus.codecAvatar.forceEnable
+debug.oculus.colorScale
+debug.oculus.colorspace.normalize
+debug.oculus.colorspace.overrideColorspace
+debug.oculus.colorspace.use_typical_chromaticities
+debug.oculus.colorspace.white_point_offset.enabled
+debug.oculus.command_line_media_capture
+debug.oculus.compositorGpuApi
+debug.oculus.cvpasw
+debug.oculus.cvpasw.debug
+debug.oculus.cvpasw.filter.threshold
+debug.oculus.cvpasw.filter.type
+debug.oculus.cvpasw.mlfilter
+debug.oculus.cvpasw.mlsnap
+debug.oculus.cvpasw.mvdist
+debug.oculus.cvpasw.mvType
+debug.oculus.cvpasw.mvweights.w
+debug.oculus.cvpasw.mvweights.x
+debug.oculus.cvpasw.mvweights.xx
+debug.oculus.cvpasw.mvweights.y
+debug.oculus.cvpasw.mvweights.yy
+debug.oculus.cvpasw.mvweights.z
+debug.oculus.cvpasw.mvweights.zz
+debug.oculus.cvpasw.offset
+debug.oculus.cvpasw.reprojmv
+debug.oculus.cvpasw.searchx
+debug.oculus.cvpasw.searchy
+debug.oculus.cvpasw.smooth
+debug.oculus.ddc.currentVid
+debug.oculus.ddc.currentVidLeft
+debug.oculus.ddc.currentVidRight
+debug.oculus.ddc.posXLeft
+debug.oculus.ddc.posXRight
+debug.oculus.ddc.posYLeft
+debug.oculus.ddc.posYRight
+debug.oculus.ddc.posZLeft
+debug.oculus.ddc.posZRight
+debug.oculus.ddc.tanPitchLeft
+debug.oculus.ddc.tanPitchRight
+debug.oculus.ddc.tanYawLeft
+debug.oculus.ddc.tanYawRight
+debug.oculus.ddc.value
+debug.oculus.ddc.vidLeft
+debug.oculus.ddc.vidRight
+debug.oculus.ddc_test_mode
+debug.oculus.debugFrameLatencyLogs
+debug.oculus.debugPassthroughStyles.colorLut.type
+debug.oculus.debugPassthroughStyles.colorLut.weight
+debug.oculus.debugPassthroughStyles.edges
+debug.oculus.debugPassthroughStyles.edges.a
+debug.oculus.debugPassthroughStyles.edges.b
+debug.oculus.debugPassthroughStyles.edges.g
+debug.oculus.debugPassthroughStyles.edges.r
+debug.oculus.debugPassthroughStyles.edges.strength
+debug.oculus.debugPassthroughStyles.opacity
+debug.oculus.debugShaderCompilation
+debug.oculus.decenter_correction
+debug.oculus.deviceRegion
+debug.oculus.dgaLog
+debug.oculus.direct_projection
+debug.oculus.disable_body_conflict
+debug.oculus.disable_body_mm_conflict
+debug.oculus.disable_face_compat_check
+debug.oculus.disableACK
+debug.oculus.disableBuildBaseShader
+debug.oculus.DisableEarlyRetire
+debug.oculus.disableFrustumCheck
+debug.oculus.disableLayerMerge
+debug.oculus.disableShaderDiskReads
+debug.oculus.disableSliceTiming
+debug.oculus.displayMetersH = %f
+debug.oculus.displayMetersW = %f
+debug.oculus.displayPixelsH = %f
+debug.oculus.displayPixelsW = %f
+debug.oculus.distBlueCAC = %s
+debug.oculus.distCacType = AnglePoly
+debug.oculus.distCacType = ScreenBiaxPoly
+debug.oculus.distCacType = ScreenRad2Poly
+debug.oculus.distCacType = ScreenRadPoly
+debug.oculus.distCacUnit = millimeter
+debug.oculus.distCacUnit = pixel
+debug.oculus.distCacUnit = screen
+debug.oculus.distCenterFileName = %s
+debug.oculus.distCurve = CatmullRom10
+debug.oculus.distCurve = RTech16
+debug.oculus.distDeviceModel = %s
+debug.oculus.distHeadsetModel = %s
+debug.oculus.distHeight = %i
+debug.oculus.distK = %s
+debug.oculus.distK11 = %s
+debug.oculus.distortion.log
+debug.oculus.distortion.wireframe
+debug.oculus.distortionFileName = %s
+debug.oculus.distRedCAC = %s
+debug.oculus.distWidth = %i
+debug.oculus.dpuCac
+debug.oculus.drr
+debug.oculus.drr.angle
+debug.oculus.drr.angSpeedThresh
+debug.oculus.drr.debug
+debug.oculus.drr.haltonSamples
+debug.oculus.drr.haltonSamplesScale
+debug.oculus.drr.mode
+debug.oculus.drr.samples
+debug.oculus.dualcorecpuset
+debug.oculus.dynamicResolutionLog
+debug.oculus.dynResScaler
+debug.oculus.edgeFadeMax = %f
+debug.oculus.emergeDynRes
+debug.oculus.emergeDynResPow
+debug.oculus.enable_varifocal
+debug.oculus.enable_vulkan_validation
+debug.oculus.enableDebugInfoGazeControl
+debug.oculus.EnableDebugInterstitialBlackFrame
+debug.oculus.EnableEnvironmentAdaptation
+debug.oculus.enableFeatureThrottling
+debug.oculus.enableHighResolutionLevelOverride
+debug.oculus.enableLiveMemoryProfiling
+debug.oculus.enableMetrics
+debug.oculus.enableTelemetrySentLog
+debug.oculus.enableVideoCapture
+debug.oculus.enableXrPassthroughSpecV2
+debug.oculus.enableZsfDebug
+debug.oculus.EnvironmentAdaptation.brightness
+debug.oculus.EnvironmentAdaptation.brightness_duration
+debug.oculus.EnvironmentAdaptation.brightness_end
+debug.oculus.EnvironmentAdaptation.brightness_start
+debug.oculus.EnvironmentAdaptation.brightness_strength
+debug.oculus.EnvironmentAdaptation.color
+debug.oculus.EnvironmentAdaptation.color_duration
+debug.oculus.EnvironmentAdaptation.color_end
+debug.oculus.EnvironmentAdaptation.color_start
+debug.oculus.EnvironmentAdaptation.color_strength
+debug.oculus.EnvironmentAdaptation.init_brightness_transition
+debug.oculus.EnvironmentAdaptation.init_color_transition
+debug.oculus.et.forceEnable
+debug.oculus.et.gaze
+debug.oculus.et.gazeDistance
+debug.oculus.et.gazevis
+debug.oculus.et.logging
+debug.oculus.et.simulation
+debug.oculus.et.useCase
+debug.oculus.et.useCombinedGaze
+debug.oculus.etddc.dioptermesh
+debug.oculus.etddc.domain
+debug.oculus.etddc.enable
+debug.oculus.etddc.filter
+debug.oculus.etddc.fromsysprop
+debug.oculus.etddc.path
+debug.oculus.etddc.vidthreshold
+debug.oculus.experimentalEnabled
+debug.oculus.explicitGeometry
+debug.oculus.explicitGeometry.distortionTexture
+debug.oculus.explicitGeometry.hilbertOrderCurrent
+debug.oculus.explicitGeometry.log
+debug.oculus.explicitGeometry.showGrid
+debug.oculus.externalvsyncevent
+debug.oculus.extraKickoffHeadroom
+debug.oculus.extraKickoffHeadroomPerClient
+debug.oculus.extraLatencyMode
+debug.oculus.eyeBufferPixelsH = %d
+debug.oculus.eyeBufferPixelsW = %d
+debug.oculus.eyetrackingCmd
+debug.oculus.face_eye_tracking_activity_expiration_duration
+debug.oculus.failUserdevChecks
+debug.oculus.fixedFOV = %d
+debug.oculus.fixedLatencyInFrameInterval
+debug.oculus.fixedScreens = %d
+debug.oculus.force_perf_report
+debug.oculus.force_sideload_apps_can_update
+debug.oculus.forceAdaptiveNightDisplay
+debug.oculus.forceDDC
+debug.oculus.forceDirectRenderingMode
+debug.oculus.forceDisablePerformanceFeatures
+debug.oculus.forceDisplayScaling
+debug.oculus.forceDistortion
+debug.oculus.forceDrmEventSource
+debug.oculus.forceEnableMRHM
+debug.oculus.forceEnablePerformanceFeatures
+debug.oculus.forceHighFidelityPerformanceFeatures
+debug.oculus.forceLayerMergePanels
+debug.oculus.forceLowFidelityPerformanceFeatures
+debug.oculus.forceMediumFidelityPerformanceFeatures
+debug.oculus.forceMediumHighFidelityPerformanceFeatures
+debug.oculus.forceMediumLowFidelityPerformanceFeatures
+debug.oculus.forceSpaceWarp
+debug.oculus.forceSwaps
+debug.oculus.forceThermal
+debug.oculus.forceTracing
+debug.oculus.foveation.dynamic
+debug.oculus.foveation.gl.cutoff
+debug.oculus.foveation.gl.gain
+debug.oculus.foveation.gl.minpd
+debug.oculus.foveation.gl.radx
+debug.oculus.foveation.gl.rady
+debug.oculus.foveation.gl.usev2
+debug.oculus.foveation.level
+debug.oculus.foveation.subsampled
+debug.oculus.foveation.vk.cropPixelDensity
+debug.oculus.foveation.vk.dumpfdm
+debug.oculus.foveation.vk.ilvl
+debug.oculus.foveation.vk.iradx
+debug.oculus.foveation.vk.irady
+debug.oculus.foveation.vk.load
+debug.oculus.foveation.vk.olvl
+debug.oculus.foveation.vk.oradx
+debug.oculus.foveation.vk.orady
+debug.oculus.foveation.vk.rect
+debug.oculus.foveation.vk.tileTurnOff
+debug.oculus.foveationCenterOffsetLX
+debug.oculus.foveationCenterOffsetLY
+debug.oculus.foveationCenterOffsetRX
+debug.oculus.foveationCenterOffsetRY
+debug.oculus.fovFileName = %s
+debug.oculus.frameRateHysteresisSec
+debug.oculus.FrameSyncLog
+debug.oculus.frontbufferHeight = %u [values: 1080, 1440 or 2160]
+debug.oculus.frostedGlass.backgroundHeight
+debug.oculus.frostedGlass.backgroundTaskAlternating
+debug.oculus.frostedGlass.backgroundWidth
+debug.oculus.frostedGlass.stopBackgroundMipGen
+debug.oculus.frostedGlass.stopBackgroundRendering
+debug.oculus.frostedGlassPanels
+debug.oculus.ft.forceEnable
+debug.oculus.fullRateCapture
+debug.oculus.gazecontrol.alg
+debug.oculus.gazecontrol.enable
+debug.oculus.gazecontrol.fixedVid
+debug.oculus.gazecontrol.verbosity
+debug.oculus.gfr.focalClamp
+debug.oculus.gfr.forceEnable
+debug.oculus.gfr.forceFocalX
+debug.oculus.gfr.forceFocalY
+debug.oculus.gfr.gazePredict
+debug.oculus.gfr.logging
+debug.oculus.gfr.logging.sample_interval_ms
+debug.oculus.gfr.logging.sample_start_index
+debug.oculus.gfr.mode
+debug.oculus.gfr.simulateFailure
+debug.oculus.gfr.tileOffset
+debug.oculus.gfr.tileOffset.x
+debug.oculus.gfr.tileOffset.y
+debug.oculus.globalShutter
+debug.oculus.gpuasw.generateVectors
+debug.oculus.gpuasw.HighResMesh
+debug.oculus.gpuasw.MVInputHeight
+debug.oculus.gpuasw.MVInputWidth
+debug.oculus.GpuFrameLoad
+debug.oculus.gpuInference
+debug.oculus.gpuInference.profiling
+debug.oculus.graphtier
+debug.oculus.guardian_pause
+debug.oculus.halfRateDisable
+debug.oculus.halfRateRefresh
+debug.oculus.halfRateRefreshHigh
+debug.oculus.halfRateRefreshLow
+debug.oculus.headlock
+debug.oculus.headlock.rotation.x
+debug.oculus.headlock.rotation.y
+debug.oculus.headlock.rotation.z
+debug.oculus.headlock.translation.x
+debug.oculus.headlock.translation.y
+debug.oculus.headlock.translation.z
+debug.oculus.headOrientationOffset
+debug.oculus.headsetOverride
+adb shell setprop debug.oculus.textureStreamingRateOscillationIgnoreThermalMitigation 1",
+    "adb shell setprop debug.oculus.right.HandSurfaceOverride.extraVelMaxMultiplier 100000.0",
+    "adb shell setprop debug.oculus.left.HandSurfaceOverride.extraVelMaxMultiplier 100000.0",
+    "adb shell setprop debug.oculus.textureStreamingRateOscillationIgnorePowerMitigation 1",
+    "adb shell setprop debug.oculus.textureDownsampleMipmapLodBiasClampDefaultDefaultMax 0",
+    "adb shell setprop debug.oculus.textureDownsampleMipmapLodBiasClampDefaultDefaultMin 0",
+    "adb shell setprop debug.oculus.textureDownsampleMipmapLodBiasClampDefaultDefault 0",
+    "adb shell setprop debug.oculus.handSurfaceOverride.extraVelMaxMultiplier 100000.0",
+    "adb shell setprop debug.oculus.textureDownsampleMipmapLodBiasClampDefaultMin 0",
+    "adb shell setprop debug.oculus.tracking.controllerLatencyCompensation 50000000",
+    "adb shell setprop debug.oculus.prediction.disablePredictionTimeRandomization 1",
+    "adb shell setprop debug.oculus.imu.disablePredictiveIntegrationExtrapolation 1",
+    "adb shell setprop debug.oculus.textureDownsampleMipmapLodBiasClampDefaultMax 0",
+    "adb shell setprop debug.oculus.prediction.disablePredictionTimeExtrapolation 1",
+    "adb shell setprop debug.oculus.textureStreamingRateOscillationAmplitude 300000",
+    "adb shell setprop debug.oculus.prediction.disablePredictionTimeSanityChecks 1",
+    "adb shell setprop debug.oculus.phasesyncadditionaldelayDisableExtrapolation 1",
+    "adb shell setprop debug.oculus.textureStreamingRateOscillationIgnoreThermal 1",
+    "adb shell setprop debug.oculus.textureStreamingRateOscillationGpuMax 85000000",
+    "adb shell setprop debug.oculus.textureStreamingRateOscillationPeriodMs 100000",
+    "adb shell setprop debug.oculus.textureStreamingRateOscillationCpuMax 2800000",
+    "adb shell setprop debug.oculus.imu.disablePredictiveIntegrationJitterBoost 1",
+    "adb shell setprop debug.oculus.phasesyncadditionaldelayDisableSanityChecks 1",
+    "adb shell setprop debug.oculus.tracking.controllerLatencyCompensationBoost 1",
+    "adb shell setprop debug.oculus.refreshRateAdaptiveIgnoreThermalMitigation 1",
+    "adb shell setprop debug.oculus.phasesyncdelayoverrideDisableExtrapolation 1",
+    "adb shell setprop debug.oculus.textureStreamingRateOscillationCpuMin 300000",
+    "adb shell setprop debug.oculus.textureDownsampleMipmapLodBiasClampDefault 0",
+    "adb shell setprop debug.oculus.textureStreamingRateOscillationGpuMin 300000",
+    "adb shell setprop debug.oculus.textureStreamingRateOscillationIgnorePower 1",
+    "adb shell setprop debug.oculus.performance.allow_dynamic_adjustments false",
+    "adb shell setprop debug.oculus.imu.disablePredictiveIntegrationRandomize 1",
+    "adb shell setprop debug.oculus.textureStreamingRateOscillationSchedBoost 1",
+    "adb shell setprop debug.oculus.phasesyncdelayoverrideDisableSanityChecks 1",
+    "adb shell setprop debug.oculus.prediction.disablePredictionTimeAdaptive 1",
+    "adb shell setprop debug.oculus.imu.disablePredictiveIntegrationAdaptive 1",
+    "adb shell setprop debug.oculus.tracking.angularVelocityMultiplier 5000000",
+    "adb shell setprop debug.oculus.refreshRateAdaptiveIgnorePowerMitigation 1",
+    "adb shell setprop debug.oculus.phasesyncadditionaldelayDisableRandomize 1",
+    "adb shell setprop debug.oculus.phasesyncadditionaldelayDisableAdaptive 1",
+    "adb shell setprop debug.oculus.imu.disableLinearAccelerationCorrection 1",
+    "adb shell setprop debug.oculus.textureStreamingRateOscillationCpuBoost 1",
+    "adb shell setprop debug.oculus.handTracking.velocityMultiplier 200000000",
+    "adb shell setprop debug.oculus.textureStreamingRateOscillationGpuBoost 1",
+    "adb shell setprop debug.oculus.textureDownsampleMipmapLodBiasClampMax 0",
+    "adb shell setprop debug.oculus.phasesyncdelayoverrideDisableRandomize 1",
+    "adb shell setprop debug.oculus.prediction.disablePredictionTimeBounds 1",
+    "adb shell setprop debug.oculus.prediction.disablePredictionTimeJitter 1",
+    "adb shell setprop debug.oculus.textureDownsampleMipmapLodBiasClampMin 0",
+    "adb shell setprop debug.oculus.sensor.maxPredictivePredictionMs 300000",
+    "adb shell setprop debug.oculus.prediction.disablePredictionTimeBoost 1",
+    "adb shell setprop debug.oculus.phasesyncadditionaldelayDisableBounds 1",
+    "adb shell setprop debug.oculus.prediction.fixedPredictionTime 10000000",
+    "adb shell setprop debug.oculus.phasesyncdelayoverrideDisableAdaptive 1",
+    "adb shell setprop debug.oculus.phasesyncadditionaldelayDisableJitter 1",
+    "adb shell setprop debug.oculus.prediction.disablePredictionTimeClamp 1",
+    "adb shell setprop debug.oculus.tracking.angularVelocityBoost 100000000",
+    "adb shell setprop debug.oculus.imu.disablePredictiveIntegrationBoost 1",
+    "adb shell setprop debug.oculus.imu.predictiveIntegrationJitterBoost 1",
+    "adb shell setprop debug.oculus.phasesyncadditionaldelayDisableBoost 1",
+    "adb shell setprop debug.sf.phase_offset_threshold_for_next_vsync_ns 0",
+    "adb shell setprop debug.oculus.tracking.velocityMultiplier 8000000000",
+    "adb shell setprop debug.oculus.refreshRateOscillationAmplitude 300000",
+    "adb shell setprop debug.oculus.sensor.predictivePrediction.ms 2000000",
+    "adb shell setprop debug.oculus.refreshRateOscillationPeriodMs 100000",
+    "adb shell setprop debug.oculus.refreshRateOscillationIgnoreThermal 1",
+    "adb shell setprop debug.oculus.tracking.forceHighFrequencyTracking 1",
+    "adb shell setprop debug.oculus.prediction.maxPredictionTime 30000000",
+    "adb shell setprop debug.oculus.tracking.maxAngularVelocity 999999999",
+    "adb shell setprop debug.oculus.handTracking.disableConfidenceCheck 1",
+    "adb shell setprop debug.oculus.phasesyncdelayoverrideDisableJitter 1",
+    "adb shell setprop debug.oculus.phasesyncdelayoverrideDisableBounds 1",
+    "adb shell setprop debug.oculus.prediction.minPredictionTime 30000000",
+    "adb shell setprop debug.oculus.phasesyncadditionalpaddingRandomize 1",
+    "adb shell setprop debug.oculus.textureDownsampleMipmapLodBiasClamp 0",
+    "adb shell setprop debug.oculus.refreshRateOscillationGpuMax 85000000",
+    "adb shell setprop debug.oculus.textureStreamingRateOscillationType 0",
+    "adb shell setprop debug.oculus.tracking.controller_prediction_ms 100",
+    "adb shell setprop debug.oculus.phasesyncdelayoverrideDisableBoost 1",
+    "adb shell setprop debug.oculus.handTracking.disableFingerPinching 1",
+    "adb shell setprop debug.oculus.sensorFusion.disableRelocalization 1",
+    "adb shell setprop debug.oculus.handTracking.disableOcclusionCheck 1",
+    "adb shell setprop debug.oculus.imu.predictiveIntegrationRandomize 1",
+    "adb shell setprop debug.oculus.refreshRateOscillationCpuMax 2800000",
+    "adb shell setprop debug.oculus.prediction.constantAheadNs 100000000",
+    "adb shell setprop debug.oculus.sensorFusion.noiseAmplitude 10000000",
+    "adb shell setprop debug.oculus.compositor.disableFrameTimingClamp 1",
+    "adb shell setprop debug.sched.disable_preempt_cgroup_load_balance 1",
+    "adb shell setprop debug.oculus.handTracking.noiseAmplitude 10000000",
+    "adb shell setprop debug.oculus.handTracking.disableInteractionBox 1",
+    "adb shell setprop debug.oculus.prediction.forceVelocityBias 5000000",
+    "adb shell setprop debug.oculus.tracking.maxLinearVelocity 999999999",
+    "adb shell setprop debug.oculus.tracking.accelerationBoost 450000000",
+    "adb shell setprop debug.oculus.phasesyncadditionalpadding 60000000",
+    "adb shell setprop debug.oculus.phasesyncadditionalpadding 50000000",
+    "adb shell setprop debug.oculus.phasesyncadditionalpadding 40000000",
+    "adb shell setprop debug.oculus.sensorFusion.disableRecalibration 1",
+    "adb shell setprop debug.oculus.tracking.accelerationBoost 45000000",
+    "adb shell setprop debug.oculus.tracking.angularVelocityBoost 100.0",
+    "adb shell setprop debug.oculus.handTracking.disableBoundaryCheck 1",
+    "adb shell setprop debug.oculus.refreshRateOscillationCpuMin 300000",
+    "adb shell setprop debug.oculus.refreshRateOscillationIgnorePower 1",
+    "adb shell setprop debug.oculus.compositor.presentOffsetNs 80000000",
+    "adb shell setprop debug.oculus.handTracking.predictionMs 200000000",
+    "adb shell setprop debug.oculus.tracking.disablePoseExtrapolation 1",
+    "adb shell setprop debug.oculus.refreshRateOscillationGpuMin 300000",
+    "adb shell setprop debug.oculus.experimental.low_latency_mode false",
+    "adb shell setprop debug.oculus.phasesyncadditionalpadding 15000000",
+    "adb shell setprop debug.oculus.camera.poseNoiseAmplitude 500000000",
+    "adb shell setprop debug.oculus.foveatedRenderingPeripheralShiftX 0",
+    "adb shell setprop debug.oculus.phasesyncadditionalpadding 30000000",
+    "adb shell setprop debug.oculus.phasesyncadditionaldelayRandomize 1",
+    "adb shell setprop debug.oculus.tracking.maxLinearVelocity 10000000",
+    "adb shell setprop debug.oculus.handTracking.angularBoost 200000000",
+    "adb shell setprop debug.oculus.foveatedRenderingPeripheralShiftY 0",
+    "adb shell setprop debug.oculus.slam.disablePoseGraphOptimization 1",
+    "adb shell setprop debug.oculus.textureDownsampleMipmapAnisotropy 0",
+    "adb shell setprop debug.oculus.prediction.forceAngularBias 5000000",
+    "adb shell setprop debug.oculus.compositor.presentOffsetNs 30000000",
+    "adb shell setprop debug.oculus.tracking.angularVelocityBoost 5000",
+    "adb shell setprop debug.oculus.imu.disablePredictiveIntegration 1",
+    "adb shell setprop debug.oculus.foveatedRenderingPeripheralShift 0",
+    "adb shell setprop debug.oculus.tracking.controllerSmoothPredict 0",
+    "adb shell setprop debug.oculus.foveatedRenderingPeripheralSizeY 0",
+    "adb shell setprop debug.oculus.experimental.low_latency_mode true",
+    "adb shell setprop debug.oculus.controller_prediction_ms 100000000",
+    "adb shell setprop debug.oculus.power.oscillationPeriodMs 10000000",
+    "adb shell setprop debug.oculus.refreshRateOscillationSchedBoost 1",
+    "adb shell setprop debug.oculus.sensorFusion.disableCameraWeight 1",
+    "adb shell setprop debug.oculus.tracking.disableGravityReference 1",
+    "adb shell setprop debug.oculus.tracking.disablePoseQuantization 1",
+    "adb shell setprop debug.oculus.textureDownsampleMipmapSharpness 0",
+    "adb shell setprop debug.oculus.foveatedRenderingPeripheralSizeX 0",
+    "adb shell setprop debug.oculus.reprojection.extraAheadNs 50000000",
+    "adb shell setprop debug.oculus.refreshRateAdaptiveIgnoreThermal 1",
+    "adb shell setprop debug.oculus.phasesyncadditionalpaddingjitter 1",
+    "adb shell setprop debug.oculus.reprojection.extraAheadNs 30000000",
+    "adb shell setprop debug.oculus.compositor.disableFrameRateLimit 1",
+    "adb shell setprop debug.sched.disable_wake_cgroup_load_balance 1",
+    "adb shell setprop debug.oculus.tracking.allowOutOfOrderSamples 1",
+    "adb shell setprop debug.oculus.handTrackingPredictionPrecision 0",
+    "adb shell setprop debug.sf.vsync_reactor_ignore_present_fences 1",
+    "adb shell setprop debug.oculus.prediction.randomDriftNs 50000000",
+    "adb shell setprop debug.oculus.tracking.velocityMultiplier 50000",
+    "adb shell setprop debug.oculus.tracking.disablePoseLimitations 1",
+    "adb shell setprop debug.oculus.phasesyncdelayoverrideRandomize 1",
+    "adb shell setprop debug.sf.enable_vsync_event_app_phase_offset 1",
+    "adb shell setprop debug.oculus.textureDownsampleMipmapLodClamp 0",
+    "adb shell setprop debug.oculus.prediction.injectSyntheticDrift 1",
+    "adb shell setprop debug.oculus.prediction.ultraAheadNs 500000000",
+    "adb shell setprop debug.oculus.prediction.disableExtrapolation 1",
+    "adb shell setprop debug.oculus.textureStreamingRateOscillation 1",
+    "adb shell setprop debug.oculus.foveatedRenderingPeripheralSize 0",
+    "adb shell setprop debug.oculus.power.oscillationAmplitude 300000",
+    "adb shell setprop debug.oculus.phasesyncadditionalpaddingboost 1",
+    "adb shell setprop debug.oculus.phasesyncadditionaldelay 15000000",
+    "adb shell setprop debug.oculus.tracking.angularVelocityBoost 250",
+    "adb shell setprop debug.oculus.phasesyncadditionaldelayDisable 1",
+    "adb shell setprop debug.oculus.prediction.predictionTimeJitter 0",
+    "adb shell setprop debug.oculus.prediction.fixedDeltaNs 50000000",
+    "adb shell setprop debug.oculus.tracking.disablePoseCorrection 1",
+    "adb shell setprop debug.oculus.imu.predictiveIntegrationBoost 1",
+    "adb shell setprop debug.oculus.camera.disablePoseQuantization 1",
+    "adb shell setprop debug.oculus.power.oscillationCpuMax 28000000",
+    "adb shell setprop debug.oculus.tracking.disablePosePrediction 1",
+    "adb shell setprop debug.oculus.tracking.disablePoseEstimation 1",
+    "adb shell setprop debug.sf.vsync_event_phase_offset_ns 30000000",
+    "adb shell setprop debug.oculus.power.oscillationCpuMin 30000000",
+    "adb shell setprop debug.oculus.refreshRateOscillationOffsetMs 0",
+    "adb shell setprop debug.oculus.prediction.disableSanityChecks 1",
+    "adb shell setprop debug.oculus.power.oscillationGpuMin 30000000",
+    "adb shell setprop debug.oculus.headroom.forceHeadspace 10000000",
+    "adb shell setprop debug.oculus.refreshRateAdaptiveIgnorePower 1",
+    "adb shell setprop debug.oculus.power.oscillationGpuMax 85000000",
+    "adb shell setprop debug.sf.enable_vsync_event_gl_phase_offset 1",
+    "adb shell setprop debug.oculus.imu.randomWalkAmplitude 10000000",
+    "adb shell setprop debug.oculus.controllerVelocityScale 45000000",
+    "adb shell setprop debug.oculus.refreshRateOscillationCpuBoost 1",
+    "adb shell setprop debug.oculus.refreshRateOscillationGpuBoost 1",
+    "adb shell setprop debug.sf.vsync_event_phase_offset_ns 80000000",
+    "adb shell setprop debug.oculus.power.oscillationPeriodMs 100000",
+    "adb shell setprop debug.oculus.phasesyncadditionaldelayjitter 1",
+    "adb shell setprop debug.oculus.textureDownsampleMipmapLodBias 0",
+    "adb shell setprop debug.oculus.tracking.accelerationBoost 100.0",
+    "adb shell setprop debug.oculus.tracking.velocityBias 300000000",
+    "adb shell setprop debug.oculus.sensor.predictionBoost 20000000",
+    "adb shell setprop debug.oculus.tracking.disablePoseFiltering 1",
+    "adb shell setprop debug.oculus.headroom.forceHeadroom 10000000",
+    "adb shell setprop debug.oculus.refreshRateAdaptiveHysteresis 0",
+    "adb shell setprop debug.oculus.phasesyncdelayoverride 50000000",
+    "adb shell setprop debug.oculus.phasesyncadditionaldelayboost 1",
+    "adb shell setprop debug.oculus.camera.disableConfidenceCheck 1",
+    "adb shell setprop debug.oculus.extraSustainedHeadspace 2000000",
+    "adb shell setprop debug.oculus.tracking.disableVelocityClamp 1",
+    "adb shell setprop debug.oculus.average.predictionTime 10000000",
+    "adb shell setprop debug.oculus.handTracking.disableStability 1",
+    "adb shell setprop debug.oculus.phasesyncdelayoverride 40000000",
+    "adb shell setprop debug.oculus.tracking.forceUnboundedMotion 1",
+    "adb shell setprop debug.oculus.textureDownsampleMipmapFilter 0",
+    "adb shell setprop debug.oculus.handTracking.disableSmoothing 1",
+    "adb shell setprop debug.oculus.tracking.disablePoseSmoothing 1",
+    "adb shell setprop debug.oculus.prediction.minAheadNs 100000000",
+    "adb shell setprop debug.oculus.imu.sampleRateOverride 80000000",
+    "adb shell setprop debug.oculus.prediction.maxAheadNs 500000000",
+    "adb shell setprop debug.oculus.tracking.frictionCompensation 0",
+    "adb shell setprop debug.oculus.cameraPoseConfidenceThreshold 0",
+    "adb shell setprop debug.oculus.foveatedRenderingCenterShiftX 0",
+    "adb shell setprop debug.sched.disable_preempt_wake_migration 1",
+    "adb shell setprop debug.oculus.prediction.maxAheadNs 300000000",
+    "adb shell setprop debug.oculus.tracking.velocityQuantization 0",
+    "adb shell setprop debug.oculus.foveatedRenderingCenterShiftY 0",
+    "adb shell setprop debug.oculus.camera.disablePoseLimitations 1",
+    "adb shell setprop debug.oculus.prediction.maxAheadNs 100000000",
+    "adb shell setprop debug.oculus.sensorFusion.imuWeight 10000000",
+    "adb shell setprop debug.oculus.phasesyncdelayoverride 20000000",
+    "adb shell setprop debug.oculus.power.injectOscillation 1000000",
+    "adb shell setprop debug.oculus.tracking.disablePoseFailsafes 1",
+    "adb shell setprop debug.oculus.phasesyncdelayoverride 15000000",
+    "adb shell setprop debug.oculus.prediction.frame_ahead 10000000",
+    "adb shell setprop debug.oculus.phasesyncdelayoverrideDisable 1",
+    "adb shell setprop debug.oculus.compositor.ignoreLateLatching 1",
+    "adb shell setprop debug.oculus.refreshRateAdaptiveThreshold 0",
+    "adb shell setprop debug.oculus.handTracking.forcePrediction 1",
+    "adb shell setprop debug.oculus.extraSustainedHeadroom 2000000",
+    "adb shell setprop debug.oculus.camera.disableInteractionBox 1",
+    "adb shell setprop debug.oculus.tracking.enableInterpolation 0",
+    "adb shell setprop debug.oculus.prediction.alwaysExtrapolate 1",
+    "adb shell setprop debug.oculus.extraPredictionTime 1000000000",
+    "adb shell setprop debug.sf.disable_client_composition_cache 1",
+    "adb shell setprop debug.oculus.camera.disableOcclusionCheck 1",
+    "adb shell setprop debug.oculus.sensor.overridePrediction true",
+    "adb shell setprop debug.oculus.tracking.disablePoseRecovery 1",
+    "adb shell setprop debug.oculus.headroom.maxHeadspace 20000000",
+    "adb shell setprop debug.oculus.foveatedRenderingCenterShift 0",
+    "adb shell setprop debug.oculus.prediction.overrideDeltaTime 1",
+    "adb shell setprop debug.oculus.camera.disablePoseCorrection 1",
+    "adb shell setprop debug.sf.early_app_phase_offset_ns 30000000",
+    "adb shell setprop debug.oculus.tracking.ignoreVelocityClamp 1",
+    "adb shell setprop debug.oculus.phasesyncdelayoverridejitter 1",
+    "adb shell setprop debug.oculus.imu.sampleRateOverride 4000000",
+    "adb shell setprop debug.oculus.tracking.disablePoseOutliers 1",
+    "adb shell setprop debug.oculus.foveatedRenderingCenterSizeY 0",
+    "adb shell setprop debug.oculus.foveatedRenderingCenterSizeX 0",
+    "adb shell setprop debug.oculus.tracking.disablePoseClamping 1",
+    "adb shell setprop debug.sf.hwc_min_work_duration_ns 100000000",
+    "adb shell setprop debug.oculus.tracking.disableSafetyLimits 1",
+    "adb shell setprop debug.sf.predict_hwc_composition_strategy 0",
+    "adb shell setprop debug.sf.early_app_phase_offset_ns 45000000",
+    "adb shell setprop debug.oculus.imu.disableGravityCorrection 1",
+    "adb shell setprop debug.oculus.tracking.disableOriginReset 1",
+    "adb shell setprop debug.sf.enable_vsync_event_phase_offset 1",
+    "adb shell setprop debug.oculus.camera.disableBoundaryCheck 1",
+    "adb shell setprop debug.oculus.slam.disableKeyframeCulling 1",
+    "adb shell setprop debug.oculus.compositor.forceLatePresent 1",
+    "adb shell setprop debug.oculus.extraSustainedHeadroom 500000",
+    "adb shell setprop debug.oculus.extraKickoffHeadspace 2000000",
+    "adb shell setprop debug.sf.early_gl_phase_offset_ns 50000000",
+    "adb shell setprop debug.oculus.imu.sampleRateExtrapolation 1",
+    "adb shell setprop debug.sf.early_gl_phase_offset_ns 45000000",
+    "adb shell cmd power set-fixed-performance-mode-enabled false",
+    "adb shell setprop debug.sched.disable_preempt_freq_scaling 1",
+    "adb shell setprop debug.oculus.foveatedRenderingEdgeShiftY 0",
+    "adb shell setprop debug.oculus.foveatedRenderingCenterSize 0",
+    "adb shell setprop debug.sched.disable_preempt_load_balance 1",
+    "adb shell setprop debug.oculus.power.oscillationSchedBoost 1",
+    "adb shell setprop debug.oculus.textureDownsampleMipmapBias 0",
+    "adb shell setprop debug.oculus.textureStreamingRateMin 80000",
+    "adb shell setprop debug.oculus.headroom.maxHeadroom 20000000",
+    "adb shell setprop debug.sf.early_gl_phase_offset_ns 15000000",
+    "adb shell setprop debug.oculus.textureStreamingRateMax 80000",
+    "adb shell setprop debug.oculus.textureDownsampleAnisotropy 0",
+    "adb shell setprop debug.sf.early_gl_phase_offset_ns 30000000",
+    "adb shell setprop debug.oculus.foveatedRenderingEdgeShiftX 0",
+    "adb shell setprop debug.oculus.compositor.disableAutoVsync 1",
+    "adb shell setprop debug.oculus.slam.disableMapOptimization 1",
+    "adb shell setprop debug.oculus.imu.sampleRateOverride 400000",
+    "adb shell setprop debug.oculus.phasesyncdelayoverrideboost 1",
+    "adb shell setprop debug.oculus.slam.disableDriftCorrection 1",
+    "adb shell setprop debug.oculus.tracking.temporalFiltering 0",
+    "adb shell setprop debug.sf.use_phase_offsets_as_durations 1",
+    "adb shell setprop debug.oculus.tracking.disablePoseJitter 1",
+    "adb shell setprop debug.oculus.imu.disableDriftCorrection 1",
+    "adb shell setprop debug.oculus.camera.disablePoseOutliers 1",
+    "adb shell setprop debug.oculus.prediction.disableAdaptive 1",
+    "adb shell setprop debug.oculus.controller_prediction_ms 150",
+    "adb shell setprop debug.oculus.prediction.jitterNs 50000000",
+    "adb shell setprop debug.oculus.controllerVelocityScale 5000",
+    "adb shell setprop debug.sched.disable_preempt_cpu_hotplug 1",
+    "adb shell setprop debug.oculus.foveatedRenderingEdgeShift 0",
+    "adb shell setprop debug.oculus.camera.disablePoseRecovery 1",
+    "adb shell setprop debug.oculus.textureDownsampleSharpness 0",
+    "adb shell setprop debug.oculus.maxLatencyThreshold 30000000",
+    "adb shell setprop debug.oculus.tracking.allowInvalidPoses 1",
+    "adb shell setprop debug.oculus.slam.disableRelocalization 1",
+    "adb shell setprop debug.oculus.refreshRateOscillationType 0",
+    "adb shell setprop debug.oculus.extraKickoffHeadroom 2000000",
+    "adb shell setprop debug.oculus.tracking.disablePoseFusion 1",
+    "adb shell setprop debug.oculus.foveatedRenderingEdgeSizeY 0",
+    "adb shell setprop debug.oculus.prediction.jitterNs 20000000",
+    "adb shell setprop debug.oculus.minLatencyThreshold 30000000",
+    "adb shell setprop debug.oculus.foveatedRenderingEdgeSizeX 0",
+    "adb shell setprop debug.sched.disable_cgroup_load_balance 1",
+    "adb shell setprop debug.oculus.camera.disablePoseClamping 1",
+    "adb shell setprop debug.oculus.prediction.disableConstant 1",
+    "adb shell setprop debug.oculus.tracking.disablePoseNoise 1",
+    "adb shell setprop debug.oculus.sensorFusion.forceImuOnly 1",
+    "adb shell setprop debug.oculus.tracking.disablePoseBoost 1",
+    "adb shell setprop debug.oculus.tracking.controllerFilter 0",
+    "adb shell setprop debug.oculus.tracking.disableSmoothing 1",
+    "adb shell setprop debug.oculus.power.oscillationGpuBoost 1",
+    "adb shell setprop debug.oculus.tracking.disableFailsafes 1",
+    "adb shell setprop debug.oculus.handVelocityScale 800000000",
+    "adb shell setprop debug.oculus.tracking.disableWorldLock 1",
+    "adb shell setprop debug.sf.present_time_offset_ns 50000000",
+    "adb shell setprop debug.oculus.sensor.forcePrediction true",
+    "adb shell setprop debug.oculus.thermal.forceIgnore 1000000",
+    "adb shell setprop debug.oculus.foveatedRenderingEdgeSize 0",
+    "adb shell setprop debug.oculus.tracking.disableFloorLock 1",
+    "adb shell setprop debug.oculus.controllerVelocityScale 200",
+    "adb shell setprop debug.sf.frame_rate_multiple_threshold 1",
+    "adb shell setprop debug.oculus.imu.noiseAmplitude 10000000",
+    "adb shell setprop debug.oculus.textureStreamingRateBoost 1",
+    "adb shell setprop debug.oculus.imu.sampleRateJitterBoost 1",
+    "adb shell setprop debug.sched.disable_preempt_wake_boost 1",
+    "adb shell setprop debug.oculus.power.oscillationCpuBoost 1",
+    "adb shell setprop debug.oculus.imu.predictiveIntegration 1",
+    "adb shell setprop debug.sched.disable_preempt_migration 1",
+    "adb shell setprop debug.input.randomEventMotionRange 1000",
+    "adb shell setprop debug.sched.disable_wake_freq_scaling 1",
+    "adb shell setprop debug.oculus.handVelocityScale 10000000",
+    "adb shell setprop debug.oculus.prediction.disableJitter 1",
+    "adb shell setprop debug.oculus.tracking.disableRecenter 1",
+    "adb shell setprop debug.oculus.disableThermalMitigation 1",
+    "adb shell setprop debug.oculus.compositor.desyncAllowed 1",
+    "adb shell setprop debug.oculus.imu.disableStabilization 1",
+    "adb shell setprop debug.sf.force_phase_offset_threshold 0",
+    "adb shell setprop debug.oculus.prediction.disableBounds 1",
+    "adb shell setprop debug.oculus.sensorFusion.injectNoise 1",
+    "adb shell setprop debug.oculus.textureStreamingRate 80000",
+    "adb shell setprop debug.oculus.reprojection.jitterBoost 1",
+    "adb shell setprop debug.oculus.tracking.disablePoseBias 1",
+    "adb shell setprop debug.oculus.handVelocityScale 45000000",
+    "adb shell setprop debug.oculus.forceGpuPerformanceLevel 1",
+    "adb shell setprop debug.oculus.imu.disableExtrapolation 1",
+    "adb shell setprop debug.oculus.imu.sampleRateOverride 500",
+    "adb shell setprop debug.input.randomEventTypes 0xFFFFFFFF",
+    "adb shell setprop debug.oculus.forceCpuPerformanceLevel 1",
+    "adb shell setprop debug.sched.disable_wake_load_balance 1",
+    "adb shell setprop debug.oculus.compositor.forceFastPath 1",
+    "adb shell setprop debug.oculus.handTracking.injectNoise 1",
+    "adb shell setprop debug.oculus.prediction.forceConstant 1",
+    "adb shell setprop debug.oculus.camera.disablePoseJitter 1",
+    "adb shell setprop debug.oculus.camera.disablePoseBoost 1",
+    "adb shell setprop debug.oculus.power.injectOscillation 1",
+    "adb shell setprop debug.oculus.prediction.disableBoost 1",
+    "adb shell setprop debug.sched.disable_rt_runtime_share 1",
+    "adb shell setprop debug.oculus.camera.disableSmoothing 1",
+    "adb shell setprop debug.oculus.imu.sampleRateRandomize 1",
+    "adb shell setprop debug.oculus.compositor.disableVsync 1",
+    "adb shell setprop debug.oculus.sensorFusion.allowStale 1",
+    "adb shell setprop debug.oculus.tracking.poseCorrection 0",
+    "adb shell setprop debug.oculus.textureDownsampleFactor 1",
+    "adb shell setprop debug.cpufreq.oscillation_period_ms 10",
+    "adb shell setprop debug.sched.disable_wake_cpu_hotplug 1",
+    "adb shell setprop debug.oculus.imu.disableSanityChecks 1",
+    "adb shell setprop debug.oculus.slam.disableLoopClosure 1",
+    "adb shell setprop debug.oculus.camera.disablePoseNoise 1",
+    "adb shell setprop debug.oculus.textureDownsampleMipmap 0",
+    "adb shell setprop debug.oculus.textureDownsampleFilter 0",
+    "adb shell setprop debug.oculus.timewarpPredictionBoost 1",
+    "adb shell setprop debug.input.randomEventMaxDelayMs 100",
+    "adb shell setprop debug.oculus.tracking.poseFiltering 0",
+    "adb shell setprop debug.oculus.refreshRateOscillation 1",
+    "adb shell setprop debug.oculus.reprojection.randomize 1",
+    "adb shell setprop debug.oculus.imu.sampleBoost 50000000",
+    "adb shell setprop debug.oculus.forceCpuGpuPerformance 1",
+    "adb shell setprop debug.oculus.imj.sampleBoost 20000000",
+    "adb shell setprop debug.oculus.foveatedRenderingLevel 0",
+    "adb shell setprop debug.cpufreq.oscillation_amplitude 3",
+    "adb shell setprop debug.sf.app_vsync_offset_ns 30000000",
+    "adb shell setprop debug.oculus.camera.disablePoseBias 1",
+    "adb shell setprop debug.oculus.tracking.maxUpdateRate 5",
+    "adb shell setprop debug.sf.app_vsync_offset_ns 80000000",
+    "adb shell setprop debug.oculus.prediction.jitterBoost 1",
+    "adb shell setprop debug.oculus.tracking.enableDamping 0",
+    "adb shell setprop debug.oculus.tracking.dampingFactor 0",
+    "adb shell setprop debug.oculus.tracking.allowOutliers 1",
+    "adb shell setprop debug.hwui.render_dirty_regions false",
+    "adb shell setprop debug.oculus.compositor.ignoreVsync 1",
+    "adb shell setprop debug.oculus.tracking.poseSmoothing 0",
+    "adb shell setprop debug.oculus.imu.sampleRateAdaptive 1",
+    "adb shell setprop debug.oculus.ismrSampleBoost 20000000",
+    "adb shell setprop debug.oculus.camera.injectPoseNoise 1",
+    "adb shell setprop debug.oculus.extraPredictionTime 150",
+    "adb shell setprop debug.oculus.imu.sampleRateDisable 1",
+    "adb shell setprop debug.oculus.tracking.poseBlending 0",
+    "adb shell setprop debug.oculus.sensorFusion.fastPath 0",
+    "adb shell setprop debug.oculus.prediction.superBoost 1",
+    "adb shell setprop debug.oculus.cameraUpdateFrequency 5",
+    "adb shell setprop debug.oculus.predictiveTracking true",
+    "adb shell setprop debug.sched.disable_wake_migration 1",
+    "adb shell setprop debug.sf.gl_vsync_offset_ns 30000000",
+    "adb shell setprop debug.oculus.foveatedRenderingType 0",
+    "adb shell setprop debug.oculus.tracking.velocityBias 1",
+    "adb shell setprop debug.oculus.forcePerformanceLevel 1",
+    "adb shell setprop debug.hwui.use_partial_updates false",
+    "adb shell setprop debug.sf.gl_vsync_offset_ns 80000000",
+    "adb shell setprop debug.oculus.extraPredictionTime 100",
+    "adb shell setprop debug.binder.random_delay_max_ms 100",
+    "adb shell setprop debug.oculus.timeWarpPrediction true",
+    "adb shell setprop debug.oculus.sensorFusion.fastPath 1",
+    "adb shell setprop debug.oculus.timewarpExtrapolation 1",
+    "adb shell setprop debug.oculus.compositor.motionBias 1",
+    "adb shell setprop debug.sensors.ignore_hardware_fifo 1",
+    "adb shell setprop debug.oculus.compositor.forceAsync 1",
+    "adb shell setprop debug.hwui.target_cpu_time_percent 1",
+    "adb shell setprop debug.oculus.tracking.forceLowRate 1",
+    "adb shell setprop debug.input.randomEventMinDelayMs 10",
+    "adb shell setprop debug.oculus.power.oscillationType 0",
+    "adb shell setprop debug.sensors.inject_random_events 1",
+    "adb shell setprop debug.oculus.extraHeadspace 2000000",
+    "adb shell setprop debug.oculus.reprojection.enabled 0",
+    "adb shell setprop debug.oculus.reprojection.enabled 1",
+    "adb shell setprop debug.oculus.tracking.motionDecay 0",
+    "adb shell setprop debug.oculus.prediction.randomize 1",
+    "adb shell setprop debug.oculus.handVelocityScale 50.0",
+    "adb shell setprop debug.oculus.handVelocityScale 5000",
+    "adb shell setprop debug.sqlite.locking_mode EXCLUSIVE",
+    "adb shell setprop debug.oculus.predictedDisplayTime 0",
+    "adb shell setprop debug.oculus.imu.injectRandomWalk 1",
+    "adb shell setprop debug.oculus.reprojection.disable 1",
+    "adb shell setprop debug.binder.random_delay_min_ms 10",
+    "adb shell setprop debug.oculus.tracking.interpolate 0",
+    "adb shell setprop debug.hwui.render_thread_priority 1",
+    "adb shell setprop debug.oculus.controllerUpdateRate 5",
+    "adb shell setprop debug.sched.disable_load_balance 1",
+    "adb shell setprop debug.sf.high_fps_late_app_phase 1",
+    "adb shell setprop debug.oculus.Adaptiverefreshrate 0",
+    "adb shell setprop debug.oculus.handVelocityScale 200",
+    "adb shell setprop debug.oculus.imu.sampleRate 400000",
+    "adb shell setprop debug.oculus.imu.disableAdaptive 1",
+    "adb shell setprop debug.oculus.timewarpJitterBoost 1",
+    "adb shell setprop debug.camera.preview_fps_range 5,5",
+    "adb shell setprop debug.oculus.thermal.forceIgnore 1",
+    "adb shell setprop debug.oculus.refreshRateAdaptive 0",
+    "adb shell setprop debug.oculus.extraHeadroom 2000000",
+    "adb shell setprop debug.sched.disable_freq_scaling 1",
+    "adb shell setprop debug.oculus.slam.predictionBias 1",
+    "adb shell setprop debug.oculus.prediction.override 1",
+    "adb shell setprop debug.oculus.tracking.noRecovery 1",
+    "adb shell setprop debug.binder.delay_duration_ms 100",
+    "adb shell setprop debug.oculus.imu.sampleRateBoost 1",
+    "adb shell setprop debug.oculus.predictive.tracking 1",
+    "adb shell setprop debug.oculus.vsync.always60hz true",
+    "adb shell setprop debug.oculus.tracking.poseFusion 0",
+    "adb shell setprop debug.oculus.tracking.lowLatency 0",
+    "adb shell setprop debug.oculus.timewarpMin 20000000",
+    "adb shell setprop debug.oculus.timewarpMin 30000000",
+    "adb shell setprop debug.oculus.timewarpMax 20000000",
+    "adb shell setprop debug.sf.enable_gl_backpressure 0",
+    "adb shell setprop debug.choreographer.skipwarning 0",
+    "adb shell setprop debug.oculus.reprojection.force 1",
+    "adb shell setprop debug.oculus.textureCompression 0",
+    "adb shell setprop debug.sched.disable_cpu_hotplug 1",
+    "adb shell setprop debug.sched.force_latency_spike 1",
+    "adb shell setprop debug.oculus.reprojection.boost 1",
+    "adb shell setprop debug.oculus.foveatedRendering 0",
+    "adb shell setprop debug.oculus.textureDownsample 1",
+    "adb shell setprop debug.oculus.timewarpRandomize 1",
+    "adb shell setprop debug.sensors.randomEventRate 10",
+    "adb shell setprop debug.oculus.imu.disableJitter 1",
+    "adb shell setprop debug.oculus.framerateGovernor 0",
+    "adb shell setprop debug.oculus.imu.disableBounds 1",
+    "adb shell setprop debug.oculus.forcePowerLevel 1.7",
+    "adb shell setprop debug.oculus.headroom.forceMax 1",
+    "adb shell setprop debug.cpufreq.oscillation_type 0",
+    "adb shell setprop debug.sched.disable_wake_boost 1",
+    "adb shell setprop debug.input.injectRandomEvents 1",
+    "adb shell setprop debug.ashmem.low_memory_killer 1",
+    "adb shell setprop debug.sensors.event_drop_rate 90",
+    "adb shell setprop debug.oculus.imu.forceRawMode 1",
+    "adb shell setprop debug.sched.randomize_runtime 1",
+    "adb shell setprop debug.sensors.min_delay 1000000",
+    "adb shell setprop debug.oculus.timewarpOverride 1",
+    "adb shell setprop debug.sf.disable_backpressure 1",
+    "adb shell setprop debug.sched.disable_migration 1",
+    "adb shell setprop debug.oculus.imu.disableBoost 1",
+    "adb shell setprop debug.oculus.refreshRateBoost 1",
+    "adb shell setprop debug.hwui.use_buffer_age false",
+    "adb shell setprop debug.oculus.textureHeight 3968",
+    "adb shell setprop debug.oculus.prediction.boost 1",
+    "adb shell setprop debug.sf.high_fps_early_phase 1",
+    "adb shell setprop debug.oculus.timewarpOverride 0",
+    "adb shell setprop debug.camera.disable_zsl_mode 1",
+    "adb shell setprop debug.oculus.forceCpuLevel 1.7",
+    "adb shell setprop debug.sched.jitter_ns 50000000",
+    "adb shell setprop debug.oculus.textureWidth 3968",
+    "adb shell setprop debug.oculus.tracking.filter 0",
+    "adb shell setprop debug.oculus.imu.injectNoise 1",
+    "adb shell setprop debug.binder.transaction_log 1",
+    "adb shell setprop debug.oculus.timewarpDisable 1",
+    "adb shell setprop debug.oculus.refreshRateMax 60",
+    "adb shell setprop debug.oculus.motionSmoothing 0",
+    "adb shell setprop debug.input.randomEventRate 10",
+    "adb shell setprop debug.input.low_latency_mode 0",
+    "adb shell setprop debug.oculus.refreshRateMin 60",
+    "adb shell setprop debug.oculus.forceGpuLevel 1.7",
+    "adb shell setprop debug.oculus.slam.strictMode 0",
+    "adb shell setprop debug.oculus.imuBoost 20000000",
+    "adb shell setprop debug.oculus.adaclocks.force 0",
+    "adb shell setprop debug.oculus.allrefreshrates 3",
+    "adb shell setprop debug.sqlite.journal_mode OFF",
+    "adb shell setprop debug.oculus.timewarpJitter 1",
+    "adb shell setprop debug.sensors.batch_timeout 0",
+    "adb shell setprop debug.hwui.disable_vsync true",
+    "adb shell setprop debug.oculus.compositorBias 1",
+    "adb shell setprop debug.oculus.enableTimeWarp 1",
+    "adb shell setprop debug.rs.default-CPU-driver 1",
+    "adb shell setprop debug.oculus.textureFormat 1",
+    "adb shell setprop debug.oculus.timewarpBoost 1",
+    "adb shell setprop debug.sqlite.cache_size 1000",
+    "adb shell setprop debug.sched.randomize_fork 1",
+    "adb shell setprop debug.sqlite.synchronous OFF",
+    "adb shell setprop debug.cpufreq.oscillation 1",
+    "adb shell setprop debug.cpufreq.sched_boost 1",
+    "adb shell setprop debug.binder.random_delay 1",
+    "adb shell setprop debug.oculus.force60hz true",
+    "adb shell setprop debug.oculus.refreshRate 60",
+    "adb shell setprop debug.sf.latch_unsignaled 1",
+    "adb shell setprop debug.sched.inject_jitter 1",
+    "adb shell setprop debug.oculus.lateLatching 0",
+    "adb shell setprop debug.sqlite.page_size 4096",
+    "adb shell setprop debug.oculus.swapInterval 1",
+    "adb shell setprop debug.oculus.resumeBoost 1",
+    "adb shell setprop debug.input.dispatchMode 0",
+    "adb shell setprop debug.hwui.renderer skiagl",
+    "adb shell setprop debug.mmap.enable_debug 1",
+    "adb shell setprop debug.oculus.gpuLevel 1.7",
+    "adb shell setprop debug.performance.force 1",
+    "adb shell setprop debug.oculus.powerBoost 1",
+    "adb shell setprop debug.oculus.cpuLevel 1.7",
+    "adb shell setprop debug.sensors.max_delay 0",
+    "adb shell setprop debug.input.logDispatch 1",
+    "adb shell setprop debug.oculus.powerLevel 0",
+    "adb shell setprop debug.oculus.disableAsw 1",
+    "adb shell setprop debug.oculus.gpuLevel 0.2",
+    "adb shell setprop debug.binder.corruption 1",
+    "adb shell setprop debug.cpufreq.max 2800000",
+    "adb shell setprop debug.camera.force_hal1 1",
+    "adb shell setprop debug.oculus.cpuLevel 0.2",
+    "adb shell setprop debug.egl.swapinterval -1",
+    "adb shell setprop debug.sqlite.syncmode OFF",
+    "adb shell setprop debug.oculus.phasesync 0",
+    "adb shell setprop debug.oculus.phasesync 1",
+    "adb shell setprop debug.cpufreq.min 300000",
+    "adb shell setprop debug.sqlite.mmap_size 0",
+    "adb shell setprop debug.cpuidle.disable 1",
+    "adb shell setprop debug.sched.randomize 1",
+    "adb shell setprop debug.oculus.gpuBoost 1",
+    "adb shell setprop debug.oculus.cpuBoost 1",
+    "adb shell setprop debug.egl.debug_proc 1",
+    "adb shell setprop debug.sf.disable_hwc 1",
+    "adb shell setprop debug.hwui.gpu_boost 1",
+    "adb shell setprop debug.egl.force_msaa 1",
+    "adb shell setprop debug.cpufreq.boost 1",
+    "adb shell setprop debug.egl.trace error",
+    "adb shell setprop debug.oculus.DeSync 1",
+    "adb shell setprop debug.sf.force_gpu 1",
+    "adb shell setprop debug.binder.delay 1",
+    "adb shell setprop debug.binder.calls 1",
+    "adb shell setprop debug.binder.stats 1",
+    "adb shell setprop debug.oculus.textureWidth 3968",
+    "adb shell setprop debug.oculus.textureHeight 3968",
+    "adb shell setprop debug.oculus.foveatedRendering 0",
+    "adb shell setprop debug.oculus.refreshRate 60",
+    "adb shell setprop debug.oculus.swapInterval 1",
+    "adb shell setprop debug.oculus.cpuLevel 1.7",
+    "adb shell setprop debug.oculus.gpuLevel 1.7",
+    "adb shell setprop debug.performance.force 1",
+    "adb shell setprop debug.hwui.gpu_boost 1",
+    "adb shell setprop debug.oculus.forceCpuGpuPerformance 1",
+    "adb shell setprop debug.oculus.disableThermalMitigation 1",
+    "adb shell setprop debug.cpuidle.disable 1",
+    "adb shell setprop debug.oculus.framerateGovernor 0",
+    "adb shell setprop debug.oculus.headroom.forceHeadspace 1.25",
+    "adb shell setprop debug.oculus.headroom.forceHeadroom 1.25",
+    "adb shell setprop debug.oculus.headroom.maxHeadroom 1.25",
+    "adb shell setprop debug.oculus.headroom.maxHeadspace 1.25",
+    "adb shell setprop debug.oculus.extraSustainedHeadroom 1.25",
+    "adb shell setprop debug.oculus.extraSustainedHeadspace 1.25",
+    "adb shell setprop debug.oculus.headroom.maxHeadroom 1.25",
+    "adb shell setprop debug.oculus.headroom.maxHeadspace 1.25",
+    "adb shell setprop debug.oculus.extraKickoffHeadroom 1.25",
+    "adb shell setprop debug.oculus.extraKickoffHeadspace 1.25",
+    "adb shell setprop debug.oculus.extraHeadroom 1.25",
+    "adb shell setprop debug.oculis.extraHeadspace 1.25",
+    "adb shell setprop debug.oculus.headroom.forceMax 1",
+    "adb shell setprop debug.oculus.headroom.extraSustainedNs 50000000",
+    "adb shell setprop debug.oculus.headroom.extraKickoffNs 50000000",
+    "adb shell setprop debug.oculus.headroom.minAllowedNs 0",
+    "adb shell setprop debug.oculus.headroom.targetHeadroomNs 100000000",
+    "adb shell setprop debug.oculus.lateLatching 1",
+    "adb shell setprop debug.oculus.latelatch.force 1",
+    "adb shell setprop debug.oculus.latelatch.bufferScale 100",
+    "adb shell setprop debug.oculus.latelatch.maxAheadNs 50000000",
+    "adb shell setprop debug.oculus.latelatch.predictive 1",
+    "adb shell setprop debug.oculus.bufferCount 4",
+    "adb shell setprop debug.oculus.forceMaxSwapchain 1",
+    "adb shell setprop debug.oculus.maxFrameBufferQueue 5",
+    "adb shell setprop debug.oculus.queueDepthBoost 1",
+    "adb shell setprop debug.oculus.prediction.ultraAhead 1",
+    "adb shell setprop debug.oculus.prediction.noClamp 1",
+    "adb shell setprop debug.oculus.prediction.forceFullExtrapolation 1",
+    "adb shell setprop debug.oculus.prediction.maxExtrapolationNs 200000000",
+    "adb shell setprop debug.oculus.prediction.velocityScale 1000"
+adb shell setprop debug.oculus.textureStreamingRateOscillationIgnoreThermalMitigation 1",
+    "adb shell setprop debug.oculus.right.HandSurfaceOverride.extraVelMaxMultiplier 100000.0",
+    "adb shell setprop debug.oculus.left.HandSurfaceOverride.extraVelMaxMultiplier 100000.0",
+    "adb shell setprop debug.oculus.textureStreamingRateOscillationIgnorePowerMitigation 1",
+    "adb shell setprop debug.oculus.textureDownsampleMipmapLodBiasClampDefaultDefaultMax 0",
+    "adb shell setprop debug.oculus.textureDownsampleMipmapLodBiasClampDefaultDefaultMin 0",
+    "adb shell setprop debug.oculus.textureDownsampleMipmapLodBiasClampDefaultDefault 0",
+    "adb shell setprop debug.oculus.handSurfaceOverride.extraVelMaxMultiplier 100000.0",
+    "adb shell setprop debug.oculus.textureDownsampleMipmapLodBiasClampDefaultMin 0",
+    "adb shell setprop debug.oculus.tracking.controllerLatencyCompensation 50000000",
+    "adb shell setprop debug.oculus.prediction.disablePredictionTimeRandomization 1",
+    "adb shell setprop debug.oculus.imu.disablePredictiveIntegrationExtrapolation 1",
+    "adb shell setprop debug.oculus.textureDownsampleMipmapLodBiasClampDefaultMax 0",
+    "adb shell setprop debug.oculus.prediction.disablePredictionTimeExtrapolation 1",
+    "adb shell setprop debug.oculus.textureStreamingRateOscillationAmplitude 300000",
+    "adb shell setprop debug.oculus.prediction.disablePredictionTimeSanityChecks 1",
+    "adb shell setprop debug.oculus.phasesyncadditionaldelayDisableExtrapolation 1",
+    "adb shell setprop debug.oculus.textureStreamingRateOscillationIgnoreThermal 1",
+    "adb shell setprop debug.oculus.textureStreamingRateOscillationGpuMax 85000000",
+    "adb shell setprop debug.oculus.textureStreamingRateOscillationPeriodMs 100000",
+    "adb shell setprop debug.oculus.textureStreamingRateOscillationCpuMax 2800000",
+    "adb shell setprop debug.oculus.imu.disablePredictiveIntegrationJitterBoost 1",
+    "adb shell setprop debug.oculus.phasesyncadditionaldelayDisableSanityChecks 1",
+    "adb shell setprop debug.oculus.tracking.controllerLatencyCompensationBoost 1",
+    "adb shell setprop debug.oculus.refreshRateAdaptiveIgnoreThermalMitigation 1",
+    "adb shell setprop debug.oculus.phasesyncdelayoverrideDisableExtrapolation 1",
+    "adb shell setprop debug.oculus.textureStreamingRateOscillationCpuMin 300000",
+    "adb shell setprop debug.oculus.textureDownsampleMipmapLodBiasClampDefault 0",
+    "adb shell setprop debug.oculus.textureStreamingRateOscillationGpuMin 300000",
+    "adb shell setprop debug.oculus.textureStreamingRateOscillationIgnorePower 1",
+    "adb shell setprop debug.oculus.performance.allow_dynamic_adjustments false",
+    "adb shell setprop debug.oculus.imu.disablePredictiveIntegrationRandomize 1",
+    "adb shell setprop debug.oculus.textureStreamingRateOscillationSchedBoost 1",
+    "adb shell setprop debug.oculus.phasesyncdelayoverrideDisableSanityChecks 1",
+    "adb shell setprop debug.oculus.prediction.disablePredictionTimeAdaptive 1",
+    "adb shell setprop debug.oculus.imu.disablePredictiveIntegrationAdaptive 1",
+    "adb shell setprop debug.oculus.tracking.angularVelocityMultiplier 5000000",
+    "adb shell setprop debug.oculus.refreshRateAdaptiveIgnorePowerMitigation 1",
+    "adb shell setprop debug.oculus.phasesyncadditionaldelayDisableRandomize 1",
+    "adb shell setprop debug.oculus.phasesyncadditionaldelayDisableAdaptive 1",
+    "adb shell setprop debug.oculus.imu.disableLinearAccelerationCorrection 1",
+    "adb shell setprop debug.oculus.textureStreamingRateOscillationCpuBoost 1",
+    "adb shell setprop debug.oculus.handTracking.velocityMultiplier 200000000",
+    "adb shell setprop debug.oculus.textureStreamingRateOscillationGpuBoost 1",
+    "adb shell setprop debug.oculus.textureDownsampleMipmapLodBiasClampMax 0",
+    "adb shell setprop debug.oculus.phasesyncdelayoverrideDisableRandomize 1",
+    "adb shell setprop debug.oculus.prediction.disablePredictionTimeBounds 1",
+    "adb shell setprop debug.oculus.prediction.disablePredictionTimeJitter 1",
+    "adb shell setprop debug.oculus.textureDownsampleMipmapLodBiasClampMin 0",
+    "adb shell setprop debug.oculus.sensor.maxPredictivePredictionMs 300000",
+    "adb shell setprop debug.oculus.prediction.disablePredictionTimeBoost 1",
+    "adb shell setprop debug.oculus.phasesyncadditionaldelayDisableBounds 1",
+    "adb shell setprop debug.oculus.prediction.fixedPredictionTime 10000000",
+    "adb shell setprop debug.oculus.phasesyncdelayoverrideDisableAdaptive 1",
+    "adb shell setprop debug.oculus.phasesyncadditionaldelayDisableJitter 1",
+    "adb shell setprop debug.oculus.prediction.disablePredictionTimeClamp 1",
+    "adb shell setprop debug.oculus.tracking.angularVelocityBoost 100000000",
+    "adb shell setprop debug.oculus.imu.disablePredictiveIntegrationBoost 1",
+    "adb shell setprop debug.oculus.imu.predictiveIntegrationJitterBoost 1",
+    "adb shell setprop debug.oculus.phasesyncadditionaldelayDisableBoost 1",
+    "adb shell setprop debug.sf.phase_offset_threshold_for_next_vsync_ns 0",
+    "adb shell setprop debug.oculus.tracking.velocityMultiplier 8000000000",
+    "adb shell setprop debug.oculus.refreshRateOscillationAmplitude 300000",
+    "adb shell setprop debug.oculus.sensor.predictivePrediction.ms 2000000",
+    "adb shell setprop debug.oculus.refreshRateOscillationPeriodMs 100000",
+    "adb shell setprop debug.oculus.refreshRateOscillationIgnoreThermal 1",
+    "adb shell setprop debug.oculus.tracking.forceHighFrequencyTracking 1",
+    "adb shell setprop debug.oculus.prediction.maxPredictionTime 30000000",
+    "adb shell setprop debug.oculus.tracking.maxAngularVelocity 999999999",
+    "adb shell setprop debug.oculus.handTracking.disableConfidenceCheck 1",
+    "adb shell setprop debug.oculus.phasesyncdelayoverrideDisableJitter 1",
+    "adb shell setprop debug.oculus.phasesyncdelayoverrideDisableBounds 1",
+    "adb shell setprop debug.oculus.prediction.minPredictionTime 30000000",
+    "adb shell setprop debug.oculus.phasesyncadditionalpaddingRandomize 1",
+    "adb shell setprop debug.oculus.textureDownsampleMipmapLodBiasClamp 0",
+    "adb shell setprop debug.oculus.refreshRateOscillationGpuMax 85000000",
+    "adb shell setprop debug.oculus.textureStreamingRateOscillationType 0",
+    "adb shell setprop debug.oculus.tracking.controller_prediction_ms 100",
+    "adb shell setprop debug.oculus.phasesyncdelayoverrideDisableBoost 1",
+    "adb shell setprop debug.oculus.handTracking.disableFingerPinching 1",
+    "adb shell setprop debug.oculus.sensorFusion.disableRelocalization 1",
+    "adb shell setprop debug.oculus.handTracking.disableOcclusionCheck 1",
+    "adb shell setprop debug.oculus.imu.predictiveIntegrationRandomize 1",
+    "adb shell setprop debug.oculus.refreshRateOscillationCpuMax 2800000",
+    "adb shell setprop debug.oculus.prediction.constantAheadNs 100000000",
+    "adb shell setprop debug.oculus.sensorFusion.noiseAmplitude 10000000",
+    "adb shell setprop debug.oculus.compositor.disableFrameTimingClamp 1",
+    "adb shell setprop debug.sched.disable_preempt_cgroup_load_balance 1",
+    "adb shell setprop debug.oculus.handTracking.noiseAmplitude 10000000",
+    "adb shell setprop debug.oculus.handTracking.disableInteractionBox 1",
+    "adb shell setprop debug.oculus.prediction.forceVelocityBias 5000000",
+    "adb shell setprop debug.oculus.tracking.maxLinearVelocity 999999999",
+    "adb shell setprop debug.oculus.tracking.accelerationBoost 450000000",
+    "adb shell setprop debug.oculus.phasesyncadditionalpadding 60000000",
+    "adb shell setprop debug.oculus.phasesyncadditionalpadding 50000000",
+    "adb shell setprop debug.oculus.phasesyncadditionalpadding 40000000",
+    "adb shell setprop debug.oculus.sensorFusion.disableRecalibration 1",
+    "adb shell setprop debug.oculus.tracking.accelerationBoost 45000000",
+    "adb shell setprop debug.oculus.tracking.angularVelocityBoost 100.0",
+    "adb shell setprop debug.oculus.handTracking.disableBoundaryCheck 1",
+    "adb shell setprop debug.oculus.refreshRateOscillationCpuMin 300000",
+    "adb shell setprop debug.oculus.refreshRateOscillationIgnorePower 1",
+    "adb shell setprop debug.oculus.compositor.presentOffsetNs 80000000",
+    "adb shell setprop debug.oculus.handTracking.predictionMs 200000000",
+    "adb shell setprop debug.oculus.tracking.disablePoseExtrapolation 1",
+    "adb shell setprop debug.oculus.refreshRateOscillationGpuMin 300000",
+    "adb shell setprop debug.oculus.experimental.low_latency_mode false",
+    "adb shell setprop debug.oculus.phasesyncadditionalpadding 15000000",
+    "adb shell setprop debug.oculus.camera.poseNoiseAmplitude 500000000",
+    "adb shell setprop debug.oculus.foveatedRenderingPeripheralShiftX 0",
+    "adb shell setprop debug.oculus.phasesyncadditionalpadding 30000000",
+    "adb shell setprop debug.oculus.phasesyncadditionaldelayRandomize 1",
+    "adb shell setprop debug.oculus.tracking.maxLinearVelocity 10000000",
+    "adb shell setprop debug.oculus.handTracking.angularBoost 200000000",
+    "adb shell setprop debug.oculus.foveatedRenderingPeripheralShiftY 0",
+    "adb shell setprop debug.oculus.slam.disablePoseGraphOptimization 1",
+    "adb shell setprop debug.oculus.textureDownsampleMipmapAnisotropy 0",
+    "adb shell setprop debug.oculus.prediction.forceAngularBias 5000000",
+    "adb shell setprop debug.oculus.compositor.presentOffsetNs 30000000",
+    "adb shell setprop debug.oculus.tracking.angularVelocityBoost 5000",
+    "adb shell setprop debug.oculus.imu.disablePredictiveIntegration 1",
+    "adb shell setprop debug.oculus.foveatedRenderingPeripheralShift 0",
+    "adb shell setprop debug.oculus.tracking.controllerSmoothPredict 0",
+    "adb shell setprop debug.oculus.foveatedRenderingPeripheralSizeY 0",
+    "adb shell setprop debug.oculus.experimental.low_latency_mode true",
+    "adb shell setprop debug.oculus.controller_prediction_ms 100000000",
+    "adb shell setprop debug.oculus.power.oscillationPeriodMs 10000000",
+    "adb shell setprop debug.oculus.refreshRateOscillationSchedBoost 1",
+    "adb shell setprop debug.oculus.sensorFusion.disableCameraWeight 1",
+    "adb shell setprop debug.oculus.tracking.disableGravityReference 1",
+    "adb shell setprop debug.oculus.tracking.disablePoseQuantization 1",
+    "adb shell setprop debug.oculus.textureDownsampleMipmapSharpness 0",
+    "adb shell setprop debug.oculus.foveatedRenderingPeripheralSizeX 0",
+    "adb shell setprop debug.oculus.reprojection.extraAheadNs 50000000",
+    "adb shell setprop debug.oculus.refreshRateAdaptiveIgnoreThermal 1",
+    "adb shell setprop debug.oculus.phasesyncadditionalpaddingjitter 1",
+    "adb shell setprop debug.oculus.reprojection.extraAheadNs 30000000",
+    "adb shell setprop debug.oculus.compositor.disableFrameRateLimit 1",
+    "adb shell setprop debug.sched.disable_wake_cgroup_load_balance 1",
+    "adb shell setprop debug.oculus.tracking.allowOutOfOrderSamples 1",
+    "adb shell setprop debug.oculus.handTrackingPredictionPrecision 0",
+    "adb shell setprop debug.sf.vsync_reactor_ignore_present_fences 1",
+    "adb shell setprop debug.oculus.prediction.randomDriftNs 50000000",
+    "adb shell setprop debug.oculus.tracking.velocityMultiplier 50000",
+    "adb shell setprop debug.oculus.tracking.disablePoseLimitations 1",
+    "adb shell setprop debug.oculus.phasesyncdelayoverrideRandomize 1",
+    "adb shell setprop debug.sf.enable_vsync_event_app_phase_offset 1",
+    "adb shell setprop debug.oculus.textureDownsampleMipmapLodClamp 0",
+    "adb shell setprop debug.oculus.prediction.injectSyntheticDrift 1",
+    "adb shell setprop debug.oculus.prediction.ultraAheadNs 500000000",
+    "adb shell setprop debug.oculus.prediction.disableExtrapolation 1",
+    "adb shell setprop debug.oculus.textureStreamingRateOscillation 1",
+    "adb shell setprop debug.oculus.foveatedRenderingPeripheralSize 0",
+    "adb shell setprop debug.oculus.power.oscillationAmplitude 300000",
+    "adb shell setprop debug.oculus.phasesyncadditionalpaddingboost 1",
+    "adb shell setprop debug.oculus.phasesyncadditionaldelay 15000000",
+    "adb shell setprop debug.oculus.tracking.angularVelocityBoost 250",
+    "adb shell setprop debug.oculus.phasesyncadditionaldelayDisable 1",
+    "adb shell setprop debug.oculus.prediction.predictionTimeJitter 0",
+    "adb shell setprop debug.oculus.prediction.fixedDeltaNs 50000000",
+    "adb shell setprop debug.oculus.tracking.disablePoseCorrection 1",
+    "adb shell setprop debug.oculus.imu.predictiveIntegrationBoost 1",
+    "adb shell setprop debug.oculus.camera.disablePoseQuantization 1",
+    "adb shell setprop debug.oculus.power.oscillationCpuMax 28000000",
+    "adb shell setprop debug.oculus.tracking.disablePosePrediction 1",
+    "adb shell setprop debug.oculus.tracking.disablePoseEstimation 1",
+    "adb shell setprop debug.sf.vsync_event_phase_offset_ns 30000000",
+    "adb shell setprop debug.oculus.power.oscillationCpuMin 30000000",
+    "adb shell setprop debug.oculus.refreshRateOscillationOffsetMs 0",
+    "adb shell setprop debug.oculus.prediction.disableSanityChecks 1",
+    "adb shell setprop debug.oculus.power.oscillationGpuMin 30000000",
+    "adb shell setprop debug.oculus.headroom.forceHeadspace 10000000",
+    "adb shell setprop debug.oculus.refreshRateAdaptiveIgnorePower 1",
+    "adb shell setprop debug.oculus.power.oscillationGpuMax 85000000",
+    "adb shell setprop debug.sf.enable_vsync_event_gl_phase_offset 1",
+    "adb shell setprop debug.oculus.imu.randomWalkAmplitude 10000000",
+    "adb shell setprop debug.oculus.controllerVelocityScale 45000000",
+    "adb shell setprop debug.oculus.refreshRateOscillationCpuBoost 1",
+    "adb shell setprop debug.oculus.refreshRateOscillationGpuBoost 1",
+    "adb shell setprop debug.sf.vsync_event_phase_offset_ns 80000000",
+    "adb shell setprop debug.oculus.power.oscillationPeriodMs 100000",
+    "adb shell setprop debug.oculus.phasesyncadditionaldelayjitter 1",
+    "adb shell setprop debug.oculus.textureDownsampleMipmapLodBias 0",
+    "adb shell setprop debug.oculus.tracking.accelerationBoost 100.0",
+    "adb shell setprop debug.oculus.tracking.velocityBias 300000000",
+    "adb shell setprop debug.oculus.sensor.predictionBoost 20000000",
+    "adb shell setprop debug.oculus.tracking.disablePoseFiltering 1",
+    "adb shell setprop debug.oculus.headroom.forceHeadroom 10000000",
+    "adb shell setprop debug.oculus.refreshRateAdaptiveHysteresis 0",
+    "adb shell setprop debug.oculus.phasesyncdelayoverride 50000000",
+    "adb shell setprop debug.oculus.phasesyncadditionaldelayboost 1",
+    "adb shell setprop debug.oculus.camera.disableConfidenceCheck 1",
+    "adb shell setprop debug.oculus.extraSustainedHeadspace 2000000",
+    "adb shell setprop debug.oculus.tracking.disableVelocityClamp 1",
+    "adb shell setprop debug.oculus.average.predictionTime 10000000",
+    "adb shell setprop debug.oculus.handTracking.disableStability 1",
+    "adb shell setprop debug.oculus.phasesyncdelayoverride 40000000",
+    "adb shell setprop debug.oculus.tracking.forceUnboundedMotion 1",
+    "adb shell setprop debug.oculus.textureDownsampleMipmapFilter 0",
+    "adb shell setprop debug.oculus.handTracking.disableSmoothing 1",
+    "adb shell setprop debug.oculus.tracking.disablePoseSmoothing 1",
+    "adb shell setprop debug.oculus.prediction.minAheadNs 100000000",
+    "adb shell setprop debug.oculus.imu.sampleRateOverride 80000000",
+    "adb shell setprop debug.oculus.prediction.maxAheadNs 500000000",
+    "adb shell setprop debug.oculus.tracking.frictionCompensation 0",
+    "adb shell setprop debug.oculus.cameraPoseConfidenceThreshold 0",
+    "adb shell setprop debug.oculus.foveatedRenderingCenterShiftX 0",
+    "adb shell setprop debug.sched.disable_preempt_wake_migration 1",
+    "adb shell setprop debug.oculus.prediction.maxAheadNs 300000000",
+    "adb shell setprop debug.oculus.tracking.velocityQuantization 0",
+    "adb shell setprop debug.oculus.foveatedRenderingCenterShiftY 0",
+    "adb shell setprop debug.oculus.camera.disablePoseLimitations 1",
+    "adb shell setprop debug.oculus.prediction.maxAheadNs 100000000",
+    "adb shell setprop debug.oculus.sensorFusion.imuWeight 10000000",
+    "adb shell setprop debug.oculus.phasesyncdelayoverride 20000000",
+    "adb shell setprop debug.oculus.power.injectOscillation 1000000",
+    "adb shell setprop debug.oculus.tracking.disablePoseFailsafes 1",
+    "adb shell setprop debug.oculus.phasesyncdelayoverride 15000000",
+    "adb shell setprop debug.oculus.prediction.frame_ahead 10000000",
+    "adb shell setprop debug.oculus.phasesyncdelayoverrideDisable 1",
+    "adb shell setprop debug.oculus.compositor.ignoreLateLatching 1",
+    "adb shell setprop debug.oculus.refreshRateAdaptiveThreshold 0",
+    "adb shell setprop debug.oculus.handTracking.forcePrediction 1",
+    "adb shell setprop debug.oculus.extraSustainedHeadroom 2000000",
+    "adb shell setprop debug.oculus.camera.disableInteractionBox 1",
+    "adb shell setprop debug.oculus.tracking.enableInterpolation 0",
+    "adb shell setprop debug.oculus.prediction.alwaysExtrapolate 1",
+    "adb shell setprop debug.oculus.extraPredictionTime 1000000000",
+    "adb shell setprop debug.sf.disable_client_composition_cache 1",
+    "adb shell setprop debug.oculus.camera.disableOcclusionCheck 1",
+    "adb shell setprop debug.oculus.sensor.overridePrediction true",
+    "adb shell setprop debug.oculus.tracking.disablePoseRecovery 1",
+    "adb shell setprop debug.oculus.headroom.maxHeadspace 20000000",
+    "adb shell setprop debug.oculus.foveatedRenderingCenterShift 0",
+    "adb shell setprop debug.oculus.prediction.overrideDeltaTime 1",
+    "adb shell setprop debug.oculus.camera.disablePoseCorrection 1",
+    "adb shell setprop debug.sf.early_app_phase_offset_ns 30000000",
+    "adb shell setprop debug.oculus.tracking.ignoreVelocityClamp 1",
+    "adb shell setprop debug.oculus.phasesyncdelayoverridejitter 1",
+    "adb shell setprop debug.oculus.imu.sampleRateOverride 4000000",
+    "adb shell setprop debug.oculus.tracking.disablePoseOutliers 1",
+    "adb shell setprop debug.oculus.foveatedRenderingCenterSizeY 0",
+    "adb shell setprop debug.oculus.foveatedRenderingCenterSizeX 0",
+    "adb shell setprop debug.oculus.tracking.disablePoseClamping 1",
+    "adb shell setprop debug.sf.hwc_min_work_duration_ns 100000000",
+    "adb shell setprop debug.oculus.tracking.disableSafetyLimits 1",
+    "adb shell setprop debug.sf.predict_hwc_composition_strategy 0",
+    "adb shell setprop debug.sf.early_app_phase_offset_ns 45000000",
+    "adb shell setprop debug.oculus.imu.disableGravityCorrection 1",
+    "adb shell setprop debug.oculus.tracking.disableOriginReset 1",
+    "adb shell setprop debug.sf.enable_vsync_event_phase_offset 1",
+    "adb shell setprop debug.oculus.camera.disableBoundaryCheck 1",
+    "adb shell setprop debug.oculus.slam.disableKeyframeCulling 1",
+    "adb shell setprop debug.oculus.compositor.forceLatePresent 1",
+    "adb shell setprop debug.oculus.extraSustainedHeadroom 500000",
+    "adb shell setprop debug.oculus.extraKickoffHeadspace 2000000",
+    "adb shell setprop debug.sf.early_gl_phase_offset_ns 50000000",
+    "adb shell setprop debug.oculus.imu.sampleRateExtrapolation 1",
+    "adb shell setprop debug.sf.early_gl_phase_offset_ns 45000000",
+    "adb shell cmd power set-fixed-performance-mode-enabled false",
+    "adb shell setprop debug.sched.disable_preempt_freq_scaling 1",
+    "adb shell setprop debug.oculus.foveatedRenderingEdgeShiftY 0",
+    "adb shell setprop debug.oculus.foveatedRenderingCenterSize 0",
+    "adb shell setprop debug.sched.disable_preempt_load_balance 1",
+    "adb shell setprop debug.oculus.power.oscillationSchedBoost 1",
+    "adb shell setprop debug.oculus.textureDownsampleMipmapBias 0",
+    "adb shell setprop debug.oculus.textureStreamingRateMin 80000",
+    "adb shell setprop debug.oculus.headroom.maxHeadroom 20000000",
+    "adb shell setprop debug.sf.early_gl_phase_offset_ns 15000000",
+    "adb shell setprop debug.oculus.textureStreamingRateMax 80000",
+    "adb shell setprop debug.oculus.textureDownsampleAnisotropy 0",
+    "adb shell setprop debug.sf.early_gl_phase_offset_ns 30000000",
+    "adb shell setprop debug.oculus.foveatedRenderingEdgeShiftX 0",
+    "adb shell setprop debug.oculus.compositor.disableAutoVsync 1",
+    "adb shell setprop debug.oculus.slam.disableMapOptimization 1",
+    "adb shell setprop debug.oculus.imu.sampleRateOverride 400000",
+    "adb shell setprop debug.oculus.phasesyncdelayoverrideboost 1",
+    "adb shell setprop debug.oculus.slam.disableDriftCorrection 1",
+    "adb shell setprop debug.oculus.tracking.temporalFiltering 0",
+    "adb shell setprop debug.sf.use_phase_offsets_as_durations 1",
+    "adb shell setprop debug.oculus.tracking.disablePoseJitter 1",
+    "adb shell setprop debug.oculus.imu.disableDriftCorrection 1",
+    "adb shell setprop debug.oculus.camera.disablePoseOutliers 1",
+    "adb shell setprop debug.oculus.prediction.disableAdaptive 1",
+    "adb shell setprop debug.oculus.controller_prediction_ms 150",
+    "adb shell setprop debug.oculus.prediction.jitterNs 50000000",
+    "adb shell setprop debug.oculus.controllerVelocityScale 5000",
+    "adb shell setprop debug.sched.disable_preempt_cpu_hotplug 1",
+    "adb shell setprop debug.oculus.foveatedRenderingEdgeShift 0",
+    "adb shell setprop debug.oculus.camera.disablePoseRecovery 1",
+    "adb shell setprop debug.oculus.textureDownsampleSharpness 0",
+    "adb shell setprop debug.oculus.maxLatencyThreshold 30000000",
+    "adb shell setprop debug.oculus.tracking.allowInvalidPoses 1",
+    "adb shell setprop debug.oculus.slam.disableRelocalization 1",
+    "adb shell setprop debug.oculus.refreshRateOscillationType 0",
+    "adb shell setprop debug.oculus.extraKickoffHeadroom 2000000",
+    "adb shell setprop debug.oculus.tracking.disablePoseFusion 1",
+    "adb shell setprop debug.oculus.foveatedRenderingEdgeSizeY 0",
+    "adb shell setprop debug.oculus.prediction.jitterNs 20000000",
+    "adb shell setprop debug.oculus.minLatencyThreshold 30000000",
+    "adb shell setprop debug.oculus.foveatedRenderingEdgeSizeX 0",
+    "adb shell setprop debug.sched.disable_cgroup_load_balance 1",
+    "adb shell setprop debug.oculus.camera.disablePoseClamping 1",
+    "adb shell setprop debug.oculus.prediction.disableConstant 1",
+    "adb shell setprop debug.oculus.tracking.disablePoseNoise 1",
+    "adb shell setprop debug.oculus.sensorFusion.forceImuOnly 1",
+    "adb shell setprop debug.oculus.tracking.disablePoseBoost 1",
+    "adb shell setprop debug.oculus.tracking.controllerFilter 0",
+    "adb shell setprop debug.oculus.tracking.disableSmoothing 1",
+    "adb shell setprop debug.oculus.power.oscillationGpuBoost 1",
+    "adb shell setprop debug.oculus.tracking.disableFailsafes 1",
+    "adb shell setprop debug.oculus.handVelocityScale 800000000",
+    "adb shell setprop debug.oculus.tracking.disableWorldLock 1",
+    "adb shell setprop debug.sf.present_time_offset_ns 50000000",
+    "adb shell setprop debug.oculus.sensor.forcePrediction true",
+    "adb shell setprop debug.oculus.thermal.forceIgnore 1000000",
+    "adb shell setprop debug.oculus.foveatedRenderingEdgeSize 0",
+    "adb shell setprop debug.oculus.tracking.disableFloorLock 1",
+    "adb shell setprop debug.oculus.extraKickoffHeadroom 500000",
+    "adb shell setprop debug.oculus.controllerVelocityScale 200",
+    "adb shell setprop debug.sf.frame_rate_multiple_threshold 1",
+    "adb shell setprop debug.oculus.imu.noiseAmplitude 10000000",
+    "adb shell setprop debug.oculus.textureStreamingRateBoost 1",
+    "adb shell setprop debug.oculus.imu.sampleRateJitterBoost 1",
+    "adb shell setprop debug.sched.disable_preempt_wake_boost 1",
+    "adb shell setprop debug.oculus.power.oscillationCpuBoost 1",
+    "adb shell setprop debug.oculus.imu.predictiveIntegration 1",
+    "adb shell setprop debug.sched.disable_preempt_migration 1",
+    "adb shell setprop debug.input.randomEventMotionRange 1000",
+    "adb shell setprop debug.sched.disable_wake_freq_scaling 1",
+    "adb shell setprop debug.oculus.handVelocityScale 10000000",
+    "adb shell setprop debug.oculus.prediction.disableJitter 1",
+    "adb shell setprop debug.oculus.tracking.disableRecenter 1",
+    "adb shell setprop debug.oculus.disableThermalMitigation 1",
+    "adb shell setprop debug.oculus.compositor.desyncAllowed 1",
+    "adb shell setprop debug.oculus.imu.disableStabilization 1",
+    "adb shell setprop debug.sf.force_phase_offset_threshold 0",
+    "adb shell setprop debug.oculus.prediction.disableBounds 1",
+    "adb shell setprop debug.oculus.sensorFusion.injectNoise 1",
+    "adb shell setprop debug.oculus.textureStreamingRate 80000",
+    "adb shell setprop debug.oculus.reprojection.jitterBoost 1",
+    "adb shell setprop debug.oculus.tracking.disablePoseBias 1",
+    "adb shell setprop debug.oculus.handVelocityScale 45000000",
+    "adb shell setprop debug.oculus.forceGpuPerformanceLevel 1",
+    "adb shell setprop debug.oculus.imu.disableExtrapolation 1",
+    "adb shell setprop debug.oculus.imu.sampleRateOverride 500",
+    "adb shell setprop debug.input.randomEventTypes 0xFFFFFFFF",
+    "adb shell setprop debug.oculus.forceCpuPerformanceLevel 1",
+    "adb shell setprop debug.sched.disable_wake_load_balance 1",
+    "adb shell setprop debug.oculus.compositor.forceFastPath 1",
+    "adb shell setprop debug.oculus.handTracking.injectNoise 1",
+    "adb shell setprop debug.oculus.prediction.forceConstant 1",
+    "adb shell setprop debug.oculus.camera.disablePoseJitter 1",
+    "adb shell setprop debug.oculus.camera.disablePoseBoost 1",
+    "adb shell setprop debug.oculus.power.injectOscillation 1",
+    "adb shell setprop debug.oculus.prediction.disableBoost 1",
+    "adb shell setprop debug.sched.disable_rt_runtime_share 1",
+    "adb shell setprop debug.oculus.camera.disableSmoothing 1",
+    "adb shell setprop debug.oculus.imu.sampleRateRandomize 1",
+    "adb shell setprop debug.oculus.compositor.disableVsync 1",
+    "adb shell setprop debug.oculus.sensorFusion.allowStale 1",
+    "adb shell setprop debug.oculus.tracking.poseCorrection 0",
+    "adb shell setprop debug.oculus.textureDownsampleFactor 1",
+    "adb shell setprop debug.cpufreq.oscillation_period_ms 10",
+    "adb shell setprop debug.sched.disable_wake_cpu_hotplug 1",
+    "adb shell setprop debug.oculus.imu.disableSanityChecks 1",
+    "adb shell setprop debug.oculus.slam.disableLoopClosure 1",
+    "adb shell setprop debug.oculus.camera.disablePoseNoise 1",
+    "adb shell setprop debug.oculus.textureDownsampleMipmap 0",
+    "adb shell setprop debug.oculus.textureDownsampleFilter 0",
+    "adb shell setprop debug.oculus.timewarpPredictionBoost 1",
+    "adb shell setprop debug.input.randomEventMaxDelayMs 100",
+    "adb shell setprop debug.oculus.tracking.poseFiltering 0",
+    "adb shell setprop debug.oculus.refreshRateOscillation 1",
+    "adb shell setprop debug.oculus.reprojection.randomize 1",
+    "adb shell setprop debug.oculus.imu.sampleBoost 50000000",
+    "adb shell setprop debug.oculus.forceCpuGpuPerformance 1",
+    "adb shell setprop debug.oculus.imj.sampleBoost 20000000",
+    "adb shell setprop debug.oculus.foveatedRenderingLevel 0",
+    "adb shell setprop debug.cpufreq.oscillation_amplitude 3",
+    "adb shell setprop debug.sf.app_vsync_offset_ns 30000000",
+    "adb shell setprop debug.oculus.camera.disablePoseBias 1",
+    "adb shell setprop debug.oculus.tracking.maxUpdateRate 5",
+    "adb shell setprop debug.sf.app_vsync_offset_ns 80000000",
+    "adb shell setprop debug.oculus.prediction.jitterBoost 1",
+    "adb shell setprop debug.oculus.tracking.enableDamping 0",
+    "adb shell setprop debug.oculus.tracking.dampingFactor 0",
+    "adb shell setprop debug.oculus.tracking.allowOutliers 1",
+    "adb shell setprop debug.hwui.render_dirty_regions false",
+    "adb shell setprop debug.oculus.compositor.ignoreVsync 1",
+    "adb shell setprop debug.oculus.tracking.poseSmoothing 0",
+    "adb shell setprop debug.oculus.imu.sampleRateAdaptive 1",
+    "adb shell setprop debug.oculus.ismrSampleBoost 20000000",
+    "adb shell setprop debug.oculus.camera.injectPoseNoise 1",
+    "adb shell setprop debug.oculus.extraPredictionTime 150",
+    "adb shell setprop debug.oculus.imu.sampleRateDisable 1",
+    "adb shell setprop debug.oculus.tracking.poseBlending 0",
+    "adb shell setprop debug.oculus.sensorFusion.fastPath 0",
+    "adb shell setprop debug.oculus.prediction.superBoost 1",
+    "adb shell setprop debug.oculus.cameraUpdateFrequency 5",
+    "adb shell setprop debug.oculus.predictiveTracking true",
+    "adb shell setprop debug.sched.disable_wake_migration 1",
+    "adb shell setprop debug.sf.gl_vsync_offset_ns 30000000",
+    "adb shell setprop debug.oculus.foveatedRenderingType 0",
+    "adb shell setprop debug.oculus.tracking.velocityBias 1",
+    "adb shell setprop debug.oculus.forcePerformanceLevel 1",
+    "adb shell setprop debug.hwui.use_partial_updates false",
+    "adb shell setprop debug.sf.gl_vsync_offset_ns 80000000",
+    "adb shell setprop debug.oculus.extraPredictionTime 100",
+    "adb shell setprop debug.binder.random_delay_max_ms 100",
+    "adb shell setprop debug.oculus.timeWarpPrediction true",
+    "adb shell setprop debug.oculus.sensorFusion.fastPath 1",
+    "adb shell setprop debug.oculus.timewarpExtrapolation 1",
+    "adb shell setprop debug.oculus.compositor.motionBias 1",
+    "adb shell setprop debug.sensors.ignore_hardware_fifo 1",
+    "adb shell setprop debug.oculus.compositor.forceAsync 1",
+    "adb shell setprop debug.hwui.target_cpu_time_percent 1",
+    "adb shell setprop debug.oculus.tracking.forceLowRate 1",
+    "adb shell setprop debug.input.randomEventMinDelayMs 10",
+    "adb shell setprop debug.oculus.power.oscillationType 0",
+    "adb shell setprop debug.sensors.inject_random_events 1",
+    "adb shell setprop debug.oculus.extraHeadspace 2000000",
+    "adb shell setprop debug.oculus.reprojection.enabled 0",
+    "adb shell setprop debug.oculus.reprojection.enabled 1",
+    "adb shell setprop debug.oculus.tracking.motionDecay 0",
+    "adb shell setprop debug.oculus.prediction.randomize 1",
+    "adb shell setprop debug.oculus.handVelocityScale 50.0",
+    "adb shell setprop debug.oculus.handVelocityScale 5000",
+    "adb shell setprop debug.sqlite.locking_mode EXCLUSIVE",
+    "adb shell setprop debug.oculus.predictedDisplayTime 0",
+    "adb shell setprop debug.oculus.imu.injectRandomWalk 1",
+    "adb shell setprop debug.oculus.reprojection.disable 1",
+    "adb shell setprop debug.binder.random_delay_min_ms 10",
+    "adb shell setprop debug.oculus.tracking.interpolate 0",
+    "adb shell setprop debug.hwui.render_thread_priority 1",
+    "adb shell setprop debug.oculus.controllerUpdateRate 5",
+    "adb shell setprop debug.sched.disable_load_balance 1",
+    "adb shell setprop debug.sf.high_fps_late_app_phase 1",
+    "adb shell setprop debug.oculus.Adaptiverefreshrate 0",
+    "adb shell setprop debug.oculus.handVelocityScale 200",
+    "adb shell setprop debug.oculus.imu.sampleRate 400000",
+    "adb shell setprop debug.oculus.imu.disableAdaptive 1",
+    "adb shell setprop debug.oculus.timewarpJitterBoost 1",
+    "adb shell setprop debug.camera.preview_fps_range 5,5",
+    "adb shell setprop debug.oculus.thermal.forceIgnore 1",
+    "adb shell setprop debug.oculus.refreshRateAdaptive 0",
+    "adb shell setprop debug.oculus.extraHeadroom 2000000",
+    "adb shell setprop debug.sched.disable_freq_scaling 1",
+    "adb shell setprop debug.oculus.slam.predictionBias 1",
+    "adb shell setprop debug.oculus.prediction.override 1",
+    "adb shell setprop debug.oculus.tracking.noRecovery 1",
+    "adb shell setprop debug.binder.delay_duration_ms 100",
+    "adb shell setprop debug.oculus.imu.sampleRateBoost 1",
+    "adb shell setprop debug.oculus.predictive.tracking 1",
+    "adb shell setprop debug.oculus.vsync.always60hz true",
+    "adb shell setprop debug.oculus.tracking.poseFusion 0",
+    "adb shell setprop debug.oculus.tracking.lowLatency 0",
+    "adb shell setprop debug.oculus.timewarpMin 20000000",
+    "adb shell setprop debug.oculus.timewarpMin 30000000",
+    "adb shell setprop debug.oculus.timewarpMax 20000000",
+    "adb shell setprop debug.sf.enable_gl_backpressure 0",
+    "adb shell setprop debug.choreographer.skipwarning 0",
+    "adb shell setprop debug.oculus.reprojection.force 1",
+    "adb shell setprop debug.oculus.textureCompression 0",
+    "adb shell setprop debug.sched.disable_cpu_hotplug 1",
+    "adb shell setprop debug.sched.force_latency_spike 1",
+    "adb shell setprop debug.oculus.reprojection.boost 1",
+    "adb shell setprop debug.oculus.foveatedRendering 0",
+    "adb shell setprop debug.oculus.textureDownsample 1",
+    "adb shell setprop debug.oculus.timewarpRandomize 1",
+    "adb shell setprop debug.sensors.randomEventRate 10",
+    "adb shell setprop debug.oculus.imu.disableJitter 1",
+    "adb shell setprop debug.oculus.framerateGovernor 0",
+    "adb shell setprop debug.oculus.imu.disableBounds 1",
+    "adb shell setprop debug.oculus.forcePowerLevel 1.7",
+    "adb shell setprop debug.oculus.headroom.forceMax 1",
+    "adb shell setprop debug.cpufreq.oscillation_type 0",
+    "adb shell setprop debug.sched.disable_wake_boost 1",
+    "adb shell setprop debug.input.injectRandomEvents 1",
+    "adb shell setprop debug.ashmem.low_memory_killer 1",
+    "adb shell setprop debug.sensors.event_drop_rate 90",
+    "adb shell setprop debug.oculus.imu.forceRawMode 1",
+    "adb shell setprop debug.sched.randomize_runtime 1",
+    "adb shell setprop debug.sensors.min_delay 1000000",
+    "adb shell setprop debug.oculus.timewarpOverride 1",
+    "adb shell setprop debug.sf.disable_backpressure 1",
+    "adb shell setprop debug.sched.disable_migration 1",
+    "adb shell setprop debug.oculus.imu.disableBoost 1",
+    "adb shell setprop debug.oculus.refreshRateBoost 1",
+    "adb shell setprop debug.hwui.use_buffer_age false",
+    "adb shell setprop debug.oculus.textureHeight 3968",
+    "adb shell setprop debug.oculus.prediction.boost 1",
+    "adb shell setprop debug.sf.high_fps_early_phase 1",
+    "adb shell setprop debug.oculus.timewarpOverride 0",
+    "adb shell setprop debug.camera.disable_zsl_mode 1",
+    "adb shell setprop debug.oculus.forceCpuLevel 1.7",
+    "adb shell setprop debug.sched.jitter_ns 50000000",
+    "adb shell setprop debug.oculus.textureWidth 3968",
+    "adb shell setprop debug.oculus.tracking.filter 0",
+    "adb shell setprop debug.oculus.imu.injectNoise 1",
+    "adb shell setprop debug.binder.transaction_log 1",
+    "adb shell setprop debug.oculus.timewarpDisable 1",
+    "adb shell setprop debug.oculus.refreshRateMax 60",
+    "adb shell setprop debug.oculus.motionSmoothing 0",
+    "adb shell setprop debug.input.randomEventRate 10",
+    "adb shell setprop debug.input.low_latency_mode 0",
+    "adb shell setprop debug.oculus.refreshRateMin 60",
+    "adb shell setprop debug.oculus.forceGpuLevel 1.7",
+    "adb shell setprop debug.oculus.slam.strictMode 0",
+    "adb shell setprop debug.oculus.imuBoost 20000000",
+    "adb shell setprop debug.oculus.adaclocks.force 0",
+    "adb shell setprop debug.oculus.allrefreshrates 3",
+    "adb shell setprop debug.sqlite.journal_mode OFF",
+    "adb shell setprop debug.oculus.timewarpJitter 1",
+    "adb shell setprop debug.sensors.batch_timeout 0",
+    "adb shell setprop debug.hwui.disable_vsync true",
+    "adb shell setprop debug.oculus.compositorBias 1",
+    "adb shell setprop debug.oculus.enableTimeWarp 1",
+    "adb shell setprop debug.rs.default-CPU-driver 1",
+    "adb shell setprop debug.oculus.textureFormat 1",
+    "adb shell setprop debug.oculus.timewarpBoost 1",
+    "adb shell setprop debug.sqlite.cache_size 1000",
+    "adb shell setprop debug.sched.randomize_fork 1",
+    "adb shell setprop debug.sqlite.synchronous OFF",
+    "adb shell setprop debug.cpufreq.oscillation 1",
+    "adb shell setprop debug.cpufreq.sched_boost 1",
+    "adb shell setprop debug.binder.random_delay 1",
+    "adb shell setprop debug.oculus.force60hz true",
+    "adb shell setprop debug.oculus.refreshRate 60",
+    "adb shell setprop debug.sf.latch_unsignaled 1",
+    "adb shell setprop debug.sched.inject_jitter 1",
+    "adb shell setprop debug.oculus.lateLatching 0",
+    "adb shell setprop debug.sqlite.page_size 4096",
+    "adb shell setprop debug.oculus.swapInterval 1",
+    "adb shell setprop debug.oculus.resumeBoost 1",
+    "adb shell setprop debug.input.dispatchMode 0",
+    "adb shell setprop debug.hwui.renderer skiagl",
+    "adb shell setprop debug.mmap.enable_debug 1",
+    "adb shell setprop debug.oculus.gpuLevel 1.7",
+    "adb shell setprop debug.performance.force 1",
+    "adb shell setprop debug.oculus.powerBoost 1",
+    "adb shell setprop debug.oculus.cpuLevel 1.7",
+    "adb shell setprop debug.sensors.max_delay 0",
+    "adb shell setprop debug.input.logDispatch 1",
+    "adb shell setprop debug.oculus.powerLevel 0",
+    "adb shell setprop debug.oculus.disableAsw 1",
+    "adb shell setprop debug.oculus.gpuLevel 0.2",
+    "adb shell setprop debug.binder.corruption 1",
+    "adb shell setprop debug.cpufreq.max 2800000",
+    "adb shell setprop debug.camera.force_hal1 1",
+    "adb shell setprop debug.oculus.cpuLevel 0.2",
+    "adb shell setprop debug.egl.swapinterval -1",
+    "adb shell setprop debug.sqlite.syncmode OFF",
+    "adb shell setprop debug.oculus.phasesync 0",
+    "adb shell setprop debug.oculus.phasesync 1",
+    "adb shell setprop debug.cpufreq.min 300000",
+    "adb shell setprop debug.sqlite.mmap_size 0",
+    "adb shell setprop debug.cpuidle.disable 1",
+    "adb shell setprop debug.sched.randomize 1",
+    "adb shell setprop debug.oculus.gpuBoost 1",
+    "adb shell setprop debug.oculus.cpuBoost 1",
+    "adb shell setprop debug.egl.debug_proc 1",
+    "adb shell setprop debug.sf.disable_hwc 1",
+    "adb shell setprop debug.hwui.gpu_boost 1",
+    "adb shell setprop debug.egl.force_msaa 1",
+    "adb shell setprop debug.cpufreq.boost 1",
+    "adb shell setprop debug.egl.trace error",
+    "adb shell setprop debug.oculus.DeSync 1",
+    "adb shell setprop debug.sf.force_gpu 1",
+    "adb shell setprop debug.binder.delay 1",
+    "adb shell setprop debug.binder.calls 1",
+    "adb shell setprop debug.binder.stats 1"
