@@ -76,23 +76,37 @@ export default function ADBArchive() {
         setLoading(true);
         setError(null);
 
-        const groups = await Promise.all(
-          ARCHIVE_SOURCES.map(async ({ url, label }) => {
-            const response = await fetch(url, { cache: "no-store" });
-            if (!response.ok) {
-              throw new Error(`Failed to load ${label}`);
-            }
-            const raw = await response.text();
-            return parseArchiveText(raw, label);
-          })
-        );
+        const response = await fetch("/api/archive", { cache: "no-store" });
+        if (!response.ok) {
+          throw new Error("Archive API failed");
+        }
+
+        const payload = (await response.json()) as { entries?: ArchiveEntry[] };
 
         if (!active) return;
-        setEntries(groups.flat());
+        setEntries(payload.entries ?? []);
       } catch (loadError) {
         if (!active) return;
         console.error(loadError);
-        setError("Unable to load the remote archive right now. Please try again in a moment.");
+
+        try {
+          const groups = await Promise.all(
+            ARCHIVE_SOURCES.map(async ({ url, label }) => {
+              const remoteResponse = await fetch(url, { cache: "no-store" });
+              if (!remoteResponse.ok) {
+                throw new Error(`Failed to load ${label}`);
+              }
+              const raw = await remoteResponse.text();
+              return parseArchiveText(raw, label);
+            })
+          );
+
+          if (!active) return;
+          setEntries(groups.flat());
+        } catch {
+          if (!active) return;
+          setError("Unable to load the remote archive right now. Please try again in a moment.");
+        }
       } finally {
         if (active) setLoading(false);
       }
