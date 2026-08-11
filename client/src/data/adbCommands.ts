@@ -465,6 +465,18 @@ export const adbCategories: AdbCategory[] = [
         description: "Warning: do not set debug.oculus.vsyncEmu above 1. It can fry your headset and may cause artifacting and glitching. Pairing this with debug.oculus.refreshRate bypasses the headset's maximum and minimum refresh-rate limits while tuning frame sync and performance timing.",
       },
       {
+        id: "dbg-2a",
+        label: "Refresh rate bypass",
+        command: "adb shell setprop debug.oculus.refreshRate 60",
+        description: "Warning: do not pair this with debug.oculus.vsyncEmu above 1. It can fry your headset and may cause artifacting and glitching. This overrides the headset's maximum and minimum refresh-rate limits when used with the Oculus VSYNC emulation tweak.",
+      },
+      {
+        id: "dbg-2b",
+        label: "Vsync emu guard",
+        command: "adb shell setprop debug.oculus.vsyncEmu 1",
+        description: "Warning: never set debug.oculus.vsyncEmu above 1 or it may fry your headset and cause artifacting and glitching. Pairing this with debug.oculus.refreshRate bypasses the headset's max and min refresh-rate limits.",
+      },
+      {
         id: "dbg-3",
         label: "Pull mod",
         command: "adb shell setprop debug.oculus.headlock 1; i=1; while [ $i -lt 30 ]; do setprop debug.oculus.headlock.translation.x $(awk -v i=$i 'BEGIN {print i * 0.5}'); i=$((i + 1)); done; setprop debug.oculus.headlock.translation.x 0; setprop debug.oculus.headlock 0",
