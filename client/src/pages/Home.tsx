@@ -4,7 +4,7 @@
  * monospace command cards with copy-to-clipboard.
  *
  * Style: Crimson Terminal — war-room console for VR power users.
- * Colors: #000 bg, #DC2626 brand red, #EF4444 glow, #22C55E code syntax (secondary only)
+ * Colors: #000 bg, #26dc90 brand red, #09bb3c glow, #22C55E code syntax (secondary only)
  * Fonts: Orbitron (display), JetBrains Mono (body/code)
  */
 import { useState, useCallback, useEffect, useRef } from "react";
