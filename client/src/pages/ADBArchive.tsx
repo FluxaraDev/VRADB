@@ -25,41 +25,52 @@ const extractQuotedSegments = (text: string): string[] => {
     .filter(Boolean);
 };
 
+const splitCandidateParts = (text: string): string[] => {
+  return text
+    .split(/(?:&&|;|,(?=(?:adb\s+shell|debug\.oculus|setprop|persist\.debug\.oculus)))/i)
+    .map((part) => part.trim())
+    .filter(Boolean)
+    .map((part) => part.replace(/^["'`]+|["'`,]+$/g, "").trim())
+    .filter(Boolean);
+};
+
 const normalizeCommand = (raw: string): string | null => {
   let cleaned = raw
     .replace(/^[-*•]\s*/, "")
     .replace(/^\d+[.)-]\s*/, "")
     .replace(/^"|"$/g, "")
-    .replace(/^[\s'\"`]+|[\s'\"`,]+$/g, "")
+    .replace(/[\s'\"`]+|[\s'\"`,]+$/g, "")
+    .replace(/[,;]+$/g, "")
     .trim();
 
   if (!cleaned) return null;
 
-  cleaned = cleaned.replace(/\\n/g, " ").replace(/\s+/g, " ").trim();
+  cleaned = cleaned.replace(/\n/g, " ").replace(/\s+/g, " ").trim();
   const lower = cleaned.toLowerCase();
 
   if (lower.includes("adb shell")) {
-    if (lower.startsWith("adb shell") && cleaned.includes("setprop")) {
-      return cleaned;
-    }
-
     const withoutPrefix = cleaned.replace(/^adb\s+shell\s+/i, "").trim();
-    if (withoutPrefix.startsWith("setprop ")) {
-      return `adb shell ${withoutPrefix}`;
-    }
+    if (withoutPrefix.startsWith("setprop ")) return `adb shell ${withoutPrefix}`;
+    return cleaned;
   }
 
-  if (cleaned.startsWith("setprop ") || cleaned.startsWith("debug.oculus.")) {
-    if (cleaned.startsWith("debug.oculus.")) {
-      const [prop, ...rest] = cleaned.split(/\s+/);
-      const value = rest.length ? ` ${rest.join(" ")}` : " 1";
+  if (cleaned.startsWith("setprop ")) return `adb shell ${cleaned}`;
+
+  if (cleaned.startsWith("debug.oculus.") || cleaned.startsWith("persist.debug.oculus.")) {
+    const [prop, ...rest] = cleaned.split(/\s+/);
+    const value = rest.length ? ` ${rest.join(" ")}` : " 1";
+    return `adb shell setprop ${prop}${value}`;
+  }
+
+  if (lower.includes("debug.oculus") || lower.includes("persist.debug.oculus")) {
+    const match = cleaned.match(/(?:debug\.?oculus\.[^\s]+|persist\.debug\.oculus\.[^\s]+)/i);
+    if (match) {
+      const prop = match[0];
+      const propIndex = cleaned.indexOf(prop);
+      const rest = propIndex >= 0 ? cleaned.slice(propIndex + prop.length).trim() : "";
+      const value = rest ? ` ${rest}` : " 1";
       return `adb shell setprop ${prop}${value}`;
     }
-    return `adb shell ${cleaned}`;
-  }
-
-  if (lower.includes("debug.oculus")) {
-    return `adb shell ${cleaned}`;
   }
 
   return null;
@@ -76,17 +87,19 @@ function parseArchiveText(raw: string, sourceLabel: string): ArchiveEntry[] {
     const candidates = [base, ...extractQuotedSegments(base)];
 
     candidates.forEach((candidate) => {
-      const normalized = normalizeCommand(candidate);
-      if (!normalized) return;
+      splitCandidateParts(candidate).forEach((part) => {
+        const normalized = normalizeCommand(part);
+        if (!normalized) return;
 
-      const key = normalized.toLowerCase();
-      if (seen.has(key)) return;
-      seen.add(key);
+        const key = normalized.toLowerCase();
+        if (seen.has(key)) return;
+        seen.add(key);
 
-      entries.push({
-        id: `${sourceLabel}-${lineIndex}-${normalized.slice(0, 80)}`,
-        source: sourceLabel,
-        text: normalized,
+        entries.push({
+          id: `${sourceLabel}-${lineIndex}-${normalized.slice(0, 80)}`,
+          source: sourceLabel,
+          text: normalized,
+        });
       });
     });
   });
