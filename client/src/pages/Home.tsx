@@ -4,7 +4,7 @@
  * monospace command cards with copy-to-clipboard.
  *
  * Style: Crimson Terminal — war-room console for VR power users.
- * Colors: #000 bg, #26dc90 brand red, #09bb3c glow, #22C55E code syntax (secondary only)
+ * Colors: #000 bg, #dc2626 brand red, #09bb3c glow, #22C55E code syntax (secondary only)
  * Fonts: Orbitron (display), JetBrains Mono (body/code)
  */
 import { useState, useCallback, useEffect, useRef } from "react";
@@ -64,7 +64,7 @@ function CommandCard({ cmd }: { cmd: AdbCommand }) {
         description: `> ${cmd.command}`,
         duration: 1800,
         style: {
-          background: "#0dfe31",
+          background: "#000902",
           border: "1px solid #DC2626",
           color: "#f1f5f9",
           fontFamily: "'JetBrains Mono', monospace",
@@ -112,7 +112,7 @@ function CommandCard({ cmd }: { cmd: AdbCommand }) {
             {copied ? (
               <>
                 <Check size={10} />
-                <span>COPIED</span>
+                <span>COPIED!</span>
               </>
             ) : (
               <>
