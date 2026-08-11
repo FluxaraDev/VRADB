@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "wouter";
-import { ArrowLeft, Database, Search, Terminal } from "lucide-react";
+import { ArrowLeft, Copy, Database, Search, Terminal, ChevronLeft, ChevronRight } from "lucide-react";
+import { toast } from "sonner";
 import list1Text from "@/data/list1.txt?raw";
 import list2Text from "@/data/list2.txt?raw";
 
@@ -15,47 +16,71 @@ const ARCHIVE_SOURCES = [
   { label: "list2.txt", raw: list2Text },
 ] as const;
 
-const GROUP_SIZE = 50;
+const PAGE_SIZE = 50;
+
+const splitCommands = (line: string): string[] => {
+  return line
+    .split(/\s*&&\s*|\s*;\s*/)
+    .map((part) => part.trim())
+    .filter(Boolean)
+    .filter((part) => part.length > 3);
+};
+
+const normalizeCommand = (raw: string): string | null => {
+  let cleaned = raw.trim();
+  cleaned = cleaned.replace(/^[-*•]\s*/, "");
+  cleaned = cleaned.replace(/^\d+[.)-]\s*/, "");
+  cleaned = cleaned.replace(/^"|"$/g, "").trim();
+
+  if (!cleaned) return null;
+
+  const lower = cleaned.toLowerCase();
+  if (!lower.includes("adb shell") && !lower.includes("debug.oculus")) {
+    return null;
+  }
+
+  if (lower.startsWith("adb shell")) {
+    return `adb shell ${cleaned.replace(/^adb shell\s+/i, "").trim()}`;
+  }
+
+  if (lower.startsWith("setprop ")) {
+    return `adb shell ${cleaned}`;
+  }
+
+  if (lower.startsWith("debug.oculus")) {
+    return `adb shell setprop ${cleaned} 1`;
+  }
+
+  return cleaned;
+};
 
 function parseArchiveText(raw: string, sourceLabel: string): ArchiveEntry[] {
   const seen = new Set<string>();
+  const entries: ArchiveEntry[] = [];
 
-  return raw
-    .split(/\r?\n/)
-    .map((line) => line.trim())
-    .filter(Boolean)
-    .filter((line) => {
-      const normalized = line.toLowerCase();
-      return (
-        normalized.includes("adb") ||
-        normalized.includes("setprop") ||
-        normalized.includes("settings") ||
-        normalized.includes("debug") ||
-        normalized.includes("dumpsys") ||
-        normalized.includes("cmd ") ||
-        normalized.includes("pm ") ||
-        normalized.includes("am ")
-      );
-    })
-    .map((line, index) => {
-      const cleaned = line
-        .replace(/^[-*•]\s*/, "")
-        .replace(/^\d+[.)-]\s*/, "")
-        .trim();
+  raw.split(/\r?\n/).forEach((line, lineIndex) => {
+    const base = line.trim();
+    if (!base) return;
 
-      if (!cleaned) return null;
+    const pieces = splitCommands(base);
 
-      const id = `${sourceLabel}-${index}-${cleaned.slice(0, 80)}`;
-      if (seen.has(id)) return null;
-      seen.add(id);
+    pieces.forEach((piece) => {
+      const normalized = normalizeCommand(piece);
+      if (!normalized) return;
 
-      return {
-        id,
+      const key = normalized.toLowerCase();
+      if (seen.has(key)) return;
+      seen.add(key);
+
+      entries.push({
+        id: `${sourceLabel}-${lineIndex}-${normalized.slice(0, 80)}`,
         source: sourceLabel,
-        text: cleaned,
-      };
-    })
-    .filter((entry): entry is ArchiveEntry => Boolean(entry));
+        text: normalized,
+      });
+    });
+  });
+
+  return entries;
 }
 
 export default function ADBArchive() {
@@ -63,6 +88,7 @@ export default function ADBArchive() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [search, setSearch] = useState("");
+  const [page, setPage] = useState(1);
 
   useEffect(() => {
     let active = true;
@@ -81,17 +107,21 @@ export default function ADBArchive() {
       } catch (loadError) {
         if (!active) return;
         console.error(loadError);
-        setError("Unable to load the local archive files.");
+        setError("Unable to load the local ADB list files.");
       } finally {
         if (active) setLoading(false);
       }
     };
 
-    void loadArchive();
+    loadArchive();
     return () => {
       active = false;
     };
   }, []);
+
+  useEffect(() => {
+    setPage(1);
+  }, [search]);
 
   const filteredEntries = useMemo(() => {
     const query = search.trim().toLowerCase();
@@ -103,13 +133,24 @@ export default function ADBArchive() {
     });
   }, [entries, search]);
 
-  const groups = useMemo(() => {
-    const packed: ArchiveEntry[][] = [];
-    for (let index = 0; index < filteredEntries.length; index += GROUP_SIZE) {
-      packed.push(filteredEntries.slice(index, index + GROUP_SIZE));
+  const pageCount = Math.max(1, Math.ceil(filteredEntries.length / PAGE_SIZE));
+  const safePage = Math.min(page, pageCount);
+  const pagedEntries = filteredEntries.slice(
+    (safePage - 1) * PAGE_SIZE,
+    safePage * PAGE_SIZE
+  );
+
+  const handleCopy = async (command: string) => {
+    try {
+      await navigator.clipboard.writeText(command);
+      toast.success("COMMAND COPIED", {
+        description: `> ${command}`,
+        duration: 1500,
+      });
+    } catch {
+      toast.error("COPY FAILED");
     }
-    return packed;
-  }, [filteredEntries]);
+  };
 
   return (
     <div className="relative min-h-screen bg-black text-gray-100 overflow-x-hidden crt-scanlines crt-noise">
@@ -138,7 +179,7 @@ export default function ADBArchive() {
                   VR<span className="text-red-500">ADB</span>
                 </div>
                 <div className="text-[9px] text-gray-700 tracking-[0.2em] uppercase leading-none mt-0.5 font-mono">
-                  Remote ADB Archive
+                  ADB LIST
                 </div>
               </div>
             </div>
@@ -160,11 +201,11 @@ export default function ADBArchive() {
               <div className="flex items-center gap-2 mb-2">
                 <span className="text-red-700 text-[10px] font-mono">&gt;</span>
                 <span className="text-gray-600 text-[10px] uppercase tracking-[0.2em] font-mono">
-                  Archive Loader
+                  COMMAND LIST
                 </span>
               </div>
               <h1 className="font-display text-2xl md:text-4xl font-black tracking-tight text-white">
-                ADB <span className="text-red-500">TEXT</span> ARCHIVE
+                ADB <span className="text-red-500">LIST</span>
               </h1>
             </div>
 
@@ -181,9 +222,48 @@ export default function ADBArchive() {
           </div>
         </section>
 
+        {!loading && !error && (
+          <div className="mb-6 flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+            <div className="flex items-center gap-2 text-[10px] font-mono tracking-[0.2em] uppercase text-gray-600">
+              <span>PAGE</span>
+              <input
+                type="number"
+                min={1}
+                max={pageCount}
+                value={safePage}
+                onChange={(event) => {
+                  const nextPage = Number(event.target.value) || 1;
+                  setPage(Math.min(pageCount, Math.max(1, nextPage)));
+                }}
+                className="w-16 bg-black border border-red-900/25 rounded px-2 py-1 text-red-400 text-center focus:outline-none focus:border-red-600/50"
+              />
+              <span>OF {pageCount}</span>
+            </div>
+
+            <div className="flex items-center gap-2">
+              <button
+                onClick={() => setPage((prev) => Math.max(1, prev - 1))}
+                disabled={safePage <= 1}
+                className="inline-flex items-center gap-1 rounded border border-red-900/25 px-2.5 py-1.5 text-[10px] font-mono uppercase tracking-[0.2em] text-red-400 disabled:opacity-40 disabled:cursor-not-allowed hover:border-red-600/50 hover:text-red-300 transition-colors"
+              >
+                <ChevronLeft size={12} />
+                PREV
+              </button>
+              <button
+                onClick={() => setPage((prev) => Math.min(pageCount, prev + 1))}
+                disabled={safePage >= pageCount}
+                className="inline-flex items-center gap-1 rounded border border-red-900/25 px-2.5 py-1.5 text-[10px] font-mono uppercase tracking-[0.2em] text-red-400 disabled:opacity-40 disabled:cursor-not-allowed hover:border-red-600/50 hover:text-red-300 transition-colors"
+              >
+                NEXT
+                <ChevronRight size={12} />
+              </button>
+            </div>
+          </div>
+        )}
+
         {loading && (
           <div className="rounded border border-red-900/25 bg-black/60 p-10 text-center text-gray-400 font-mono text-xs tracking-[0.2em] uppercase">
-            LOADING ARCHIVE DATA...
+            LOADING LIST DATA...
           </div>
         )}
 
@@ -193,47 +273,73 @@ export default function ADBArchive() {
           </div>
         )}
 
-        {!loading && !error && groups.length === 0 && (
+        {!loading && !error && filteredEntries.length === 0 && (
           <div className="rounded border border-red-900/25 bg-black/60 p-10 text-center text-gray-500 font-mono text-xs tracking-[0.2em] uppercase">
             NO MATCHES FOUND
           </div>
         )}
 
-        {!loading && !error && groups.length > 0 && (
-          <div className="space-y-8">
-            {groups.map((group, groupIndex) => (
-              <section
-                key={`group-${groupIndex + 1}`}
-                className="rounded border border-red-900/25 bg-black/60 overflow-hidden"
-              >
-                <div className="flex items-center justify-between px-4 py-3 border-b border-red-900/20 bg-red-950/10">
-                  <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-red-400">
-                    Group {String(groupIndex + 1).padStart(2, "0")}
-                  </span>
-                  <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-gray-600">
-                    {group.length} entries
-                  </span>
-                </div>
+        {!loading && !error && filteredEntries.length > 0 && (
+          <>
+            <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-3">
+              {pagedEntries.map((entry) => {
+                const boxHeight = Math.min(220, Math.max(92, 90 + Math.ceil(entry.text.length / 28) * 10));
 
-                <div className="grid gap-2 p-3 md:grid-cols-2 xl:grid-cols-3">
-                  {group.map((entry) => (
-                    <div
-                      key={entry.id}
-                      className="rounded border border-red-900/20 bg-white/[0.02] px-3 py-2 text-[11px] leading-relaxed font-mono text-gray-300"
-                    >
-                      <div className="mb-1 text-[9px] uppercase tracking-[0.2em] text-red-700">
+                return (
+                  <div
+                    key={entry.id}
+                    className="group rounded border border-red-900/20 bg-white/[0.02] px-3 py-2 text-[11px] leading-relaxed font-mono text-gray-300 transition-all duration-150 hover:border-red-600/40 hover:bg-white/[0.035]"
+                    style={{ minHeight: `${boxHeight}px` }}
+                  >
+                    <div className="flex items-center justify-between gap-2 mb-2">
+                      <span className="text-[9px] uppercase tracking-[0.2em] text-red-700">
                         {entry.source}
-                      </div>
-                      <code className="block whitespace-pre-wrap break-words text-green-400">
-                        <span className="text-red-600 mr-2">$</span>
-                        {entry.text}
-                      </code>
+                      </span>
+                      <button
+                        onClick={() => handleCopy(entry.text)}
+                        className="inline-flex items-center gap-1 rounded border border-red-900/25 px-2 py-1 text-[9px] uppercase tracking-[0.2em] text-red-400 hover:border-red-600/50 hover:text-red-300 transition-colors"
+                      >
+                        <Copy size={10} />
+                        COPY
+                      </button>
                     </div>
-                  ))}
-                </div>
-              </section>
-            ))}
-          </div>
+
+                    <code className="block whitespace-pre-wrap break-words text-green-400 leading-relaxed">
+                      <span className="text-red-600 mr-2">$</span>
+                      {entry.text}
+                    </code>
+                  </div>
+                );
+              })}
+            </div>
+
+            <div className="mt-8 flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+              <div className="flex items-center gap-2 text-[10px] font-mono tracking-[0.2em] uppercase text-gray-600">
+                <span>SHOWING</span>
+                <span className="text-red-400">{Math.min(filteredEntries.length, (safePage - 1) * PAGE_SIZE + 1)}-{Math.min(filteredEntries.length, safePage * PAGE_SIZE)}</span>
+                <span>OF {filteredEntries.length}</span>
+              </div>
+
+              <div className="flex items-center gap-2">
+                <button
+                  onClick={() => setPage((prev) => Math.max(1, prev - 1))}
+                  disabled={safePage <= 1}
+                  className="inline-flex items-center gap-1 rounded border border-red-900/25 px-2.5 py-1.5 text-[10px] font-mono uppercase tracking-[0.2em] text-red-400 disabled:opacity-40 disabled:cursor-not-allowed hover:border-red-600/50 hover:text-red-300 transition-colors"
+                >
+                  <ChevronLeft size={12} />
+                  PREV
+                </button>
+                <button
+                  onClick={() => setPage((prev) => Math.min(pageCount, prev + 1))}
+                  disabled={safePage >= pageCount}
+                  className="inline-flex items-center gap-1 rounded border border-red-900/25 px-2.5 py-1.5 text-[10px] font-mono uppercase tracking-[0.2em] text-red-400 disabled:opacity-40 disabled:cursor-not-allowed hover:border-red-600/50 hover:text-red-300 transition-colors"
+                >
+                  NEXT
+                  <ChevronRight size={12} />
+                </button>
+              </div>
+            </div>
+          </>
         )}
       </main>
     </div>
