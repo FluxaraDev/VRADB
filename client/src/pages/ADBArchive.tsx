@@ -51,29 +51,18 @@ const normalizeCommand = (raw: string): string | null => {
   if (lower.includes("adb shell")) {
     const withoutPrefix = normalizedText.replace(/^adb\s+shell\s+/i, "").trim();
     if (!withoutPrefix) return null;
-    if (withoutPrefix.startsWith("setprop ")) return `adb shell ${withoutPrefix}`;
-    return `adb shell ${withoutPrefix}`;
+    return `adb shell ${withoutPrefix}`.replace(/\s+/g, " ").trim();
   }
 
-  if (normalizedText.startsWith("setprop ")) return `adb shell ${normalizedText}`;
-
-  if (/^(?:debug\.oculus\.|persist\.debug\.oculus\.)/i.test(normalizedText)) {
-    const match = normalizedText.match(/^(?:debug\.oculus\.|persist\.debug\.oculus\.)[A-Za-z0-9_.-]+/i);
-    if (!match) return null;
-
-    const prop = match[0];
-    const rest = normalizedText.slice(prop.length).trim();
-    const value = rest ? rest : "1";
-    return `adb shell setprop ${prop} ${value}`.replace(/\s+/g, " ").trim();
+  if (normalizedText.startsWith("setprop ")) {
+    return `adb shell ${normalizedText}`.replace(/\s+/g, " ").trim();
   }
 
-  if (lower.includes("debug.oculus") || lower.includes("persist.debug.oculus")) {
-    const match = normalizedText.match(/(?:debug\.oculus\.[A-Za-z0-9_.-]+|persist\.debug\.oculus\.[A-Za-z0-9_.-]+)/i);
-    if (!match) return null;
-
-    const prop = match[0];
+  const propertyMatch = normalizedText.match(/(?:debug|persist\.debug)\.oculus\.[A-Za-z0-9_.-]+/i);
+  if (propertyMatch) {
+    const prop = propertyMatch[0];
     const rest = normalizedText.slice(normalizedText.indexOf(prop) + prop.length).trim();
-    const value = rest ? rest : "1";
+    const value = rest && !/^[:=,;]+$/.test(rest) ? rest : "1";
     return `adb shell setprop ${prop} ${value}`.replace(/\s+/g, " ").trim();
   }
 
