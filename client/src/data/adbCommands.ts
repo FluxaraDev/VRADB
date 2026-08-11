@@ -306,7 +306,7 @@ export const adbCategories: AdbCategory[] = [
         id: "disp-8",
         label: "Disable Screen Timeout",
         command: "adb shell settings put system screen_off_timeout 2147483647",
-        description: "Prevents screen from turning off (max timeout).",
+        description: "Warning: do not set debug.oculus.vsyncEmu above 1. It can fry your headset and may cause artifacting and glitching. Pairing this with debug.oculus.refreshRate bypasses the headset's maximum and minimum refresh-rate limits while tuning frame sync and performance timing
       },
       {
         id: "disp-9",
