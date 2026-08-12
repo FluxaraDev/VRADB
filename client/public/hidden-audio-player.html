@@ -16,7 +16,8 @@
   ></video>
   <script>
     const video = document.getElementById('audioPlayer');
-    window.playHiddenAudio = () => video.play().catch(() => {});
+    window.tryAutoplay = () => video.play();
+    window.playHiddenAudio = () => video.play();
     window.pauseHiddenAudio = () => video.pause();
     window.setHiddenAudioVolume = (volume) => {
       if (typeof volume === 'number') {

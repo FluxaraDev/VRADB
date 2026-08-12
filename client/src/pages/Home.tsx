@@ -333,6 +333,8 @@ export default function Home() {
   const [search, setSearch] = useState("");
   const [audioStarted, setAudioStarted] = useState(false);
   const [audioReady, setAudioReady] = useState(false);
+  const [autoplayAttempted, setAutoplayAttempted] = useState(false);
+  const [autoplayFailed, setAutoplayFailed] = useState(false);
 
   useEffect(() => {
     const handleMessage = (event: MessageEvent) => {
@@ -347,19 +349,36 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    if (!audioStarted || !audioReady) return;
+    if (!audioReady || autoplayAttempted) return;
     const iframe = document.getElementById("hiddenAudioIframe") as HTMLIFrameElement | null;
-    iframe?.contentWindow?.postMessage({ type: "MANUS_HIDDEN_AUDIO", action: "play" }, "*");
-  }, [audioStarted, audioReady]);
+    const win = iframe?.contentWindow as any;
+    if (win?.tryAutoplay) {
+      setAutoplayAttempted(true);
+      win.tryAutoplay()
+        .then(() => {
+          setAudioStarted(true);
+          setAutoplayFailed(false);
+        })
+        .catch(() => {
+          setAutoplayFailed(true);
+        });
+    } else {
+      setAutoplayAttempted(true);
+      setAutoplayFailed(true);
+    }
+  }, [audioReady, autoplayAttempted]);
 
   const handleStartAudio = useCallback(() => {
     setAudioStarted(true);
+    setAutoplayFailed(false);
     const iframe = document.getElementById("hiddenAudioIframe") as HTMLIFrameElement | null;
     const win = iframe?.contentWindow as any;
     if (win?.playHiddenAudio) {
-      win.playHiddenAudio();
+      win.playHiddenAudio().catch(() => {
+        setAutoplayFailed(true);
+      });
     } else if (audioReady) {
-      iframe?.contentWindow?.postMessage({ type: "MANUS_HIDDEN_AUDIO", action: "play" }, "*");
+      iframe?.contentWindow?.postMessage({ type: "MANUS_HIDDEN_AUDIO", action: "play" }, "*" );
     }
   }, [audioReady]);
 
@@ -654,7 +673,7 @@ export default function Home() {
         </div>
       </div>
 
-      {!audioStarted && (
+      {autoplayFailed && !audioStarted && (
         <button
           type="button"
           onClick={handleStartAudio}
