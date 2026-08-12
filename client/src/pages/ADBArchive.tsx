@@ -178,7 +178,7 @@ export default function ADBArchive() {
               </div>
               <div>
                 <div className="font-display text-sm font-black text-white tracking-widest leading-none">
-                  VR<span className="text-red-500">ADB</span>
+                  NOVA<span className="text-red-500">ADBS</span>
                 </div>
                 <div className="text-[9px] text-gray-700 tracking-[0.2em] uppercase leading-none mt-0.5 font-mono">
                   ADB LIST

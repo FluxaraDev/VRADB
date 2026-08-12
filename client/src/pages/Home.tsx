@@ -208,7 +208,7 @@ function StatusBar() {
                     bg-black/90">
       <span className="text-red-800 status-pulse">■ SYSTEM ONLINE</span>
       <span className="text-gray-800">|</span>
-      <span>ADB_LIB v2.6.0</span>
+      <span>ADB_LIB v2.6.1</span>
       <span className="text-gray-800">|</span>
       <span><span className="text-red-700">{total}</span> CMDS LOADED</span>
       <span className="text-gray-800">|</span>
@@ -451,7 +451,7 @@ export default function Home() {
             </div>
             <div>
               <div className="font-display text-sm font-black text-white tracking-widest leading-none">
-                VR<span className="text-red-500">ADB</span>
+                NOVA<span className="text-red-500">ADBS</span>
               </div>
               <div className="text-[9px] text-gray-700 tracking-[0.2em] uppercase leading-none mt-0.5 font-mono">
                 For Quest, Pico &amp; Android VR
@@ -688,7 +688,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3">
           <div className="flex items-center gap-2 text-[10px] text-gray-700 font-mono">
             <span className="text-red-700">&gt;_</span>
-            <span className="tracking-widest">VR ADB KEY MAPPER v2.6.0</span>
+            <span className="tracking-widest">Nova ADB's v2.6.1</span>
           </div>
           <p className="text-[10px] text-gray-800 font-mono text-center tracking-wide">
             ⚠ USE AT YOUR OWN RISK — ENABLE USB DEBUGGING BEFORE EXECUTING ANY ADB COMMAND
