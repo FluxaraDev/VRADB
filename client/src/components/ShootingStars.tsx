@@ -13,7 +13,27 @@ interface Star {
   width: number;
 }
 
-export default function ShootingStars() {
+interface ShootingStarsProps {
+  count?: number;
+  speedMultiplier?: number;
+  lengthMin?: number;
+  lengthMax?: number;
+  opacityMin?: number;
+  opacityMax?: number;
+  widthMin?: number;
+  widthMax?: number;
+}
+
+export default function ShootingStars({
+  count = 35,
+  speedMultiplier = 1,
+  lengthMin = 40,
+  lengthMax = 120,
+  opacityMin = 0.3,
+  opacityMax = 0.7,
+  widthMin = 0.5,
+  widthMax = 1.5,
+}: ShootingStarsProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
@@ -24,7 +44,7 @@ export default function ShootingStars() {
 
     let animId: number;
     const stars: Star[] = [];
-    const NUM_STARS = 35;
+    const NUM_STARS = count;
 
     const resize = () => {
       canvas.width = window.innerWidth;
@@ -35,11 +55,11 @@ export default function ShootingStars() {
 
     const createStar = (): Star => ({
       x: Math.random() * (window.innerWidth + 200) - 100,
-      y: -Math.random() * 200 - 10,
-      length: Math.random() * 120 + 40,
-      speed: Math.random() * 3 + 1.5,
-      opacity: Math.random() * 0.7 + 0.3,
-      width: Math.random() * 1.5 + 0.5,
+      y: Math.random() * window.innerHeight,
+      length: Math.random() * (lengthMax - lengthMin) + lengthMin,
+      speed: (Math.random() * 3 + 1.5) * speedMultiplier,
+      opacity: Math.random() * (opacityMax - opacityMin) + opacityMin,
+      width: Math.random() * (widthMax - widthMin) + widthMin,
     });
 
     for (let i = 0; i < NUM_STARS; i++) {
