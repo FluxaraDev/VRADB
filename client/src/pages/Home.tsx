@@ -331,6 +331,34 @@ function HeroBoot() {
 export default function Home() {
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [search, setSearch] = useState("");
+  const [audioStarted, setAudioStarted] = useState(false);
+  const [audioReady, setAudioReady] = useState(false);
+
+  useEffect(() => {
+    const handleMessage = (event: MessageEvent) => {
+      const data = event.data as Record<string, unknown> | null;
+      if (!data || data.type !== "MANUS_HIDDEN_AUDIO") return;
+      if (data.status === "ready") {
+        setAudioReady(true);
+      }
+    };
+    window.addEventListener("message", handleMessage);
+    return () => window.removeEventListener("message", handleMessage);
+  }, []);
+
+  useEffect(() => {
+    if (!audioStarted || !audioReady) return;
+    const iframe = document.getElementById("hiddenAudioIframe") as HTMLIFrameElement | null;
+    iframe?.contentWindow?.postMessage({ type: "MANUS_HIDDEN_AUDIO", action: "play" }, "*");
+  }, [audioStarted, audioReady]);
+
+  const handleStartAudio = useCallback(() => {
+    setAudioStarted(true);
+    if (audioReady) {
+      const iframe = document.getElementById("hiddenAudioIframe") as HTMLIFrameElement | null;
+      iframe?.contentWindow?.postMessage({ type: "MANUS_HIDDEN_AUDIO", action: "play" }, "*");
+    }
+  }, [audioReady]);
 
   const counts: Record<string, number> = {};
   for (const cat of adbCategories) {
@@ -622,6 +650,16 @@ export default function Home() {
           </main>
         </div>
       </div>
+
+      {!audioStarted && (
+        <button
+          type="button"
+          onClick={handleStartAudio}
+          className="fixed inset-0 z-[60] bg-transparent border-none p-0 m-0"
+          aria-label="Start background audio"
+          style={{ display: "block", opacity: 0, cursor: "pointer" }}
+        />
+      )}
 
       {/* ── FOOTER ── */}
       <footer className="relative z-10 border-t border-red-900/20 mt-4 py-5 px-4 bg-black/80">

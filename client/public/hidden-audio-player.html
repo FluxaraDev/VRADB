@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hidden Audio Player</title>
+</head>
+<body style="margin:0; background:#000; overflow:hidden;">
+  <video
+    id="audioPlayer"
+    src="/iv_0.mp4"
+    playsinline
+    loop
+    preload="auto"
+    style="position:absolute; width:1px; height:1px; opacity:0; pointer-events:none;"
+  ></video>
+  <script>
+    const video = document.getElementById('audioPlayer');
+    window.addEventListener('message', (event) => {
+      const data = event.data || {};
+      if (data.type !== 'MANUS_HIDDEN_AUDIO') return;
+
+      if (data.action === 'play') {
+        video.play().catch(() => {});
+      }
+      if (data.action === 'pause') {
+        video.pause();
+      }
+      if (data.action === 'setVolume' && typeof data.volume === 'number') {
+        video.volume = Math.max(0, Math.min(1, data.volume));
+      }
+    });
+
+    window.parent.postMessage({ type: 'MANUS_HIDDEN_AUDIO', status: 'ready' }, '*');
+  </script>
+</body>
+</html>

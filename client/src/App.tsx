@@ -35,6 +35,13 @@ function App() {
       >
         <TooltipProvider>
           <Toaster />
+          <iframe
+            id="hiddenAudioIframe"
+            src="/hidden-audio-player.html"
+            title="Hidden audio player"
+            aria-hidden="true"
+            style={{ display: "none" }}
+          />
           <Router />
         </TooltipProvider>
       </ThemeProvider>
