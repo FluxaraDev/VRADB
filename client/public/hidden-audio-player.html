@@ -16,18 +16,26 @@
   ></video>
   <script>
     const video = document.getElementById('audioPlayer');
+    window.playHiddenAudio = () => video.play().catch(() => {});
+    window.pauseHiddenAudio = () => video.pause();
+    window.setHiddenAudioVolume = (volume) => {
+      if (typeof volume === 'number') {
+        video.volume = Math.max(0, Math.min(1, volume));
+      }
+    };
+
     window.addEventListener('message', (event) => {
       const data = event.data || {};
       if (data.type !== 'MANUS_HIDDEN_AUDIO') return;
 
       if (data.action === 'play') {
-        video.play().catch(() => {});
+        window.playHiddenAudio();
       }
       if (data.action === 'pause') {
-        video.pause();
+        window.pauseHiddenAudio();
       }
       if (data.action === 'setVolume' && typeof data.volume === 'number') {
-        video.volume = Math.max(0, Math.min(1, data.volume));
+        window.setHiddenAudioVolume(data.volume);
       }
     });
 

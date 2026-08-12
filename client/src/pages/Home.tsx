@@ -354,8 +354,11 @@ export default function Home() {
 
   const handleStartAudio = useCallback(() => {
     setAudioStarted(true);
-    if (audioReady) {
-      const iframe = document.getElementById("hiddenAudioIframe") as HTMLIFrameElement | null;
+    const iframe = document.getElementById("hiddenAudioIframe") as HTMLIFrameElement | null;
+    const win = iframe?.contentWindow as any;
+    if (win?.playHiddenAudio) {
+      win.playHiddenAudio();
+    } else if (audioReady) {
       iframe?.contentWindow?.postMessage({ type: "MANUS_HIDDEN_AUDIO", action: "play" }, "*");
     }
   }, [audioReady]);
