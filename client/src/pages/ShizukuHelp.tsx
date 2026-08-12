@@ -1,6 +1,8 @@
+import { useState } from "react";
 import { Link } from "wouter";
-import { ArrowLeft, Download, ShieldCheck, Smartphone, Settings, Rocket, ExternalLink, CheckCircle2, MonitorCog, Wifi, TerminalSquare, AlertTriangle } from "lucide-react";
+import { ArrowLeft, Download, ShieldCheck, Smartphone, Settings, Rocket, ExternalLink, CheckCircle2, MonitorCog, Wifi, TerminalSquare, AlertTriangle, Copy, Check, ChevronDown } from "lucide-react";
 import ShootingStars from "@/components/ShootingStars";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 const officialSources = [
   { label: "Official Shizuku Website", url: "https://shizuku.rikka.app/" },
@@ -8,7 +10,46 @@ const officialSources = [
   { label: "Android SDK Platform Tools", url: "https://developer.android.com/studio/releases/platform-tools" },
 ];
 
-const guideSections = [
+function CopyCodeButton({ text }: { text: string }) {
+  const [copied, setCopied] = useState(false);
+
+  const handleCopy = async () => {
+    try {
+      await navigator.clipboard.writeText(text);
+      setCopied(true);
+      window.setTimeout(() => setCopied(false), 1200);
+    } catch {
+      setCopied(false);
+    }
+  };
+
+  return (
+    <button
+      type="button"
+      onClick={handleCopy}
+      className="inline-flex items-center gap-1 rounded border border-red-800/35 bg-red-950/20 px-2 py-1 text-[9px] uppercase tracking-[0.2em] text-red-300 transition-colors hover:border-red-600/60 hover:text-red-200"
+    >
+      {copied ? <Check size={10} /> : <Copy size={10} />}
+      {copied ? "Copied" : "Copy"}
+    </button>
+  );
+}
+
+function CommandBlock({ command, title }: { command: string; title?: string }) {
+  return (
+    <div className="rounded border border-red-900/20 bg-black/60 p-3">
+      {title ? <div className="mb-2 text-[10px] uppercase tracking-[0.2em] text-red-400">{title}</div> : null}
+      <div className="mb-2 flex justify-end">
+        <CopyCodeButton text={command} />
+      </div>
+      <pre className="overflow-x-auto whitespace-pre-wrap break-words font-mono text-xs leading-relaxed text-green-400">
+        {command}
+      </pre>
+    </div>
+  );
+}
+
+const questGuideSections = [
   {
     title: "1. WHAT THIS GUIDE DOES",
     icon: CheckCircle2,
@@ -29,18 +70,18 @@ const guideSections = [
     ),
   },
   {
-    title: "2. OFFICIAL SOURCE LINKS (FOR THE AI TO USE)",
+    title: "2. OFFICIAL SOURCE LINKS",
     icon: ExternalLink,
     body: (
       <div className="space-y-3 text-sm leading-relaxed text-gray-400 font-mono">
         <p>
-          Official Shizuku Website: (<a className="text-red-400 underline" href="https://shizuku.rikka.app/" target="_blank" rel="noopener noreferrer">https://shizuku.rikka.app/</a>)
+          Official Shizuku Website: <a className="text-red-400 underline" href="https://shizuku.rikka.app/" target="_blank" rel="noopener noreferrer">https://shizuku.rikka.app/</a>
         </p>
         <p>
-          Official Shizuku GitHub Releases: (<a className="text-red-400 underline" href="https://github.com/RikkaApps/Shizuku/releases" target="_blank" rel="noopener noreferrer">https://github.com/RikkaApps/Shizuku/releases</a>)
+          Official Shizuku GitHub Releases: <a className="text-red-400 underline" href="https://github.com/RikkaApps/Shizuku/releases" target="_blank" rel="noopener noreferrer">https://github.com/RikkaApps/Shizuku/releases</a>
         </p>
         <p>
-          Android SDK Platform Tools: (<a className="text-red-400 underline" href="https://developer.android.com/studio/releases/platform-tools" target="_blank" rel="noopener noreferrer">https://developer.android.com/studio/releases/platform-tools</a>)
+          Android SDK Platform Tools: <a className="text-red-400 underline" href="https://developer.android.com/studio/releases/platform-tools" target="_blank" rel="noopener noreferrer">https://developer.android.com/studio/releases/platform-tools</a>
         </p>
       </div>
     ),
@@ -259,28 +300,128 @@ const guideSections = [
       </div>
     ),
   },
+];
+
+const termuxGuideSections = [
   {
-    title: "15. PROMPT FOR YOUR AI TO BUILD THE WEBSITE",
+    title: "1. REQUIREMENTS",
+    icon: CheckCircle2,
+    body: (
+      <div className="space-y-3 text-sm leading-relaxed text-gray-400 font-mono">
+        <ul className="list-disc pl-5 space-y-1 text-xs text-gray-500">
+          <li>Meta Quest headset</li>
+          <li>Shizuku already installed and running</li>
+          <li>Termux installed on Quest</li>
+          <li>Ability to access Shizuku’s “Use Shizuku in terminal apps” menu</li>
+        </ul>
+      </div>
+    ),
+  },
+  {
+    title: "2. EXPORT RISH FILES FROM SHIZUKU",
+    icon: Download,
+    body: (
+      <div className="space-y-3 text-sm leading-relaxed text-gray-400 font-mono">
+        <ol className="list-decimal pl-5 space-y-1 text-xs text-gray-500">
+          <li>Open Shizuku.</li>
+          <li>Go to Use Shizuku in terminal apps.</li>
+          <li>Press Export files.</li>
+          <li>When asked where to export:
+            <ul className="list-disc pl-5 mt-2 space-y-1 text-xs text-gray-500">
+              <li>Open your file manager.</li>
+              <li>Go to Download.</li>
+              <li>Create a folder named rish1.</li>
+              <li>Select the rish1 folder.</li>
+            </ul>
+          </li>
+          <li>Shizuku will export two files into: /sdcard/Download/rish1/
+            <ul className="list-disc pl-5 mt-2 space-y-1 text-xs text-gray-500">
+              <li>rish</li>
+              <li>rish_shizuku.dex</li>
+            </ul>
+          </li>
+        </ol>
+      </div>
+    ),
+  },
+  {
+    title: "3. SET UP TERMUX STORAGE",
     icon: TerminalSquare,
     body: (
       <div className="space-y-3 text-sm leading-relaxed text-gray-400 font-mono">
-        <p>Tell your AI:</p>
-        <ul className="list-disc pl-5 space-y-1 text-xs text-gray-500">
-          <li>“All source links are inside parentheses — convert them into clickable links.”</li>
-          <li>“Do NOT remove the parentheses.”</li>
-        </ul>
-        <p className="pt-2">Make pages for:</p>
-        <ul className="list-disc pl-5 space-y-1 text-xs text-gray-500">
-          <li>Overview</li>
-          <li>Install Shizuku v11.0 (Required First Step)</li>
-          <li>Open Android Settings via Lightning Launcher</li>
-          <li>Unlock Developer Options (Build Number)</li>
-          <li>Wireless Debugging Setup</li>
-          <li>Pair Shizuku v11.0 (with pairing code + port explanation)</li>
-          <li>Upgrade Shizuku to Newest Version (with ‘Upgrade’ behavior)</li>
-          <li>Troubleshooting</li>
-        </ul>
-        <p className="pt-2">Add step cards for each section. Add screenshot placeholders (no images needed).</p>
+        <ol className="list-decimal pl-5 space-y-2 text-xs text-gray-500">
+          <li>Open Termux.</li>
+          <li>Run:</li>
+        </ol>
+        <CommandBlock command="termux-setup-storage" />
+        <p className="text-xs text-gray-500">Press Allow when the permission popup appears.</p>
+      </div>
+    ),
+  },
+  {
+    title: "4. COPY RISH FILES INTO TERMUX HOME",
+    icon: Copy,
+    body: (
+      <div className="space-y-3 text-sm leading-relaxed text-gray-400 font-mono">
+        <p>Run these commands in Termux:</p>
+        <CommandBlock command={`cat /sdcard/Download/rish1/rish > ~/rish\ncat /sdcard/Download/rish1/rish_shizuku.dex > ~/rish_shizuku.dex`} />
+        <p className="text-xs text-gray-500">Press Enter after each command.</p>
+      </div>
+    ),
+  },
+  {
+    title: "5. SET PERMISSIONS",
+    icon: ShieldCheck,
+    body: (
+      <div className="space-y-3 text-sm leading-relaxed text-gray-400 font-mono">
+        <p>Run:</p>
+        <CommandBlock command={`chmod 700 ~/rish\nchmod 400 ~/rish_shizuku.dex`} />
+      </div>
+    ),
+  },
+  {
+    title: "6. SET APPLICATION ID FOR TERMUX",
+    icon: Settings,
+    body: (
+      <div className="space-y-3 text-sm leading-relaxed text-gray-400 font-mono">
+        <p>Run:</p>
+        <CommandBlock command='export RISH_APPLICATION_ID="com.termux"' />
+      </div>
+    ),
+  },
+  {
+    title: "7. TEST RISH",
+    icon: CheckCircle2,
+    body: (
+      <div className="space-y-3 text-sm leading-relaxed text-gray-400 font-mono">
+        <p>Run:</p>
+        <CommandBlock command='~/rish -c "whoami"' />
+        <p className="text-xs text-gray-500">If it prints: shell</p>
+        <p className="text-xs text-gray-500">You are fully set up.</p>
+      </div>
+    ),
+  },
+  {
+    title: "8. RUN ADB-STYLE COMMANDS USING RISH",
+    icon: TerminalSquare,
+    body: (
+      <div className="space-y-4 text-sm leading-relaxed text-gray-400 font-mono">
+        <div>
+          <p className="font-bold text-red-400">A. Quick one-shot command</p>
+          <p className="mt-2 text-xs text-gray-500">Use:</p>
+          <CommandBlock command='rish -c setprop "debug.oculus.swapInterval" 2' />
+        </div>
+        <div>
+          <p className="font-bold text-red-400">B. Full interactive ADB shell</p>
+          <p className="mt-2 text-xs text-gray-500">Run:</p>
+          <CommandBlock command='rish' />
+          <p className="mt-3 text-xs text-gray-500">If successful, it will print your device codename:</p>
+          <ul className="list-disc pl-5 mt-2 space-y-1 text-xs text-gray-500">
+            <li>panther on Quest 3 / 3S</li>
+            <li>hollywood on Quest 2</li>
+          </ul>
+          <p className="mt-3 text-xs text-gray-500">Paste any ADB command directly into this shell without using rish -c.</p>
+        </div>
       </div>
     ),
   },
@@ -330,31 +471,96 @@ export default function ShizukuHelp() {
           <div className="space-y-2 text-sm text-gray-400 font-mono">
             {officialSources.map((source) => (
               <p key={source.label}>
-                {source.label}: (<a className="text-red-400 underline" href={source.url} target="_blank" rel="noopener noreferrer">{source.url}</a>)
+                {source.label}: <a className="text-red-400 underline" href={source.url} target="_blank" rel="noopener noreferrer">{source.url}</a>
               </p>
             ))}
           </div>
         </div>
 
-        <div className="grid gap-4 md:grid-cols-2">
-          {guideSections.map(({ title, body, icon: Icon }) => (
-            <div
-              key={title}
-              className="relative rounded border border-red-900/25 bg-white/[0.02] backdrop-blur-sm overflow-hidden card-glow p-5"
-            >
-              <div className="absolute left-0 top-0 bottom-0 w-[2px] bg-gradient-to-b from-red-600 via-red-700 to-transparent opacity-60" />
-              <div className="flex items-start gap-3 mb-4">
-                <div className="rounded border border-red-800/35 bg-red-950/20 p-2 text-red-400">
-                  <Icon size={14} />
+        <div className="mb-8">
+          <Accordion type="single" collapsible className="space-y-3">
+            <AccordionItem value="meta-quest-guide" className="overflow-hidden rounded border border-red-900/25 bg-white/[0.02] backdrop-blur-sm">
+              <AccordionTrigger className="px-4 py-3 text-left hover:no-underline [&>svg]:text-red-400">
+                <div className="flex items-center gap-3">
+                  <div className="rounded border border-red-800/35 bg-red-950/20 p-2 text-red-400">
+                    <ChevronDown size={14} />
+                  </div>
+                  <span className="font-display text-xs uppercase tracking-[0.2em] text-red-400 leading-relaxed">
+                    Meta Quest Shizuku guide
+                  </span>
                 </div>
-                <h2 className="font-display text-xs uppercase tracking-[0.2em] text-red-400 leading-relaxed">
-                  {title}
-                </h2>
-              </div>
+              </AccordionTrigger>
+              <AccordionContent className="px-4 pb-4">
+                <div className="grid gap-4 md:grid-cols-2">
+                  {questGuideSections.map(({ title, body, icon: Icon }) => (
+                    <div
+                      key={title}
+                      className="relative rounded border border-red-900/25 bg-black/35 p-4"
+                    >
+                      <div className="absolute left-0 top-0 bottom-0 w-[2px] bg-gradient-to-b from-red-600 via-red-700 to-transparent opacity-60" />
+                      <div className="mb-3 flex items-start gap-3">
+                        <div className="rounded border border-red-800/35 bg-red-950/20 p-2 text-red-400">
+                          <Icon size={14} />
+                        </div>
+                        <h3 className="font-display text-[10px] uppercase tracking-[0.2em] text-red-400 leading-relaxed">
+                          {title}
+                        </h3>
+                      </div>
+                      <div className="space-y-3">{body}</div>
+                    </div>
+                  ))}
+                </div>
+              </AccordionContent>
+            </AccordionItem>
 
-              <div className="space-y-3">{body}</div>
-            </div>
-          ))}
+            <AccordionItem value="termux-guide" className="overflow-hidden rounded border border-red-900/25 bg-white/[0.02] backdrop-blur-sm">
+              <AccordionTrigger className="px-4 py-3 text-left hover:no-underline [&>svg]:text-red-400">
+                <div className="flex items-center gap-3">
+                  <div className="rounded border border-red-800/35 bg-red-950/20 p-2 text-red-400">
+                    <TerminalSquare size={14} />
+                  </div>
+                  <span className="font-display text-xs uppercase tracking-[0.2em] text-red-400 leading-relaxed">
+                    Termux + Shizuku + Rish Setup Guide (Standalone, No-PC)
+                  </span>
+                </div>
+              </AccordionTrigger>
+              <AccordionContent className="px-4 pb-4">
+                <div className="grid gap-4 md:grid-cols-2">
+                  {termuxGuideSections.map(({ title, body, icon: Icon }) => (
+                    <div
+                      key={title}
+                      className="relative rounded border border-red-900/25 bg-black/35 p-4"
+                    >
+                      <div className="absolute left-0 top-0 bottom-0 w-[2px] bg-gradient-to-b from-red-600 via-red-700 to-transparent opacity-60" />
+                      <div className="mb-3 flex items-start gap-3">
+                        <div className="rounded border border-red-800/35 bg-red-950/20 p-2 text-red-400">
+                          <Icon size={14} />
+                        </div>
+                        <h3 className="font-display text-[10px] uppercase tracking-[0.2em] text-red-400 leading-relaxed">
+                          {title}
+                        </h3>
+                      </div>
+                      <div className="space-y-3">{body}</div>
+                    </div>
+                  ))}
+                </div>
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
+        </div>
+
+        <div className="mt-8 rounded border border-red-900/30 bg-black/60 p-4 text-center text-sm text-gray-400 font-mono">
+          <p>
+            For more help, join the Discord <span className="text-red-400">:-)</span>
+            <a
+              href="https://discord.gg/WS9Pe8Tzx"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ml-2 text-red-400 underline hover:text-red-300"
+            >
+              https://discord.gg/WS9Pe8Tzx
+            </a>
+          </p>
         </div>
       </div>
     </div>
