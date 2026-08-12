@@ -275,7 +275,7 @@ function HeroBoot() {
               <br />
               <span className="text-red-600 font-bold">VERY IMPORTANT</span>
               <br />
-              <span className="text-red-500">DISCORD SERVER:</span> <a href="https://discord.gg/WS9Pe8Tzx" target="_blank" rel="noopener noreferrer" className="text-red-400 hover:text-red-300 underline">https://discord.gg/WS9Pe8Tzx</a>
+              <span className="text-red-500">DISCORD SERVER:</span> <a href="https://discord.gg/r7SgjdmUF5" target="_blank" rel="noopener noreferrer" className="text-red-400 hover:text-red-300 underline">https://discord.gg/r7SgjdmUF5</a>
               <br />
               <span className="text-gray-600 text-xs">JOIN TO GET MORE. Credits to jinn00898 for the website and FluxDev for small tweaks. / goobert / sing / ace for most of the ADB commands</span>
             </p>
