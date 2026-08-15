@@ -7,6 +7,7 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 import ADBArchive from "./pages/ADBArchive";
 import Home from "./pages/Home";
 import ShizukuHelp from "./pages/ShizukuHelp";
+import DailyAdbBanner from "./components/DailyAdbBanner";
 
 
 function Router() {
@@ -42,6 +43,7 @@ function App() {
             aria-hidden="true"
             style={{ display: "none" }}
           />
+          <DailyAdbBanner />
           <Router />
         </TooltipProvider>
       </ThemeProvider>
