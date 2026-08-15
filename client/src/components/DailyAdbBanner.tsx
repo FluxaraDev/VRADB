@@ -1,31 +1,12 @@
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import { CalendarClock, Copy, Sparkles, X } from "lucide-react";
 import { toast } from "sonner";
 import { getDailyArchiveEntry } from "@/lib/adbArchive";
-
-const STORAGE_PREFIX = "vradb.daily-banner";
-
-function getTodayKey() {
-  const now = new Date();
-  return `${now.getFullYear()}-${now.getMonth() + 1}-${now.getDate()}`;
-}
 
 export default function DailyAdbBanner() {
   const [closed, setClosed] = useState(false);
 
   const entry = useMemo(() => getDailyArchiveEntry(), []);
-
-  useEffect(() => {
-    const todayKey = getTodayKey();
-    const stored = window.localStorage.getItem(STORAGE_PREFIX);
-    setClosed(stored === todayKey);
-  }, []);
-
-  useEffect(() => {
-    if (closed) {
-      window.localStorage.setItem(STORAGE_PREFIX, getTodayKey());
-    }
-  }, [closed]);
 
   if (!entry || closed) return null;
 

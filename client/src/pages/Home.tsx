@@ -28,6 +28,7 @@ import {
   Activity,
   Shield,
   Database,
+  CalendarDays,
 } from "lucide-react";
 import ShootingStars from "@/components/ShootingStars";
 import { adbCategories, type AdbCommand, type AdbCategory } from "@/data/adbCommands";
@@ -489,6 +490,10 @@ export default function Home() {
             <Link href="/archive" className="inline-flex items-center gap-1.5 rounded border border-red-800/35 bg-red-950/20 px-2.5 py-1 text-[10px] uppercase tracking-[0.2em] text-red-400 hover:border-red-600/60 hover:text-red-300 transition-colors">
               <Database size={10} />
               LIST
+            </Link>
+            <Link href="/calendar" className="inline-flex items-center gap-1.5 rounded border border-red-800/35 bg-red-950/20 px-2.5 py-1 text-[10px] uppercase tracking-[0.2em] text-red-400 hover:border-red-600/60 hover:text-red-300 transition-colors">
+              <CalendarDays size={10} />
+              CALENDAR
             </Link>
             <Link href="/help" className="inline-flex items-center gap-1.5 rounded border border-red-800/35 bg-red-950/20 px-2.5 py-1 text-[10px] uppercase tracking-[0.2em] text-red-400 hover:border-red-600/60 hover:text-red-300 transition-colors">
               <Shield size={10} />

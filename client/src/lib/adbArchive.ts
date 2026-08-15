@@ -93,17 +93,20 @@ export function getArchiveEntries(): ArchiveEntry[] {
   return ARCHIVE_SOURCES.flatMap(({ label, raw }) => parseArchiveText(raw, label));
 }
 
-export function getDailyArchiveEntry(): ArchiveEntry | null {
+export function getDateSeededArchiveEntry(date: Date): ArchiveEntry | null {
   const entries = getArchiveEntries();
   if (!entries.length) return null;
 
-  const now = new Date();
-  const day = now.getDate();
-  const month = now.getMonth() + 1;
-  const year = now.getFullYear();
+  const year = date.getFullYear();
+  const month = date.getMonth() + 1;
+  const day = date.getDate();
 
   const dateKey = Number(`${year}${String(month).padStart(2, "0")}${String(day).padStart(2, "0")}`);
   const index = Math.abs(Math.floor((dateKey * 17 + day * 13 + month * 7) % entries.length));
 
   return entries[index] ?? entries[0];
+}
+
+export function getDailyArchiveEntry(date = new Date()): ArchiveEntry | null {
+  return getDateSeededArchiveEntry(date);
 }

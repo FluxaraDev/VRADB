@@ -7,6 +7,7 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 import ADBArchive from "./pages/ADBArchive";
 import Home from "./pages/Home";
 import ShizukuHelp from "./pages/ShizukuHelp";
+import AdbCalendarPage from "./pages/AdbCalendar";
 import DailyAdbBanner from "./components/DailyAdbBanner";
 
 
@@ -15,6 +16,7 @@ function Router() {
     <Switch>
       <Route path={"/"} component={Home} />
       <Route path={"/archive"} component={ADBArchive} />
+      <Route path={"/calendar"} component={AdbCalendarPage} />
       <Route path={"/help"} component={ShizukuHelp} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
