@@ -1,6 +1,7 @@
 /**
  * Commands — the curated ADB command list (moved off the homepage in v2.0.0).
  */
+import { useState, useCallback, useEffect, useRef, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { toast } from "sonner";
 import { Link } from "wouter";
@@ -25,6 +26,8 @@ import {
 import ShootingStars from "@/components/ShootingStars";
 import { adbCategories, type AdbCommand, type AdbCategory } from "@/data/adbCommands";
 import { getArchiveEntries } from "@/lib/adbArchive";
+import { isMusicMuted, applyMuteToPlayer } from "@/lib/music";
+import MuteButton from "@/components/MuteButton";
 
 const ICON_MAP: Record<string, React.ElementType> = {
   cpu: Cpu,
@@ -214,6 +217,11 @@ export default function Commands() {
 
   useEffect(() => {
     if (!audioReady || autoplayAttempted) return;
+    if (isMusicMuted()) {
+      setAutoplayAttempted(true);
+      applyMuteToPlayer(true);
+      return;
+    }
     const iframe = document.getElementById("hiddenAudioIframe") as HTMLIFrameElement | null;
     const win = iframe?.contentWindow as any;
     if (win?.tryAutoplay) {
@@ -233,6 +241,7 @@ export default function Commands() {
   }, [audioReady, autoplayAttempted]);
 
   const handleStartAudio = useCallback(() => {
+    if (isMusicMuted()) return;
     setAudioStarted(true);
     setAutoplayFailed(false);
     const iframe = document.getElementById("hiddenAudioIframe") as HTMLIFrameElement | null;
@@ -499,7 +508,8 @@ export default function Commands() {
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3">
           <div className="flex items-center gap-2 text-[10px] text-gray-700 font-mono">
             <span className="text-zinc-700">&gt;_</span>
-            <span className="tracking-widest">Nova Modding v2.0.0</span>
+            <span className="tracking-widest">Nova Modding v2.0.1</span>
+            <MuteButton />
           </div>
           <p className="text-[10px] text-gray-800 font-mono text-center tracking-wide">
             ⚠ USE AT YOUR OWN RISK — ENABLE USB DEBUGGING BEFORE EXECUTING ANY ADB COMMAND

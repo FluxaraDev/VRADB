@@ -22,6 +22,8 @@ import {
 } from "lucide-react";
 import ShootingStars from "@/components/ShootingStars";
 import { getArchiveEntries } from "@/lib/adbArchive";
+import { isMusicMuted, applyMuteToPlayer } from "@/lib/music";
+import MuteButton from "@/components/MuteButton";
 
 const INVITE = "https://discord.gg/novamodding";
 const CLIENT_FREE_URL =
@@ -313,6 +315,7 @@ export default function Home() {
   const [audioStarted, setAudioStarted] = useState(false);
   const [audioReady, setAudioReady] = useState(false);
   const [autoplayAttempted, setAutoplayAttempted] = useState(false);
+  const [autoplayFailed, setAutoplayFailed] = useState(false);
   useEffect(() => {
     const handleMessage = (event: MessageEvent) => {
       const data = event.data as Record<string, unknown> | null;
@@ -324,17 +327,28 @@ export default function Home() {
   }, []);
   useEffect(() => {
     if (!audioReady || autoplayAttempted) return;
+    setAutoplayAttempted(true);
+    if (isMusicMuted()) {
+      applyMuteToPlayer(true);
+      return;
+    }
     const iframe = document.getElementById(
       "hiddenAudioIframe"
     ) as HTMLIFrameElement | null;
     const win = iframe?.contentWindow as any;
-    setAutoplayAttempted(true);
     if (win?.tryAutoplay) {
-      win.tryAutoplay().then(() => setAudioStarted(true)).catch(() => {});
+      win
+        .tryAutoplay()
+        .then(() => setAudioStarted(true))
+        .catch(() => setAutoplayFailed(true));
+    } else {
+      setAutoplayFailed(true);
     }
   }, [audioReady, autoplayAttempted]);
   const handleStartAudio = useCallback(() => {
+    if (isMusicMuted()) return;
     setAudioStarted(true);
+    setAutoplayFailed(false);
     const iframe = document.getElementById(
       "hiddenAudioIframe"
     ) as HTMLIFrameElement | null;
@@ -636,12 +650,24 @@ export default function Home() {
         </div>
       </section>
 
+      {autoplayFailed && !audioStarted && (
+        <button
+          type="button"
+          onClick={handleStartAudio}
+          className="fixed inset-0 z-[60] bg-transparent border-none p-0 m-0"
+          aria-label="Start background audio"
+          style={{ display: "block", opacity: 0, cursor: "pointer" }}
+        />
+      )}
+
       {/* ── FOOTER ── */}
       <footer className="relative z-10 border-t border-zinc-900 mt-6">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-3 text-[10px] font-mono text-gray-700">
-            <span className="tracking-widest">Nova Modding v2.0.0</span>
-            {!audioStarted ? (
+            <span className="tracking-widest">Nova Modding v2.0.1</span>
+            <span className="inline-flex items-center gap-4">
+              <MuteButton />
+              {!audioStarted ? (
               <button
                 onClick={handleStartAudio}
                 className="inline-flex items-center gap-1.5 text-zinc-500 hover:text-zinc-300 transition-colors cursor-pointer tracking-widest"
@@ -650,7 +676,8 @@ export default function Home() {
               </button>
             ) : (
               <span className="tracking-widest text-zinc-500">MUSIC ON</span>
-            )}
+              )}
+            </span>
             <span>
               {archiveCount.toLocaleString()} commands in the archive
             </span>
