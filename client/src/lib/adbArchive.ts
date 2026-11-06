@@ -1,5 +1,4 @@
 import list1Text from "@/data/list1.txt?raw";
-import list2Text from "@/data/list2.txt?raw";
 
 export type ArchiveEntry = {
   id: string;
@@ -9,7 +8,6 @@ export type ArchiveEntry = {
 
 const ARCHIVE_SOURCES = [
   { label: "list1.txt", raw: list1Text },
-  { label: "list2.txt", raw: list2Text },
 ] as const;
 
 export const extractQuotedSegments = (text: string): string[] => {
