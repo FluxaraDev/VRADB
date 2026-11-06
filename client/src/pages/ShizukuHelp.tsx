@@ -27,7 +27,7 @@ function CopyCodeButton({ text }: { text: string }) {
     <button
       type="button"
       onClick={handleCopy}
-      className="inline-flex items-center gap-1 rounded border border-red-800/35 bg-red-950/20 px-2 py-1 text-[9px] uppercase tracking-[0.2em] text-red-300 transition-colors hover:border-red-600/60 hover:text-red-200"
+      className="inline-flex items-center gap-1 rounded border border-zinc-800/35 bg-zinc-950/20 px-2 py-1 text-[9px] uppercase tracking-[0.2em] text-zinc-300 transition-colors hover:border-zinc-600/60 hover:text-zinc-200"
     >
       {copied ? <Check size={10} /> : <Copy size={10} />}
       {copied ? "Copied" : "Copy"}
@@ -37,12 +37,12 @@ function CopyCodeButton({ text }: { text: string }) {
 
 function CommandBlock({ command, title }: { command: string; title?: string }) {
   return (
-    <div className="rounded border border-red-900/20 bg-black/60 p-3">
-      {title ? <div className="mb-2 text-[10px] uppercase tracking-[0.2em] text-red-400">{title}</div> : null}
+    <div className="rounded border border-zinc-900/20 bg-black/60 p-3">
+      {title ? <div className="mb-2 text-[10px] uppercase tracking-[0.2em] text-zinc-400">{title}</div> : null}
       <div className="mb-2 flex justify-end">
         <CopyCodeButton text={command} />
       </div>
-      <pre className="overflow-x-auto whitespace-pre-wrap break-words font-mono text-xs leading-relaxed text-green-400">
+      <pre className="overflow-x-auto whitespace-pre-wrap break-words font-mono text-xs leading-relaxed text-zinc-100">
         {command}
       </pre>
     </div>
@@ -75,13 +75,13 @@ const questGuideSections = [
     body: (
       <div className="space-y-3 text-sm leading-relaxed text-gray-400 font-mono">
         <p>
-          Official Shizuku Website: <a className="text-red-400 underline" href="https://shizuku.rikka.app/" target="_blank" rel="noopener noreferrer">https://shizuku.rikka.app/</a>
+          Official Shizuku Website: <a className="text-zinc-400 underline" href="https://shizuku.rikka.app/" target="_blank" rel="noopener noreferrer">https://shizuku.rikka.app/</a>
         </p>
         <p>
-          Official Shizuku GitHub Releases: <a className="text-red-400 underline" href="https://github.com/RikkaApps/Shizuku/releases" target="_blank" rel="noopener noreferrer">https://github.com/RikkaApps/Shizuku/releases</a>
+          Official Shizuku GitHub Releases: <a className="text-zinc-400 underline" href="https://github.com/RikkaApps/Shizuku/releases" target="_blank" rel="noopener noreferrer">https://github.com/RikkaApps/Shizuku/releases</a>
         </p>
         <p>
-          Android SDK Platform Tools: <a className="text-red-400 underline" href="https://developer.android.com/studio/releases/platform-tools" target="_blank" rel="noopener noreferrer">https://developer.android.com/studio/releases/platform-tools</a>
+          Android SDK Platform Tools: <a className="text-zinc-400 underline" href="https://developer.android.com/studio/releases/platform-tools" target="_blank" rel="noopener noreferrer">https://developer.android.com/studio/releases/platform-tools</a>
         </p>
       </div>
     ),
@@ -120,16 +120,16 @@ const questGuideSections = [
     icon: Download,
     body: (
       <div className="space-y-3 text-sm leading-relaxed text-gray-400 font-mono">
-        <p><span className="text-red-400 font-bold">IMPORTANT:</span> You MUST install <span className="text-red-400">Shizuku v11.0</span> first. Newer versions will NOT pair correctly until v11.0 has paired once.</p>
-        <p className="font-bold text-red-400">A. Download v11.0 inside the headset</p>
+        <p><span className="text-zinc-400 font-bold">IMPORTANT:</span> You MUST install <span className="text-zinc-400">Shizuku v11.0</span> first. Newer versions will NOT pair correctly until v11.0 has paired once.</p>
+        <p className="font-bold text-zinc-400">A. Download v11.0 inside the headset</p>
         <ol className="list-decimal pl-5 space-y-1 text-xs text-gray-500">
           <li>Put on the headset.</li>
           <li>Open the browser.</li>
-          <li>Go to the official Shizuku GitHub releases (<a className="text-red-400 underline" href="https://github.com/RikkaApps/Shizuku/releases" target="_blank" rel="noopener noreferrer">https://github.com/RikkaApps/Shizuku/releases</a>).</li>
+          <li>Go to the official Shizuku GitHub releases (<a className="text-zinc-400 underline" href="https://github.com/RikkaApps/Shizuku/releases" target="_blank" rel="noopener noreferrer">https://github.com/RikkaApps/Shizuku/releases</a>).</li>
           <li>Scroll down to older versions.</li>
           <li>Download the Shizuku v11.0 release APK.</li>
         </ol>
-        <p className="font-bold text-red-400">B. Install v11.0</p>
+        <p className="font-bold text-zinc-400">B. Install v11.0</p>
         <ol className="list-decimal pl-5 space-y-1 text-xs text-gray-500">
           <li>Open your file manager or APK installer.</li>
           <li>Locate the Shizuku v11.0 APK.</li>
@@ -146,7 +146,7 @@ const questGuideSections = [
       <div className="space-y-3 text-sm leading-relaxed text-gray-400 font-mono">
         <ol className="list-decimal pl-5 space-y-1 text-xs text-gray-500">
           <li>Open App Lab inside the headset.</li>
-          <li>Install <span className="text-red-400">Lightning Launcher</span>.</li>
+          <li>Install <span className="text-zinc-400">Lightning Launcher</span>.</li>
           <li>Open Lightning Launcher.</li>
         </ol>
       </div>
@@ -158,7 +158,7 @@ const questGuideSections = [
     body: (
       <div className="space-y-3 text-sm leading-relaxed text-gray-400 font-mono">
         <p>Quest hides Android Settings. Lightning Launcher exposes them automatically.</p>
-        <p className="font-bold text-red-400">Inside Lightning Launcher:</p>
+        <p className="font-bold text-zinc-400">Inside Lightning Launcher:</p>
         <ol className="list-decimal pl-5 space-y-1 text-xs text-gray-500">
           <li>Open Lightning Launcher.</li>
           <li>Scroll down the app list.</li>
@@ -173,7 +173,7 @@ const questGuideSections = [
     icon: MonitorCog,
     body: (
       <div className="space-y-3 text-sm leading-relaxed text-gray-400 font-mono">
-        <p className="font-bold text-red-400">Inside Android Settings:</p>
+        <p className="font-bold text-zinc-400">Inside Android Settings:</p>
         <ol className="list-decimal pl-5 space-y-1 text-xs text-gray-500">
           <li>Scroll down and tap System.</li>
           <li>Tap About device or About tablet.</li>
@@ -212,7 +212,7 @@ const questGuideSections = [
           <li>Tap Pair device with pairing code.</li>
           <li>Enter the pairing code into Shizuku v11.0.</li>
         </ol>
-        <p className="font-bold text-red-400 pt-2">ABOUT THE PAIRING CODE AND PORT:</p>
+        <p className="font-bold text-zinc-400 pt-2">ABOUT THE PAIRING CODE AND PORT:</p>
         <ul className="list-disc pl-5 space-y-1 text-xs text-gray-500">
           <li>The pairing code is a temporary 6-digit code.</li>
           <li>Wireless debugging also shows a host:port (example: 192.168.x.x:xxxx).</li>
@@ -250,7 +250,7 @@ const questGuideSections = [
         <ol className="list-decimal pl-5 space-y-1 text-xs text-gray-500">
           <li>Put on the headset.</li>
           <li>Open the browser.</li>
-          <li>Go to the official Shizuku GitHub releases (<a className="text-red-400 underline" href="https://github.com/RikkaApps/Shizuku/releases" target="_blank" rel="noopener noreferrer">https://github.com/RikkaApps/Shizuku/releases</a>).</li>
+          <li>Go to the official Shizuku GitHub releases (<a className="text-zinc-400 underline" href="https://github.com/RikkaApps/Shizuku/releases" target="_blank" rel="noopener noreferrer">https://github.com/RikkaApps/Shizuku/releases</a>).</li>
           <li>Download the newest Shizuku APK.</li>
           <li>Open your file manager or installer.</li>
           <li>Install the new APK over v11.0. It will show “Upgrade” instead of “Install”.</li>
@@ -278,20 +278,20 @@ const questGuideSections = [
     body: (
       <div className="space-y-4 text-sm leading-relaxed text-gray-400 font-mono">
         <div>
-          <p className="font-bold text-red-400">Shizuku stuck on “Searching”</p>
+          <p className="font-bold text-zinc-400">Shizuku stuck on “Searching”</p>
           <ul className="list-disc pl-5 space-y-1 text-xs text-gray-500">
             <li>Turn Wireless debugging OFF → wait → turn it ON.</li>
             <li>Reopen Shizuku and press Start.</li>
           </ul>
         </div>
         <div>
-          <p className="font-bold text-red-400">Shizuku stops running</p>
+          <p className="font-bold text-zinc-400">Shizuku stops running</p>
           <ul className="list-disc pl-5 space-y-1 text-xs text-gray-500">
             <li>Press Start again in Shizuku.</li>
           </ul>
         </div>
         <div>
-          <p className="font-bold text-red-400">APK won’t install</p>
+          <p className="font-bold text-zinc-400">APK won’t install</p>
           <ul className="list-disc pl-5 space-y-1 text-xs text-gray-500">
             <li>Make sure Developer Mode is ON.</li>
             <li>Make sure your installer app has permission to install APKs.</li>
@@ -407,12 +407,12 @@ const termuxGuideSections = [
     body: (
       <div className="space-y-4 text-sm leading-relaxed text-gray-400 font-mono">
         <div>
-          <p className="font-bold text-red-400">A. Quick one-shot command</p>
+          <p className="font-bold text-zinc-400">A. Quick one-shot command</p>
           <p className="mt-2 text-xs text-gray-500">Use:</p>
           <CommandBlock command='rish -c setprop "debug.oculus.swapInterval" 2' />
         </div>
         <div>
-          <p className="font-bold text-red-400">B. Full interactive ADB shell</p>
+          <p className="font-bold text-zinc-400">B. Full interactive ADB shell</p>
           <p className="mt-2 text-xs text-gray-500">Run:</p>
           <CommandBlock command='rish' />
           <p className="mt-3 text-xs text-gray-500">If successful, it will print your device codename:</p>
@@ -435,13 +435,13 @@ export default function ShizukuHelp() {
         className="fixed inset-0 pointer-events-none z-0"
         style={{
           background:
-            "radial-gradient(ellipse 90% 35% at 50% 0%, rgba(220,38,38,0.09) 0%, transparent 70%)",
+            "radial-gradient(ellipse 90% 35% at 50% 0%, rgba(255,255,255,0.09) 0%, transparent 70%)",
         }}
       />
 
       <div className="relative z-10 max-w-6xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
         <div className="mb-6 flex items-center justify-between gap-3">
-          <Link href="/" className="inline-flex items-center gap-2 rounded border border-red-800/35 bg-red-950/20 px-3 py-2 text-[10px] uppercase tracking-[0.2em] text-red-400 hover:border-red-600/60 hover:text-red-300 transition-colors">
+          <Link href="/" className="inline-flex items-center gap-2 rounded border border-zinc-800/35 bg-zinc-950/20 px-3 py-2 text-[10px] uppercase tracking-[0.2em] text-zinc-400 hover:border-zinc-600/60 hover:text-zinc-300 transition-colors">
             <ArrowLeft size={12} />
             BACK TO HOME
           </Link>
@@ -450,11 +450,11 @@ export default function ShizukuHelp() {
           </div>
         </div>
 
-        <div className="mb-8 rounded border border-red-900/30 bg-black/60 p-6 shadow-[0_0_30px_rgba(220,38,38,0.08)] backdrop-blur-sm">
+        <div className="mb-8 rounded border border-zinc-900/30 bg-black/60 p-6 shadow-[0_0_30px_rgba(255,255,255,0.08)] backdrop-blur-sm">
           <div className="flex items-center gap-3 mb-4">
-            <Settings className="text-red-500" size={18} />
+            <Settings className="text-zinc-500" size={18} />
             <h1 className="font-display text-2xl sm:text-3xl font-black tracking-[0.12em] uppercase text-white">
-              Shizuku on <span className="text-red-500">Meta Quest</span>
+              Shizuku on <span className="text-zinc-500">Meta Quest</span>
             </h1>
           </div>
 
@@ -463,15 +463,15 @@ export default function ShizukuHelp() {
           </p>
         </div>
 
-        <div className="mb-8 rounded border border-red-900/30 bg-black/60 p-5 backdrop-blur-sm">
+        <div className="mb-8 rounded border border-zinc-900/30 bg-black/60 p-5 backdrop-blur-sm">
           <div className="flex items-center gap-2 mb-4">
-            <ExternalLink className="text-red-500" size={16} />
+            <ExternalLink className="text-zinc-500" size={16} />
             <h2 className="font-display text-xs uppercase tracking-[0.2em] text-white">Official source links</h2>
           </div>
           <div className="space-y-2 text-sm text-gray-400 font-mono">
             {officialSources.map((source) => (
               <p key={source.label}>
-                {source.label}: <a className="text-red-400 underline" href={source.url} target="_blank" rel="noopener noreferrer">{source.url}</a>
+                {source.label}: <a className="text-zinc-400 underline" href={source.url} target="_blank" rel="noopener noreferrer">{source.url}</a>
               </p>
             ))}
           </div>
@@ -479,13 +479,13 @@ export default function ShizukuHelp() {
 
         <div className="mb-8">
           <Accordion type="single" collapsible className="space-y-3">
-            <AccordionItem value="meta-quest-guide" className="overflow-hidden rounded border border-red-900/25 bg-white/[0.02] backdrop-blur-sm">
-              <AccordionTrigger className="px-4 py-3 text-left hover:no-underline [&>svg]:text-red-400">
+            <AccordionItem value="meta-quest-guide" className="overflow-hidden rounded border border-zinc-900/25 bg-white/[0.02] backdrop-blur-sm">
+              <AccordionTrigger className="px-4 py-3 text-left hover:no-underline [&>svg]:text-zinc-400">
                 <div className="flex items-center gap-3">
-                  <div className="rounded border border-red-800/35 bg-red-950/20 p-2 text-red-400">
+                  <div className="rounded border border-zinc-800/35 bg-zinc-950/20 p-2 text-zinc-400">
                     <ChevronDown size={14} />
                   </div>
-                  <span className="font-display text-xs uppercase tracking-[0.2em] text-red-400 leading-relaxed">
+                  <span className="font-display text-xs uppercase tracking-[0.2em] text-zinc-400 leading-relaxed">
                     Meta Quest Shizuku guide
                   </span>
                 </div>
@@ -495,14 +495,14 @@ export default function ShizukuHelp() {
                   {questGuideSections.map(({ title, body, icon: Icon }) => (
                     <div
                       key={title}
-                      className="relative rounded border border-red-900/25 bg-black/35 p-4"
+                      className="relative rounded border border-zinc-900/25 bg-black/35 p-4"
                     >
-                      <div className="absolute left-0 top-0 bottom-0 w-[2px] bg-gradient-to-b from-red-600 via-red-700 to-transparent opacity-60" />
+                      <div className="absolute left-0 top-0 bottom-0 w-[2px] bg-gradient-to-b from-zinc-600 via-zinc-700 to-transparent opacity-60" />
                       <div className="mb-3 flex items-start gap-3">
-                        <div className="rounded border border-red-800/35 bg-red-950/20 p-2 text-red-400">
+                        <div className="rounded border border-zinc-800/35 bg-zinc-950/20 p-2 text-zinc-400">
                           <Icon size={14} />
                         </div>
-                        <h3 className="font-display text-[10px] uppercase tracking-[0.2em] text-red-400 leading-relaxed">
+                        <h3 className="font-display text-[10px] uppercase tracking-[0.2em] text-zinc-400 leading-relaxed">
                           {title}
                         </h3>
                       </div>
@@ -513,13 +513,13 @@ export default function ShizukuHelp() {
               </AccordionContent>
             </AccordionItem>
 
-            <AccordionItem value="termux-guide" className="overflow-hidden rounded border border-red-900/25 bg-white/[0.02] backdrop-blur-sm">
-              <AccordionTrigger className="px-4 py-3 text-left hover:no-underline [&>svg]:text-red-400">
+            <AccordionItem value="termux-guide" className="overflow-hidden rounded border border-zinc-900/25 bg-white/[0.02] backdrop-blur-sm">
+              <AccordionTrigger className="px-4 py-3 text-left hover:no-underline [&>svg]:text-zinc-400">
                 <div className="flex items-center gap-3">
-                  <div className="rounded border border-red-800/35 bg-red-950/20 p-2 text-red-400">
+                  <div className="rounded border border-zinc-800/35 bg-zinc-950/20 p-2 text-zinc-400">
                     <TerminalSquare size={14} />
                   </div>
-                  <span className="font-display text-xs uppercase tracking-[0.2em] text-red-400 leading-relaxed">
+                  <span className="font-display text-xs uppercase tracking-[0.2em] text-zinc-400 leading-relaxed">
                     Termux + Shizuku + Rish Setup Guide (Standalone, No-PC)
                   </span>
                 </div>
@@ -529,14 +529,14 @@ export default function ShizukuHelp() {
                   {termuxGuideSections.map(({ title, body, icon: Icon }) => (
                     <div
                       key={title}
-                      className="relative rounded border border-red-900/25 bg-black/35 p-4"
+                      className="relative rounded border border-zinc-900/25 bg-black/35 p-4"
                     >
-                      <div className="absolute left-0 top-0 bottom-0 w-[2px] bg-gradient-to-b from-red-600 via-red-700 to-transparent opacity-60" />
+                      <div className="absolute left-0 top-0 bottom-0 w-[2px] bg-gradient-to-b from-zinc-600 via-zinc-700 to-transparent opacity-60" />
                       <div className="mb-3 flex items-start gap-3">
-                        <div className="rounded border border-red-800/35 bg-red-950/20 p-2 text-red-400">
+                        <div className="rounded border border-zinc-800/35 bg-zinc-950/20 p-2 text-zinc-400">
                           <Icon size={14} />
                         </div>
-                        <h3 className="font-display text-[10px] uppercase tracking-[0.2em] text-red-400 leading-relaxed">
+                        <h3 className="font-display text-[10px] uppercase tracking-[0.2em] text-zinc-400 leading-relaxed">
                           {title}
                         </h3>
                       </div>
@@ -549,14 +549,14 @@ export default function ShizukuHelp() {
           </Accordion>
         </div>
 
-        <div className="mt-8 rounded border border-red-900/30 bg-black/60 p-4 text-center text-sm text-gray-400 font-mono">
+        <div className="mt-8 rounded border border-zinc-900/30 bg-black/60 p-4 text-center text-sm text-gray-400 font-mono">
           <p>
-            For more help, join the Discord <span className="text-red-400">:-)</span>
+            For more help, join the Discord <span className="text-zinc-400">:-)</span>
             <a
               href="https://discord.gg/r7SgjdmUF5"
               target="_blank"
               rel="noopener noreferrer"
-              className="ml-2 text-red-400 underline hover:text-red-300"
+              className="ml-2 text-zinc-400 underline hover:text-zinc-300"
             >
               https://discord.gg/r7SgjdmUF5
             </a>

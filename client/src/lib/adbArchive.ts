@@ -91,9 +91,24 @@ export function getArchiveEntries(): ArchiveEntry[] {
   return ARCHIVE_SOURCES.flatMap(({ label, raw }) => parseArchiveText(raw, label));
 }
 
+const DAILY_FAMILIES = new Set(["debug", "persist", "ro", "sys", "vendor", "service", "vr"]);
+
+export function isDailyPickable(entry: ArchiveEntry): boolean {
+  const match = entry.text.match(/^adb shell setprop (\S+)/);
+  if (!match) return false;
+  const prop = match[1];
+  if (prop.endsWith(".")) return false;
+  const segments = prop.split(".");
+  if (!DAILY_FAMILIES.has(segments[0])) return false;
+  // Reject decompiled class-name debris (e.g. oculus.navigator...AppRoot.onCreate)
+  return segments.every((seg) => !/^[A-Z]/.test(seg));
+}
+
 export function getDateSeededArchiveEntry(date: Date): ArchiveEntry | null {
-  const entries = getArchiveEntries();
-  if (!entries.length) return null;
+  const all = getArchiveEntries();
+  if (!all.length) return null;
+  const pickable = all.filter(isDailyPickable);
+  const entries = pickable.length ? pickable : all;
 
   const year = date.getFullYear();
   const month = date.getMonth() + 1;

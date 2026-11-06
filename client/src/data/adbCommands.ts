@@ -1,6 +1,6 @@
 /**
  * ADB Command data for VR Key Mapper
- * Crimson Terminal — Curated ADB commands for VR headsets (Meta Quest, Pico, etc.)
+ * Monochrome — Curated ADB commands for VR headsets (Meta Quest, Pico, etc.)
  */
 
 export interface AdbCommand {
@@ -24,7 +24,7 @@ export const adbCategories: AdbCategory[] = [
     id: "device",
     name: "Device Info",
     icon: "cpu",
-    color: "#EF4444",
+    color: "#E4E4E7",
     commands: [
       {
         id: "dev-1",
@@ -92,7 +92,7 @@ export const adbCategories: AdbCategory[] = [
     id: "apps",
     name: "App Management",
     icon: "package",
-    color: "#EF4444",
+    color: "#E4E4E7",
     commands: [
       {
         id: "app-1",
@@ -172,7 +172,7 @@ export const adbCategories: AdbCategory[] = [
     id: "keymapping",
     name: "Key Mapping",
     icon: "keyboard",
-    color: "#EF4444",
+    color: "#E4E4E7",
     commands: [
       {
         id: "key-1",
@@ -258,7 +258,7 @@ export const adbCategories: AdbCategory[] = [
     id: "display",
     name: "Display & Performance",
     icon: "monitor",
-    color: "#EF4444",
+    color: "#E4E4E7",
     commands: [
       {
         id: "disp-1",
@@ -326,7 +326,7 @@ export const adbCategories: AdbCategory[] = [
     id: "files",
     name: "File Transfer",
     icon: "folder",
-    color: "#EF4444",
+    color: "#E4E4E7",
     commands: [
       {
         id: "file-1",
@@ -388,7 +388,7 @@ export const adbCategories: AdbCategory[] = [
     id: "network",
     name: "Network & Wireless",
     icon: "wifi",
-    color: "#EF4444",
+    color: "#E4E4E7",
     commands: [
       {
         id: "net-1",
@@ -450,7 +450,7 @@ export const adbCategories: AdbCategory[] = [
     id: "debug",
     name: "ADb's",
     icon: "terminal",
-    color: "#EF4444",
+    color: "#E4E4E7",
     commands: [
       {
         id: "dbg-1",
@@ -548,7 +548,7 @@ export const adbCategories: AdbCategory[] = [
     id: "sideload",
     name: "Sideloading & OBB",
     icon: "download",
-    color: "#EF4444",
+    color: "#E4E4E7",
     commands: [
       {
         id: "sl-1",

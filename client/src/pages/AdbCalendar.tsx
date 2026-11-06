@@ -85,24 +85,24 @@ export default function AdbCalendarPage() {
         className="fixed inset-0 pointer-events-none z-0"
         style={{
           background:
-            "radial-gradient(ellipse 90% 35% at 50% 0%, rgba(220,38,38,0.09) 0%, transparent 70%)",
+            "radial-gradient(ellipse 90% 35% at 50% 0%, rgba(255,255,255,0.09) 0%, transparent 70%)",
         }}
       />
 
-      <header className="relative z-10 border-b border-red-900/25 bg-black/85 backdrop-blur-md">
+      <header className="relative z-10 border-b border-zinc-900/25 bg-black/85 backdrop-blur-md">
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
           <div className="flex items-center gap-3">
-            <Link href="/" className="inline-flex items-center gap-2 rounded border border-red-900/30 px-2.5 py-1.5 text-[10px] font-mono uppercase tracking-[0.2em] text-red-400 transition-colors hover:border-red-600/50 hover:text-red-300">
+            <Link href="/" className="inline-flex items-center gap-2 rounded border border-zinc-900/30 px-2.5 py-1.5 text-[10px] font-mono uppercase tracking-[0.2em] text-zinc-400 transition-colors hover:border-zinc-600/50 hover:text-zinc-300">
               <ArrowLeft size={12} />
               HOME
             </Link>
             <div className="flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded border border-red-700/50 bg-red-950/30 text-red-500">
+              <div className="flex h-10 w-10 items-center justify-center rounded border border-zinc-700/50 bg-zinc-950/30 text-zinc-500">
                 <CalendarDays size={18} />
               </div>
               <div>
                 <div className="font-display text-sm font-black tracking-widest text-white leading-none">
-                  ADB<span className="text-red-500">CALENDAR</span>
+                  ADB<span className="text-zinc-500">CALENDAR</span>
                 </div>
                 <div className="mt-0.5 text-[9px] font-mono uppercase tracking-[0.2em] text-gray-700 leading-none">
                   DATE LOCKED GUIDE
@@ -112,38 +112,38 @@ export default function AdbCalendarPage() {
           </div>
 
           <div className="hidden items-center gap-2 text-[10px] font-mono text-gray-700 sm:flex">
-            <ShieldCheck size={10} className="text-red-700" />
+            <ShieldCheck size={10} className="text-zinc-700" />
             <span>
-              <span className="text-red-600 font-bold">TEMP</span> {TEMP_LOCK_ENABLED ? `CODE ${TEMP_CODE}` : "DISABLED"}
+              <span className="text-zinc-600 font-bold">TEMP</span> {TEMP_LOCK_ENABLED ? `CODE ${TEMP_CODE}` : "DISABLED"}
             </span>
           </div>
         </div>
       </header>
 
       <main className="relative z-10 mx-auto max-w-6xl px-4 py-8 sm:px-6 lg:px-8">
-        <section className="mb-6 rounded border border-red-900/25 bg-black/70 p-4 md:p-6">
+        <section className="mb-6 rounded border border-zinc-900/25 bg-black/70 p-4 md:p-6">
           <div className="mb-4 flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
             <div>
-              <div className="mb-2 flex items-center gap-2 text-[10px] font-mono uppercase tracking-[0.2em] text-red-500">
+              <div className="mb-2 flex items-center gap-2 text-[10px] font-mono uppercase tracking-[0.2em] text-zinc-500">
                 <Sparkles size={10} />
                 DAILY ADB MAP
               </div>
               <h1 className="font-display text-2xl md:text-4xl font-black tracking-tight text-white">
-                CHEAT <span className="text-red-500">CALENDAR</span>
+                CHEAT <span className="text-zinc-500">CALENDAR</span>
               </h1>
             </div>
 
-            <div className="inline-flex items-center gap-2 rounded border border-red-900/30 bg-red-950/15 px-3 py-2 text-[10px] font-mono uppercase tracking-[0.2em] text-red-300">
+            <div className="inline-flex items-center gap-2 rounded border border-zinc-900/30 bg-zinc-950/15 px-3 py-2 text-[10px] font-mono uppercase tracking-[0.2em] text-zinc-300">
               {userHasUnlocked ? <Unlock size={12} /> : <Lock size={12} />}
               {userHasUnlocked ? "UNLOCKED" : "TEMPORARILY LOCKED"}
             </div>
           </div>
 
-          <div className="rounded border border-red-900/20 bg-black/60 p-4">
+          <div className="rounded border border-zinc-900/20 bg-black/60 p-4">
             <div className="mb-4 flex items-center justify-between gap-3">
-              <button type="button" onClick={previousMonth} className="rounded border border-red-900/30 bg-red-950/20 px-2 py-1 text-xs text-red-300 hover:border-red-700/50">←</button>
+              <button type="button" onClick={previousMonth} className="rounded border border-zinc-900/30 bg-zinc-950/20 px-2 py-1 text-xs text-zinc-300 hover:border-zinc-700/50">←</button>
               <div className="font-display text-lg text-white">{monthLabel}</div>
-              <button type="button" onClick={nextMonth} className="rounded border border-red-900/30 bg-red-950/20 px-2 py-1 text-xs text-red-300 hover:border-red-700/50">→</button>
+              <button type="button" onClick={nextMonth} className="rounded border border-zinc-900/30 bg-zinc-950/20 px-2 py-1 text-xs text-zinc-300 hover:border-zinc-700/50">→</button>
             </div>
 
             <div className="grid grid-cols-7 gap-2 text-center text-[10px] font-mono uppercase tracking-[0.2em] text-gray-600">
@@ -159,26 +159,26 @@ export default function AdbCalendarPage() {
                 const entry = getDateSeededArchiveEntry(date);
 
                 const cellStyle = isCurrentMonth
-                  ? "border-red-900/25 bg-black/55 text-gray-100"
-                  : "border-red-950/10 bg-black/20 text-gray-700 opacity-60";
+                  ? "border-zinc-900/25 bg-black/55 text-gray-100"
+                  : "border-zinc-950/10 bg-black/20 text-gray-700 opacity-60";
 
                 return (
                   <div
                     key={date.toISOString()}
-                    className={`min-h-[100px] rounded border p-2 ${cellStyle} ${isToday ? "shadow-[0_0_18px_rgba(220,38,38,0.12)]" : ""}`}
+                    className={`min-h-[100px] rounded border p-2 ${cellStyle} ${isToday ? "shadow-[0_0_18px_rgba(255,255,255,0.12)]" : ""}`}
                   >
                     <div className="mb-2 flex items-center justify-between text-[10px] font-mono">
-                      <span className={isToday ? "text-red-400" : "text-gray-400"}>{date.getDate()}</span>
-                      {isLocked ? <Lock size={10} className="text-red-500" /> : <Unlock size={10} className="text-green-500" />}
+                      <span className={isToday ? "text-zinc-400" : "text-gray-400"}>{date.getDate()}</span>
+                      {isLocked ? <Lock size={10} className="text-zinc-500" /> : <Unlock size={10} className="text-zinc-100" />}
                     </div>
 
                     {isCurrentMonth && entry && !isLocked ? (
-                      <div className="mt-1 flex min-h-[44px] flex-col justify-between rounded border border-red-900/15 bg-red-950/10 p-1.5 text-[9px] leading-relaxed text-gray-200">
-                        <span className="font-mono text-[9px] uppercase tracking-[0.12em] text-red-300">ADB</span>
-                        <span className="line-clamp-3 text-[9px] text-green-400">{entry.text}</span>
+                      <div className="mt-1 flex min-h-[44px] flex-col justify-between rounded border border-zinc-900/15 bg-zinc-950/10 p-1.5 text-[9px] leading-relaxed text-gray-200">
+                        <span className="font-mono text-[9px] uppercase tracking-[0.12em] text-zinc-300">ADB</span>
+                        <span className="line-clamp-3 text-[9px] text-zinc-100">{entry.text}</span>
                       </div>
                     ) : isCurrentMonth ? (
-                      <div className="mt-1 flex min-h-[44px] items-center justify-center rounded border border-red-900/15 bg-black/30 p-1 text-[9px] uppercase tracking-[0.12em] text-red-500">
+                      <div className="mt-1 flex min-h-[44px] items-center justify-center rounded border border-zinc-900/15 bg-black/30 p-1 text-[9px] uppercase tracking-[0.12em] text-zinc-500">
                         {isLocked ? "Locked" : "No data"}
                       </div>
                     ) : null}

@@ -1,5 +1,5 @@
 /**
- * ShootingStars — Crimson Terminal animated background
+ * ShootingStars — Monochrome animated background
  * Red shooting stars / particles falling diagonally across the full viewport.
  */
 import { useEffect, useRef } from "react";
@@ -88,8 +88,8 @@ export default function ShootingStars({
         const tailY = star.y - Math.sin(angle) * star.length;
 
         const gradient = ctx.createLinearGradient(tailX, tailY, star.x, star.y);
-        gradient.addColorStop(0, `rgba(220, 38, 38, 0)`);
-        gradient.addColorStop(0.6, `rgba(220, 38, 38, ${star.opacity * 0.4})`);
+        gradient.addColorStop(0, `rgba(255, 255, 255, 0)`);
+        gradient.addColorStop(0.6, `rgba(255, 255, 255, ${star.opacity * 0.4})`);
         gradient.addColorStop(1, `rgba(255, 255, 255, ${star.opacity})`);
 
         ctx.beginPath();
@@ -103,7 +103,7 @@ export default function ShootingStars({
         // Bright head dot
         ctx.beginPath();
         ctx.arc(star.x, star.y, star.width * 0.8, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(255, 200, 200, ${star.opacity})`;
+        ctx.fillStyle = `rgba(255, 255, 255, ${star.opacity})`;
         ctx.fill();
       }
 
