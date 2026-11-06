@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "wouter";
 import { ArrowLeft, Database, Search, Terminal, ChevronLeft, ChevronRight } from "lucide-react";
-import { CommandCard } from "./Home";
+import { CommandCard } from "./Commands";
 import ShootingStars from "@/components/ShootingStars";
 import { getArchiveEntries, type ArchiveEntry } from "@/lib/adbArchive";
 
@@ -82,12 +82,10 @@ export default function ADBArchive() {
             </Link>
 
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded border border-zinc-700/50 bg-zinc-950/30 flex items-center justify-center">
-                <Database size={18} className="text-zinc-500" />
-              </div>
+              <img src="/nova-logo.svg" alt="Nova Modding" className="w-10 h-10 rounded object-cover border border-zinc-800" />
               <div>
                 <div className="font-display text-sm font-black text-white tracking-widest leading-none">
-                  NOVA<span className="text-zinc-500">ADBS</span>
+                  Nova <span className="text-zinc-400">Modding</span>
                 </div>
                 <div className="text-[9px] text-gray-700 tracking-[0.2em] uppercase leading-none mt-0.5 font-mono">
                   ADB LIST

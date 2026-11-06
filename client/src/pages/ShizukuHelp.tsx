@@ -553,12 +553,12 @@ export default function ShizukuHelp() {
           <p>
             For more help, join the Discord <span className="text-zinc-400">:-)</span>
             <a
-              href="https://discord.gg/r7SgjdmUF5"
+              href="https://discord.gg/novamodding"
               target="_blank"
               rel="noopener noreferrer"
               className="ml-2 text-zinc-400 underline hover:text-zinc-300"
             >
-              https://discord.gg/r7SgjdmUF5
+              https://discord.gg/novamodding
             </a>
           </p>
         </div>

@@ -1,11 +1,12 @@
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
-import { Route, Switch } from "wouter";
+import { Route, Switch, useLocation } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import ADBArchive from "./pages/ADBArchive";
 import Home from "./pages/Home";
+import Commands from "./pages/Commands";
 import ShizukuHelp from "./pages/ShizukuHelp";
 import AdbCalendarPage from "./pages/AdbCalendar";
 import DailyAdbBanner from "./components/DailyAdbBanner";
@@ -15,6 +16,7 @@ function Router() {
   return (
     <Switch>
       <Route path={"/"} component={Home} />
+      <Route path={"/commands"} component={Commands} />
       <Route path={"/archive"} component={ADBArchive} />
       <Route path={"/calendar"} component={AdbCalendarPage} />
       <Route path={"/help"} component={ShizukuHelp} />
@@ -31,6 +33,7 @@ function Router() {
 // - If you want to make theme switchable, pass `switchable` ThemeProvider and use `useTheme` hook
 
 function App() {
+  const [location] = useLocation();
   return (
     <ErrorBoundary>
       <ThemeProvider
@@ -45,7 +48,7 @@ function App() {
             aria-hidden="true"
             style={{ display: "none" }}
           />
-          <DailyAdbBanner />
+          {location !== "/" && <DailyAdbBanner />}
           <Router />
         </TooltipProvider>
       </ThemeProvider>
