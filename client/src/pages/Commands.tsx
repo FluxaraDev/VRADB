@@ -508,7 +508,7 @@ export default function Commands() {
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3">
           <div className="flex items-center gap-2 text-[10px] text-gray-700 font-mono">
             <span className="text-zinc-700">&gt;_</span>
-            <span className="tracking-widest">Nova Modding v2.0.1</span>
+            <span className="tracking-widest">Nova Modding v2.0.2</span>
             <MuteButton />
           </div>
           <p className="text-[10px] text-gray-800 font-mono text-center tracking-wide">

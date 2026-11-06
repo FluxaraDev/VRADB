@@ -5742,17 +5742,9 @@ adb shell setprop media.xmluR
 adb shell setprop media.xmluRM
 adb shell setprop meta.AccountsCenter.pwa
 adb shell setprop meta.CADDY2
-adb shell setprop meta.CamId.toString
-adb shell setprop meta.FrameId.toString
-adb shell setprop meta.Height
-adb shell setprop meta.Height.toString
 adb shell setprop meta.HyperscapeHmdCapture
 adb shell setprop meta.HyperscapeHmdCaptureAutomation
 adb shell setprop meta.MetaCurio
-adb shell setprop meta.TsLower.toString
-adb shell setprop meta.TsUpper.toString
-adb shell setprop meta.Width
-adb shell setprop meta.Width.toString
 adb shell setprop meta.aether.apps.arriver
 adb shell setprop meta.aether.apps.experiments.arriver.location
 adb shell setprop meta.agenthome

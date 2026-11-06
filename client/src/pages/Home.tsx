@@ -664,7 +664,7 @@ export default function Home() {
       <footer className="relative z-10 border-t border-zinc-900 mt-6">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-3 text-[10px] font-mono text-gray-700">
-            <span className="tracking-widest">Nova Modding v2.0.1</span>
+            <span className="tracking-widest">Nova Modding v2.0.2</span>
             <span className="inline-flex items-center gap-4">
               <MuteButton />
               {!audioStarted ? (
